@@ -20,6 +20,87 @@
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "National Certificate in Technology (NTC)"
             ]
+        },
+        {
+            "name": "I T T Illeperuma",
+            "role": "Engineer",
+            "image": "img/team/illeperuma.jpg",
+            "qualifications": [
+                "B.Sc Eng.(Hons.)",
+                "A.Eng. AMIE(SL)"
+            ]
+        },
+        {
+            "name": "Harshana Nawarathne",
+            "role": "Draftsman",
+            "image": "img/team/harshana.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "NVQ Level 03"
+            ]
+        },
+        {
+            "name": "Chamathni De Sampaya",
+            "role": "Draftsman",
+            "image": "img/team/chamathni.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "NVQ Level 04",
+                "National Certificate in Technology (NTC)",
+                "National Diploma in Construction Technology (NVQ Level 05)"
+            ]
+        },
+        {
+            "name": "Hashini Dasunika Jayarathne",
+            "role": "Draftsman",
+            "image": "img/team/hashini.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "NVQ Level 04",
+                "National Certificate in Technology (NTC)",
+                "National Diploma in Construction Technology (NVQ Level 05)"
+            ]
+        },
+        {
+            "name": "Denuwan Wikramasinghe",
+            "role": "Draftsman",
+            "image": "img/team/denuwan.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "NVQ Level 04",
+                "National Certificate in Technology (NTC)"
+            ]
+        },
+        {
+            "name": "Dimeshika K Rajapaksha",
+            "role": "Draftsman",
+            "image": "img/team/dimeshika.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "NVQ Level 04",
+                "National Certificate in Technology (NTC)",
+                "National Diploma in Construction Technology (NVQ Level 05)"
+            ]
+        },
+        {
+            "name": "A.P.K. Dushan",
+            "role": "Draftsman",
+            "image": "img/team/dushan.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "NVQ Level 04",
+                "National Certificate in Technology (NTC)"
+            ]
+        },
+        {
+            "name": "Y.K. Ruwindana Wijayarathna",
+            "role": "Draftsman",
+            "image": "img/team/ruwindana.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "NVQ Level 04",
+                "National Certificate in Technology (NTC)"
+            ]
         }
     ]
 }

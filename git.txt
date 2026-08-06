@@ -1,0 +1,37 @@
+GIT QUICK COMMANDS
+
+Setup:
+git --version
+git config --global user.name "username"
+git config --global user.email "email"
+git config --global --list
+
+Start:
+git init
+
+Upload:
+git add .
+git commit -m "message"
+git branch -M main
+git remote add origin https://github.com/user/repo.git
+git push -u origin main
+
+Update:
+git status
+git add .
+git commit -m "message"
+git push
+
+Info:
+git status              # check changes
+git log --oneline       # commit history
+git remote -v           # check repo link
+git pull                # get latest changes
+
+Reset:
+Remove-Item -Recurse -Force .git   # remove git setup
+
+Notes:
+- Git tracks files, not empty folders
+- No GitHub password needed
+- Use token/browser login for authentication
