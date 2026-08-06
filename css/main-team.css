@@ -243,6 +243,11 @@
     .main-team-grid {
         grid-template-columns:repeat(2,1fr);
     }
+
+    .main-team-dir-image {
+        width:clamp(120px,80vw,40vh);
+        height:clamp(120px,80vw,40vh);
+    }
 }
 
 @media(max-width:500px){
