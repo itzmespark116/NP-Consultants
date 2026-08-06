@@ -1,0 +1,191 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* -------------------- main-banner.css ----------------------- */
+/* ------------------------------------------------------------ */
+
+.banner {
+    position: relative;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.banner-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--banner-tint);
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin-left: clamp(24px, 8vw, 120px);
+    color: var(--color);
+
+    padding: 40px;
+    border: 1px solid var(--border-3);
+    border-radius: 16px;
+
+    background: var(--glass);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow: var(--box-shadow);
+
+    opacity: 0;
+    animation: banner-enter .8s ease var(--intro) forwards;
+}
+
+.banner-content h2 {
+    margin: 0 0 12px;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 300;
+    line-height: 1.1;
+    text-transform: capitalize;
+    letter-spacing: .04em;
+    user-select: none;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: text-enter .7s ease calc(var(--intro) + .15s) forwards;
+}
+
+.banner-content h1 {
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 600;
+    line-height: .95;
+    text-transform: uppercase;
+    letter-spacing: -.03em;
+
+    user-select: none;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: text-enter .7s ease calc(var(--intro) + .3s) forwards;
+}
+
+.banner-content p {
+    margin-top: 28px;
+    max-width: 560px;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    color: var(--color-mute);
+    line-height: 1.7;
+
+    user-select: none;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: text-enter .7s ease calc(var(--intro) + .45s) forwards;
+}
+
+.banner-content button {
+    position: relative;
+    overflow: hidden;
+    margin-top: 36px;
+    padding: 14px 34px;
+    user-select: none;
+
+    background: color-mix(in srgb, var(--accent) 40%, transparent);
+    border: 1px solid var(--border-2);
+    border-radius: 999px;
+
+    color: var(--color-mute);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+
+    cursor: pointer;
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: text-enter .7s ease calc(var(--intro) + .6s) forwards;
+}
+
+.banner-content button:hover {
+    background: var(--glass);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px color-mix(in srgb, var(--base) 35%, transparent),
+        0 0 20px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.banner-content button:active {
+    transform: scale(.97);
+}
+
+
+.banner-content button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(120deg,
+            transparent,
+            color-mix(in srgb, var(--color) 25%, transparent),
+            transparent);
+
+    transform: translateX(-120%);
+    transition: .6s ease;
+    pointer-events: none;
+}
+
+.banner-content button:hover::before {
+    transform: translateX(120%);
+}
+
+.banner-overlay-fade {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+
+    background: var(--banner-fade);
+    z-index: 3;
+    pointer-events: none;
+}
+@keyframes text-enter {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes banner-enter { 
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media(max-width:700px) {
+    .banner-content { margin: 0 24px; }
+    .banner-content h1 { letter-spacing: -0.2rem; }
+    .banner-content button { width: clamp(100px, auto, auto); }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *, *::before, *::after { 
+        animation: none!important;
+        transition: none!important;
+    }
+}

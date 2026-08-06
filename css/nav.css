@@ -1,0 +1,290 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ----------------------- nav.css ---------------------------- */
+/* ------------------------------------------------------------ */
+
+
+@keyframes nav-drop-in {
+    0%   { transform: translateY(0);     opacity: 1; }
+    0%   { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0);     opacity: 1; }
+}
+
+@keyframes link-fade-in {
+    0%   { transform: translateY(0);    opacity: 1; }
+    0%   { transform: translateY(-6px); opacity: 0; }
+    100% { transform: translateY(0);    opacity: 1; }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 72px;
+
+    padding: 0 clamp(24px, 5vw, 48px);
+
+    display: flex;
+    align-items: center;
+
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+
+    z-index: 1000;
+
+    animation: nav-drop-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    transition: 
+        height 0.35s ease,
+        background 0.35s ease, 
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        backdrop-filter 0.35s ease;
+}
+
+nav * { user-select: none; pointer-events: auto; }
+
+/* -- Toggle : JS >> nav.callList.toggle('scrolled', window.scrollY > 40 -- */ 
+
+nav.scrolled { 
+    height: 60px;
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-logo { 
+    display: flex;
+    align-items: center;
+    order: 1;
+    animation: link-fade-in 0.5s ease 0.1s both;
+    cursor: pointer;
+}
+
+.navbar-logo img {
+    height: 42px;
+    width: auto;
+    user-select: none;
+    pointer-events: none;
+    transition: transform .3s ease, height .35s ease;
+    cursor: pointer;
+}
+
+nav.scrolled .navbar-logo img {
+    height: 36px;
+    cursor: pointer;
+}
+
+.navbar-logo:hover img {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#nav-toggle { display: none; }
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    order: 3;
+    margin-left: 25px;
+}
+
+.navbar-links ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 3vw, 36px);
+    list-style: none;
+}
+
+.navbar-links li { animation: link-fade-in .5s ease both; }
+
+.navbar-links li:nth-child(1) { animation-delay: .15s; }
+.navbar-links li:nth-child(2) { animation-delay: .2s;  }
+.navbar-links li:nth-child(3) { animation-delay: .25s; }
+.navbar-links li:nth-child(4) { animation-delay: .3s;  }
+.navbar-links li:nth-child(5) { animation-delay: .35s; }
+.navbar-links li:nth-child(6) { animation-delay: .4s;  }
+
+.navbar-links a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--color-mute);
+    text-decoration: none;
+    font-family: system-ui, sans-serif;
+    font-size: .95rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    cursor: pointer;
+    transition: color .25s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+    color: var(--color);
+}
+
+.navbar-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .25s ease;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+    transform: scaleX(1);
+}
+
+.themeButton {
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    background: transparent;
+    border: 1px solid var(--border-3);
+    border-radius: 50%;
+    cursor: pointer;
+    animation: link-fade-in .5s ease .45s both;
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border .25s ease;
+}
+
+.themeButton img {
+    width: 22px;
+    height: 22px;
+    transition: transform .35s ease;
+    cursor: pointer;
+}
+
+.themeButton:hover {
+    transform: translateY(-2px);
+    background: var(--glass);
+}
+
+.themeButton:hover img {
+    transform: rotate(25deg) scale(1.1);
+}
+
+.themeButton.spin img {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.open-nav,
+.close-nav {
+    display: none;
+    cursor: pointer;
+}
+
+.open-nav {
+    width: 30px;
+    height: 22px;
+    order: 4;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: link-fade-in .5s ease .3s both;
+}
+
+.open-nav span {
+    width: 100%;
+    height: 2px;
+    background: var(--color);
+    border-radius: 999px;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+.close-nav {
+    color: var(--color);
+    font-size: 2rem;
+    padding: 24px;
+    align-self: flex-end;
+    user-select: none;
+    transition: transform .25s ease, color .25s ease;
+}
+
+.close-nav:hover {
+    transform: rotate(90deg);
+    color: var(--accent);
+}
+
+.nav-overlay { display: none; }
+
+@media(max-width:600px) {
+    nav { height: 64px; }
+    nav.scrolled { height: 56px; }
+    .navbar-logo img { height: 36px;}
+    nav.scrolled .navbar-logo img { height: 32px;}
+
+    .themeButton {
+        order: 2;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .open-nav {
+        display: flex;
+        order: 3;
+    }
+
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(320px, 80vw);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        order: 4;
+        background: var(--glass);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        transition: right .35s cubic-bezier(.22, 1, .36, 1);
+        z-index: 1002;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar-links li { animation: none; }
+    #nav-toggle:checked ~ .navbar-links li { animation: link-fade-in .4s ease both; }
+
+    .navbar-links a {
+        width: 100%;
+        padding: 18px 28px;
+    }
+
+    .navbar-links a::after {  display: none; }
+    .close-nav {  display: block; }
+    #nav-toggle:checked ~ .navbar-links { right: 0; }
+
+    #nav-toggle:checked ~ .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,.35);
+        z-index: 1001;
+        animation: link-fade-in .3s ease both;
+    }
+}

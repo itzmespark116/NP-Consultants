@@ -1,0 +1,25 @@
+{
+    "director": {
+        "name": "W. Nandana Premachandrasiri",
+        "role": "Managing Director",
+        "image": "img/team/nandana.jpg",
+        "qualifications": [
+            "B.Sc Eng.(Hons.)",
+            "CEng.",
+            "MIE(SL)",
+            "MSSE Accredited Member of Green Building Council"
+        ]
+    },
+
+    "employees": [
+        {
+            "name": "Anoma Rajaguru",
+            "role": "Draftsman",
+            "image": "img/team/anoma.jpg",
+            "qualifications": [
+                "National Certificate in Engineering Draftsmanship (NCED)",
+                "National Certificate in Technology (NTC)"
+            ]
+        }
+    ]
+}

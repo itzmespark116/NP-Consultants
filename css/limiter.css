@@ -1,0 +1,69 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ---------------------- limiter.css ------------------------- */
+/* ------------------------------------------------------------ */
+
+@import url(root.css);
+
+/* ------------------------------------------------------------ */
+
+
+.shows-screen { display: block; }
+.screen-error { display: none; }
+
+@media (max-width:350px), (max-height:100px) {
+    .show-screen { display: none; }
+
+    .screen-error {
+        background: var(--debug-pattern);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+
+        z-index: 0;
+        display: block;
+        overflow: scroll;
+        padding: 0;
+        margin: 0;
+    }
+
+    .screen-error-container {
+        display: flex;
+        overflow: hidden;
+        overscroll-behavior: none;
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .screen-error-msg {
+        margin: 1vh;
+
+        height: clamp(48px, auto, 100vh);
+        max-height: 100vh;
+
+        width: clamp(48px, auto, 100vw);
+        max-width: 100vw;
+
+        font-size: min(0.6rem, auto, 100vh);
+        padding: clamp(0px, 8vh, 4rem);
+
+        background-color: var(--debug-bg);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+        border: 1px solid var(--debug); 
+        border-radius: 1vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+}
