@@ -3,7 +3,7 @@
 // --------------------- main-team.js -------------------------
 // ------------------------------------------------------------
 
-const PLACEHOLDER_IMAGE = "img/placeholder-profile-pic.jpg";
+const PLACEHOLDER_IMAGE = "img/placeholder-profile.jpg";
 
 function imageFallback(src, alt) {
     return `

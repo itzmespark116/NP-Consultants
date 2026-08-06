@@ -3,8 +3,8 @@
 /* -------------------- placeholder.css ----------------------- */
 /* ------------------------------------------------------------ */
 
-:root, :root.dark { 
-    --debug-pattern : linear-gradient(45deg, 
+:root, :root.dark {
+    --debug-pattern: linear-gradient(45deg, 
         var(--base) 0% 4%,
         var(--debug) 05%, var(--base) 6% 9%,
         var(--debug) 10%, var(--base) 11% 14%,
@@ -26,41 +26,83 @@
         var(--debug) 10%, var(--base) 91% 94%,
         var(--debug) 15%, var(--base) 96% 99%
     );
+    --debug-border: 0.4px solid white;
+    --debug-radius: 0.6rem;
+    --debug-transition: 0.4s ease;
+    --debug-font: inherit;
+}
+
+[class^="placeholder-"] {
+    width: 100%;
+    background: var(--debug-pattern);
+    border: var(--debug-border);
+    border-radius: var(--debug-radius);
+    transition: var(--debug-transition);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    filter: blur(12px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: var(--debug-font);
+    font-weight: 700;
+    font-size: clamp(1.2rem, calc(100vh * 0.16), calc(100vh * 0.3));
+    text-align: center;
+    user-select: none;
+    cursor:crosshair;
+}
+
+
+.placeholder-10vh {
+    height: 10vh;
+    height: 10dvh;
+}
+
+.placeholder-20vh {
+    height: 20vh;
+    height: 20dvh;
+}
+
+.placeholder-30vh {
+    height: 30vh;
+    height: 30dvh;
+}
+
+.placeholder-40vh {
+    height: 40vh;
+    height: 40dvh;
+}
+
+.placeholder-50vh {
+    height: 50vh;
+    height: 50dvh;
+}
+
+.placeholder-60vh {
+    height: 60vh;
+    height: 60dvh;
+}
+
+.placeholder-70vh {
+    height: 70vh;
+    height: 70dvh;
+}
+
+.placeholder-80vh {
+    height: 80vh;
+    height: 80dvh;
+}
+
+.placeholder-90vh {
+    height: 90vh;
+    height: 90dvh;
 }
 
 .placeholder-100vh {
     height: 100vh;
     height: 100dvh;
-    width: 100%;
-
-    background: linear-gradient(45deg, 
-        var(--base) 0% 4%,
-        var(--debug) 05%, var(--base) 6% 9%,
-        var(--debug) 10%, var(--base) 11% 14%,
-        var(--debug) 15%, var(--base) 16% 19%,
-        var(--debug) 10%, var(--base) 21% 24%,
-        var(--debug) 15%, var(--base) 26% 29%,
-        var(--debug) 10%, var(--base) 31% 34%,
-        var(--debug) 15%, var(--base) 36% 39%,
-        var(--debug) 10%, var(--base) 41% 44%,
-        var(--debug) 15%, var(--base) 46% 49%,
-        var(--debug) 10%, var(--base) 51% 54%,
-        var(--debug) 15%, var(--base) 56% 59%,
-        var(--debug) 10%, var(--base) 61% 64%,
-        var(--debug) 15%, var(--base) 66% 69%,
-        var(--debug) 10%, var(--base) 71% 74%,
-        var(--debug) 15%, var(--base) 76% 79%,
-        var(--debug) 10%, var(--base) 81% 84%,
-        var(--debug) 15%, var(--base) 86% 89%,
-        var(--debug) 10%, var(--base) 91% 94%,
-        var(--debug) 15%, var(--base) 96% 99%
-    );
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    filter: blur(24px);
-
-    border: 0.4px solid white;
-    border-radius: 0.6rem;
-
-    transition: 0.4s ease;
 }

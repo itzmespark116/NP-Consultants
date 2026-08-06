@@ -23,6 +23,7 @@
     --main-our-services-background: radial-gradient(circle at left, color-mix(in srgb, var(--accent) 25%, transparent), transparent 60%), radial-gradient(circle at right, color-mix(in srgb, var(--accent) 25%, transparent), transparent 60%), var(--background);
     --main-about-background : radial-gradient(circle at right, color-mix(in srgb, var(--accent) 25%, transparent), transparent 60%);
     --main-projects-background : radial-gradient(circle at left, color-mix(in srgb, var(--accent) 25%, transparent), transparent 60%), radial-gradient(circle at right, color-mix(in srgb, var(--accent) 25%, transparent), transparent 60%), var(--background);
+    --main-contact-background : color-mix(in srgb, var(--accent) 15%, var(--base) 65%);;
 
     --glass             : rgba(255, 255, 255, 0.075);
     --glass-2           : rgba(255, 255, 255, 0.05);
@@ -30,6 +31,7 @@
     --border-2          : #555555;
     --border-3          : rgba(0, 0, 0, 0.08);
     --border            : var(--border-3);
+    --border-radius        : 12px;
 
     --banner-tint       : color-mix(in srgb, var(--accent) 10%, transparent);
     --banner-fade       : linear-gradient(180deg, transparent 90%, color-mix(in srgb, var(--base) 25%, transparent) 95%, var(--base) 100%);
