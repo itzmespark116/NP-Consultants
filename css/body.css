@@ -7,7 +7,7 @@
 
 * { box-sizing: border-box; cursor: default;  transition: 0.4s ease; }
 /* ::-webkit-scrollbar { display: none; } */
-::-webkit-scrollbar { display: inherit; width: 0;}
+/* ::-webkit-scrollbar { display: inherit; width: 0;} */
 main > section { min-height: 10vh; }
 
 /* ------------------------------------------------------------ */

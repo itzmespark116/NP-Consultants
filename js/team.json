@@ -2,7 +2,7 @@
     "director": {
         "name": "W. Nandana Premachandrasiri",
         "role": "Managing Director",
-        "image": "img/our-team/NP Consultants - Director - W N Premachandrasiri.jpeg",
+        "image": "img/our-team/NP-Consultants---Director---W-N-Premachandrasiri.jpeg",
         "qualifications": [
             "B.Sc Eng.(Hons.)",
             "CEng.",
@@ -10,7 +10,6 @@
             "MSSE Accredited Member of Green Building Council"
         ]
     },
-
     "employees": [
         {
             "name": "Anoma Rajaguru",
@@ -22,18 +21,9 @@
             ]
         },
         {
-            "name": "I T T Illeperuma",
-            "role": "Engineer",
-            "image": "img/our-team/NP Consultants - Engineer - I T T Illeperuma.jpeg",
-            "qualifications": [
-                "B.Sc Eng.(Hons.)",
-                "A.Eng. AMIE(SL)"
-            ]
-        },
-        {
             "name": "Harshana Nawarathne",
             "role": "Draftsman",
-            "image": "img/our-team/NP Consultants - Draftsman - H Nawarathne.jpeg",
+            "image": "img/our-team/NP-Consultants---Draftsman---H-Nawarathne.jpeg",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "NVQ Level 03"
@@ -42,7 +32,7 @@
         {
             "name": "Chamathni De Sampaya",
             "role": "Draftsman",
-            "image": "img/our-team/NP Consultants - Draftsman - C De Sampaya.jpeg",
+            "image": "img/our-team/NP-Consultants---Draftsman---C-De-Sampaya.jpeg",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "NVQ Level 04",
@@ -53,7 +43,7 @@
         {
             "name": "Hashini Dasunika Jayarathne",
             "role": "Draftsman",
-            "image": "img/our-team/NP Consultants - Draftsman - H D Jayarathne.jpeg",
+            "image": "img/our-team/NP-Consultants---Draftsman---H-D-Jayarathne.jpeg",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "NVQ Level 04",
@@ -64,7 +54,7 @@
         {
             "name": "Denuwan Wikramasinghe",
             "role": "Draftsman",
-            "image": "img/our-team/NP Consultants - Draftsman - D Wikramasinghe.jpeg",
+            "image": "img/our-team/NP-Consultants---Draftsman---D-Wikramasinghe.jpeg",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "NVQ Level 04",
@@ -74,7 +64,7 @@
         {
             "name": "Dimeshika K Rajapaksha",
             "role": "Draftsman",
-            "image": "img/our-team/NP Consultants - Draftsman - D K Rajapaksha.jpeg",
+            "image": "img/our-team/NP-Consultants---Draftsman---D-K-Rajapaksha.jpeg",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "NVQ Level 04",
@@ -85,7 +75,7 @@
         {
             "name": "A.P.K. Dushan",
             "role": "Draftsman",
-            "image": "img/our-team/NP Consultants - Draftsman - A P K Dushan.jpeg",
+            "image": "img/our-team/NP-Consultants---Draftsman---A-P-K-Dushan.jpeg",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "NVQ Level 04",
@@ -95,7 +85,7 @@
         {
             "name": "Y.K. Ruwindana Wijayarathna",
             "role": "Draftsman",
-            "image": "img/our-team/NP Consultants - Draftsman - Y K R Wijayarathna.jpeg",
+            "image": "img/our-team/NP-Consultants---Draftsman---Y-K-R-Wijayarathna.jpeg",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
                 "NVQ Level 04",
