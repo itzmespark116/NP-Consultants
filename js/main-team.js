@@ -27,6 +27,10 @@ function directorImageFallback(src, alt) {
     `;
 }
 
+function buildQualifications(qualifications) {
+    return (qualifications || []).map(q => `<li>${q}</li>`).join("");
+}
+
 fetch("js/team.json")
 .then(res => {
     if (!res.ok) {
@@ -43,25 +47,25 @@ fetch("js/team.json")
         throw new Error("Team containers not found");
     }
 
-    director.innerHTML = `
-        ${directorImageFallback(
-            team.director.image,
-            team.director.name
-        )}
+    if (team.director) {
+        director.innerHTML = `
+            ${directorImageFallback(
+                team.director.image,
+                team.director.name
+            )}
 
-        <div class="main-team-dir-info">
-            <h3>${team.director.name}</h3>
-            <h4>${team.director.role}</h4>
+            <div class="main-team-dir-info">
+                <h3>${team.director.name}</h3>
+                <h4>${team.director.role}</h4>
 
-            <ul>
-                ${team.director.qualifications
-                    .map(q => `<li>${q}</li>`)
-                    .join("")}
-            </ul>
-        </div>
-    `;
+                <ul>
+                    ${buildQualifications(team.director.qualifications)}
+                </ul>
+            </div>
+        `;
+    }
 
-    grid.innerHTML = team.employees.map(member => `
+    grid.innerHTML = (team.employees || []).map(member => `
         <div class="main-team-card">
 
             ${imageFallback(
@@ -74,9 +78,7 @@ fetch("js/team.json")
                 <h4>${member.role}</h4>
 
                 <ul>
-                    ${member.qualifications
-                        .map(q => `<li>${q}</li>`)
-                        .join("")}
+                    ${buildQualifications(member.qualifications)}
                 </ul>
             </div>
 
@@ -86,4 +88,10 @@ fetch("js/team.json")
 })
 .catch(error => {
     console.error("Team loading error:", error);
+
+    const director = document.querySelector("#teamDirector");
+    const grid = document.querySelector("#teamGrid");
+
+    if (director) director.innerHTML = "<p>Unable to load team information.</p>";
+    if (grid) grid.innerHTML = "";
 });

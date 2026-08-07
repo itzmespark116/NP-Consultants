@@ -14,9 +14,9 @@ main > section { min-height: 10vh; }
 
 html {
     background: var(--base);
-
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {

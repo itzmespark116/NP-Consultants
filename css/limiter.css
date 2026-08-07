@@ -11,7 +11,7 @@
 .shows-screen { display: block; }
 .screen-error { display: none; }
 
-@media (max-width:350px), (max-height:100px) {
+@media (max-width:280px), (max-height:240px) {
     .show-screen { display: none; }
 
     .screen-error {

@@ -3,17 +3,16 @@
 /* ----------------------- nav.css ---------------------------- */
 /* ------------------------------------------------------------ */
 
-
 @keyframes nav-drop-in {
-    0%   { transform: translateY(0);     opacity: 1; }
+    0%   { transform: translateY(0); opacity: 1; }
     0%   { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0);     opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes link-fade-in {
-    0%   { transform: translateY(0);    opacity: 1; }
+    0%   { transform: translateY(0); opacity: 1; }
     0%   { transform: translateY(-6px); opacity: 0; }
-    100% { transform: translateY(0);    opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 nav {
@@ -24,46 +23,43 @@ nav {
 
     width: 100%;
     height: 72px;
-
     padding: 0 clamp(24px, 5vw, 48px);
-
     display: flex;
     align-items: center;
 
     background: var(--glass);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 0.5px solid var(--border);
+    border-bottom: .5px solid var(--border);
 
-    z-index: 1000;
+    z-index: 1100;
+    animation: nav-drop-in .6s cubic-bezier(.22, 1, .36, 1) both;
 
-    animation: nav-drop-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-    transition: 
-        height 0.35s ease,
-        background 0.35s ease, 
-        border-color 0.35s ease,
-        box-shadow 0.35s ease,
-        backdrop-filter 0.35s ease;
+    transition:
+        height .35s ease,
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease,
+        backdrop-filter .35s ease;
 }
 
-nav * { user-select: none; pointer-events: auto; }
+nav * {
+    user-select: none;
+    pointer-events: auto;
+}
 
-/* -- Toggle : JS >> nav.callList.toggle('scrolled', window.scrollY > 40 -- */ 
-
-nav.scrolled { 
+nav.scrolled {
     height: 60px;
-
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
 }
 
-.navbar-logo { 
+.navbar-logo {
     display: flex;
     align-items: center;
     order: 1;
-    animation: link-fade-in 0.5s ease 0.1s both;
+    animation: link-fade-in .5s ease .1s both;
     cursor: pointer;
 }
 
@@ -72,27 +68,23 @@ nav.scrolled {
     width: auto;
     user-select: none;
     pointer-events: none;
-    transition: transform .3s ease, height .35s ease;
+
+    transition:
+        transform .3s ease,
+        height .35s ease;
+
     cursor: pointer;
 }
 
-nav.scrolled .navbar-logo img {
-    height: 36px;
-    cursor: pointer;
-}
-
-.navbar-logo:hover img {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
+nav.scrolled .navbar-logo img { height: 36px; }
+.navbar-logo:hover img { transform: scale(1.05); }
 #nav-toggle { display: none; }
 
 .navbar-links {
     display: flex;
     align-items: center;
     order: 3;
-    margin-left: 25px;
+    margin-left: 1rem;
 }
 
 .navbar-links ul {
@@ -105,22 +97,22 @@ nav.scrolled .navbar-logo img {
 .navbar-links li { animation: link-fade-in .5s ease both; }
 
 .navbar-links li:nth-child(1) { animation-delay: .15s; }
-.navbar-links li:nth-child(2) { animation-delay: .2s;  }
+.navbar-links li:nth-child(2) { animation-delay:  .2s; }
 .navbar-links li:nth-child(3) { animation-delay: .25s; }
-.navbar-links li:nth-child(4) { animation-delay: .3s;  }
-.navbar-links li:nth-child(5) { animation-delay: .35s; }
-.navbar-links li:nth-child(6) { animation-delay: .4s;  }
+.navbar-links li:nth-child(4) { animation-delay:  .3s; }
 
 .navbar-links a {
     position: relative;
     display: flex;
     align-items: center;
+
     color: var(--color-mute);
     text-decoration: none;
     font-family: system-ui, sans-serif;
     font-size: .95rem;
     font-weight: 500;
     letter-spacing: .04em;
+
     cursor: pointer;
     transition: color .25s ease;
 }
@@ -133,10 +125,12 @@ nav.scrolled .navbar-logo img {
 .navbar-links a::after {
     content: "";
     position: absolute;
+
     left: 0;
     bottom: -8px;
     width: 100%;
     height: 2px;
+
     background: var(--accent);
     transform: scaleX(0);
     transform-origin: center;
@@ -151,16 +145,19 @@ nav.scrolled .navbar-logo img {
 .themeButton {
     width: 42px;
     height: 42px;
+
     margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+
     order: 2;
     background: transparent;
     border: 1px solid var(--border-3);
     border-radius: 50%;
     cursor: pointer;
     animation: link-fade-in .5s ease .45s both;
+
     transition:
         transform .25s ease,
         background .25s ease,
@@ -170,8 +167,8 @@ nav.scrolled .navbar-logo img {
 .themeButton img {
     width: 22px;
     height: 22px;
+
     transition: transform .35s ease;
-    cursor: pointer;
 }
 
 .themeButton:hover {
@@ -179,44 +176,63 @@ nav.scrolled .navbar-logo img {
     background: var(--glass);
 }
 
-.themeButton:hover img {
-    transform: rotate(25deg) scale(1.1);
-}
-
-.themeButton.spin img {
-    transform: rotate(360deg) scale(1.1);
-}
+.themeButton:hover img { transform: rotate(25deg) scale(1.1); }
+.themeButton.spin img { transform: rotate(360deg) scale(1.1); }
 
 .open-nav,
 .close-nav {
     display: none;
-    cursor: pointer;
+    cursor: none;
+    pointer-events: none;
 }
 
 .open-nav {
     width: 30px;
     height: 22px;
+
     order: 4;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    z-index: 1200;
+
     animation: link-fade-in .5s ease .3s both;
 }
 
 .open-nav span {
     width: 100%;
     height: 2px;
+
     background: var(--color);
     border-radius: 999px;
-    transition: transform .3s ease, opacity .3s ease;
+
+    transition:
+        transform .35s cubic-bezier(.22, 1, .36, 1),
+        opacity .25s ease;
 }
 
 .close-nav {
-    color: var(--color);
-    font-size: 2rem;
-    padding: 24px;
-    align-self: flex-end;
-    user-select: none;
-    transition: transform .25s ease, color .25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: none;
+    pointer-events: none;
+    
+    display: none;
+    cursor: none;
+
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
 }
 
 .close-nav:hover {
@@ -224,66 +240,117 @@ nav.scrolled .navbar-logo img {
     color: var(--accent);
 }
 
-.nav-overlay { display: none; }
+.nav-overlay {
+    display: none;
+}
 
 @media(max-width:600px) {
-    nav { height: 64px; }
-    nav.scrolled { height: 56px; }
-    .navbar-logo img { height: 36px;}
-    nav.scrolled .navbar-logo img { height: 32px;}
+    nav               { height: 64px; }
+    nav.scrolled      { height: 56px; }
+    .navbar-logo img  { height: 36px; }
+    nav.scrolled .navbar-logo img { height: 32px; }
+    .themeButton      { order: 2; margin-left: auto; margin-right: 20px; }
+    .open-nav         { display: flex; order: 3; }
 
-    .themeButton {
-        order: 2;
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .open-nav {
-        display: flex;
-        order: 3;
-    }
+    #nav-toggle:checked~.open-nav span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    #nav-toggle:checked~.open-nav span:nth-child(2) { opacity: 0; }
+    #nav-toggle:checked~.open-nav span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
 
     .navbar-links {
         position: fixed;
         top: 0;
         right: -100%;
-        width: min(320px, 80vw);
-        height: 100vh;
+        width: min(340px, 85vw);
+        height: 100dvh;
         display: flex;
         flex-direction: column;
         margin-left: 0;
+        padding: 20px 0;
         order: 4;
-        background: var(--glass);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        transition: right .35s cubic-bezier(.22, 1, .36, 1);
+        background: color-mix(in srgb, var(--glass) 60%, var(--base) 40%);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-left: .5px solid var(--border);
+        transition:
+            right .45s cubic-bezier(.22, 1, .36, 1);
+
         z-index: 1002;
     }
 
     .navbar-links ul {
         width: 100%;
-        margin-top: 20px;
+        margin: 20px 0 0;
+        padding: 0;
+        display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: 4px;
     }
 
     .navbar-links li { animation: none; }
-    #nav-toggle:checked ~ .navbar-links li { animation: link-fade-in .4s ease both; }
+    #nav-toggle:checked~.navbar-links li { animation: link-fade-in .4s ease both; }
+
+    #nav-toggle:checked~.navbar-links li:nth-child(1) { animation-delay:  .1s; }
+    #nav-toggle:checked~.navbar-links li:nth-child(2) { animation-delay: .15s; }
+    #nav-toggle:checked~.navbar-links li:nth-child(3) { animation-delay:  .2s; }
+    #nav-toggle:checked~.navbar-links li:nth-child(4) { animation-delay: .25s; }
 
     .navbar-links a {
         width: 100%;
-        padding: 18px 28px;
+        padding: 18px 32px;
+        font-size: 1rem;
+        border-radius: 12px;
+
+        transition:
+            background .25s ease,
+            padding-left .25s ease,
+            color .25s ease;
     }
 
-    .navbar-links a::after {  display: none; }
-    .close-nav {  display: block; }
-    #nav-toggle:checked ~ .navbar-links { right: 0; }
+    .navbar-links a:hover,
+    .navbar-links a.active {
+        background: color-mix(in srgb, var(--color) 10%, transparent);
+        padding-left: 40px;
+        color: var(--color);
+    }
 
-    #nav-toggle:checked ~ .nav-overlay {
+    .navbar-links a::after { display: none; }
+
+    .close-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 42px;
+        height: 42px;
+
+        margin-left: auto;
+        margin-right: 20px;
+        padding: 0;
+        border-radius: 50%;
+
+        transition:
+            transform .3s ease,
+            background .3s ease,
+            color .3s ease;
+    }
+
+    .close-nav:hover {
+        transform: rotate(90deg);
+        color: var(--accent);
+    }
+
+    #nav-toggle:checked~.navbar-links { right: 0; }
+    .nav-overlay { display: none; }
+
+    #nav-toggle:checked~.nav-overlay {
         display: block;
         position: fixed;
         inset: 0;
-        background: rgba(0,0,0,.35);
+
+        background: color-mix(in srgb, var(--base) 55%, transparent);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+
         z-index: 1001;
         animation: link-fade-in .3s ease both;
     }
