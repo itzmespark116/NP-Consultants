@@ -45,7 +45,7 @@
     padding-bottom: clamp(14px, 2vw, 20px);
     margin-bottom: clamp(32px, 5vw, 56px);
 
-    border-bottom: 1px solid;
+    border-bottom: 1px solid white;
     border-image: var(--border-bottom) 1;
 }
 

@@ -40,7 +40,7 @@
 .main-services-title {
     padding-bottom: clamp(14px, 2vw, 20px);
 
-    border-bottom: 1px solid;
+    border-bottom: 1px solid white;
     border-image: var(--main-services-border-bottom) 1;
 
     margin-bottom: clamp(20px, 3vw, 32px);

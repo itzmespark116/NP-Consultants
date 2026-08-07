@@ -4,28 +4,29 @@
 /* ------------------------------------------------------------ */
 
 :root, :root.dark {
-    --debug-pattern: linear-gradient(45deg, 
-        var(--base) 0% 4%,
-        var(--debug) 05%, var(--base) 6% 9%,
-        var(--debug) 10%, var(--base) 11% 14%,
-        var(--debug) 15%, var(--base) 16% 19%,
-        var(--debug) 10%, var(--base) 21% 24%,
-        var(--debug) 15%, var(--base) 26% 29%,
-        var(--debug) 10%, var(--base) 31% 34%,
-        var(--debug) 15%, var(--base) 36% 39%,
-        var(--debug) 10%, var(--base) 41% 44%,
-        var(--debug) 15%, var(--base) 46% 49%,
-        var(--debug) 10%, var(--base) 51% 54%,
-        var(--debug) 15%, var(--base) 56% 59%,
-        var(--debug) 10%, var(--base) 61% 64%,
-        var(--debug) 15%, var(--base) 66% 69%,
-        var(--debug) 10%, var(--base) 71% 74%,
-        var(--debug) 15%, var(--base) 76% 79%,
-        var(--debug) 10%, var(--base) 81% 84%,
-        var(--debug) 15%, var(--base) 86% 89%,
-        var(--debug) 10%, var(--base) 91% 94%,
-        var(--debug) 15%, var(--base) 96% 99%
+    --debug-pattern: linear-gradient(45deg,
+    var(--base) 0% 4%,
+    var(--debug) 5%, var(--base) 6% 9%,
+    var(--debug) 10%, var(--base) 11% 14%,
+    var(--debug) 15%, var(--base) 16% 19%,
+    var(--debug) 20%, var(--base) 21% 24%,
+    var(--debug) 25%, var(--base) 26% 29%,
+    var(--debug) 30%, var(--base) 31% 34%,
+    var(--debug) 35%, var(--base) 36% 39%,
+    var(--debug) 40%, var(--base) 41% 44%,
+    var(--debug) 45%, var(--base) 46% 49%,
+    var(--debug) 50%, var(--base) 51% 54%,
+    var(--debug) 55%, var(--base) 56% 59%,
+    var(--debug) 60%, var(--base) 61% 64%,
+    var(--debug) 65%, var(--base) 66% 69%,
+    var(--debug) 70%, var(--base) 71% 74%,
+    var(--debug) 75%, var(--base) 76% 79%,
+    var(--debug) 80%, var(--base) 81% 84%,
+    var(--debug) 85%, var(--base) 86% 89%,
+    var(--debug) 90%, var(--base) 91% 94%,
+    var(--debug) 95%, var(--base) 96% 99%
     );
+
     --debug-border: 0.4px solid white;
     --debug-radius: 0.6rem;
     --debug-transition: 0.4s ease;
@@ -34,6 +35,7 @@
 
 [class^="placeholder-"] {
     width: 100%;
+
     background: var(--debug-pattern);
     border: var(--debug-border);
     border-radius: var(--debug-radius);
@@ -41,21 +43,39 @@
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    filter: blur(12px);
+    filter: blur(6px);
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    color: white;
+    color: var(--color, white);
     font-family: var(--debug-font);
     font-weight: 700;
-    font-size: clamp(1.2rem, calc(100vh * 0.16), calc(100vh * 0.3));
     text-align: center;
+
     user-select: none;
-    cursor:crosshair;
+    cursor: crosshair;
+    overflow: hidden;
 }
 
+[class^="placeholder-"] h2 {
+    margin: 0;
+
+    font-size: clamp(8rem, 30vw, 30rem);
+    line-height: 0.8;
+
+    color: var(--color, white);
+}
+
+[class^="placeholder-"] p {
+    margin: 1rem 0 0;
+
+    font-size: clamp(0.8rem, 10vw , 5rem);
+
+    color: var(--color, white);
+}
 
 .placeholder-10vh {
     height: 10vh;
