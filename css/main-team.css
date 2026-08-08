@@ -19,7 +19,7 @@
 .main-team-title {
     padding-bottom:20px;
     margin-bottom:20px;
-    border-bottom:1px solid white;
+    border-bottom:1px solid var(--color);
     border-image:var(--border-bottom) 1;
 }
 
@@ -182,7 +182,7 @@
     object-position: top center;
     border-radius: 50%;
     border: 0.5px solid var(--border-2);
-    background: white;
+    background: white;  background-color: white;
     transition: transform .4s ease, border .4s ease;
     will-change: transform;
 }

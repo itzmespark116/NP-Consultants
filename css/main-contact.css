@@ -21,8 +21,8 @@
 
     scroll-snap-align:start;
 
-    border-top: 1px solid white;
-    border-bottom: 1px solid;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
     border-image: var(--border-bottom) 1;
 }
 

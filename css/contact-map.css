@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ---------------------- contact.css ------------------------- */
+/* ------------------------------------------------------------ */
+
+.contact-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: clamp(50px, 20vh, 300px);
+
+    margin: 0;
+    margin-top: 72px;
+    padding: 0;
+    padding-left: clamp(0px, 2vw, 30px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background: var(--contact-banner-background);
+    /* backdrop-filter: blur(12px); */
+    /* -webkit-backdrop-filter: blur(12px); */
+
+    z-index: 1000;
+
+    border-bottom: 1px solid var(--color);
+    border-image: var(--border-bottom) 1;
+
+    transition:
+        height 0.5s cubic-bezier(.22, 1, .36, 1),
+        backdrop-filter 0.5s ease,
+        box-shadow 0.5s ease;
+    animation: nav-drop-in .6s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.contact-banner.scrolled {
+    height: 54px !important;
+    margin-top: 56px;
+
+    justify-content: flex-start;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+
+    transition: 0.4s ease;
+}
+
+.contact-banner h1 {
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    transition:
+        font-size 0.5s cubic-bezier(.22, 1, .36, 1);
+}
+
+.contact-banner.scrolled h1 {
+    font-size: 1.5rem;
+}
+
+.contact-map-container {
+    width: 100%;
+    height: clamp(400px, 650px, 100vh);
+
+    margin-top: calc(72px + clamp(50px, 20vh, 300px)) ;
+
+    overflow: hidden;
+    border: none;
+}
+
+.contact-map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+

@@ -47,6 +47,8 @@
     --main-contact-background:
         color-mix(in srgb, var(--accent) 40%, var(--base) 60%);
         
+    --contact-banner-background : color-mix(in srgb, var(--base) 60%, transparent 40%);
+
     --footer-background : #e1e1e1;
 
     --glass             : rgba(255, 255, 255, 0.075);

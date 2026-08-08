@@ -30,7 +30,7 @@ nav {
     background: var(--glass);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: .5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
 
     z-index: 1100;
     animation: nav-drop-in .6s cubic-bezier(.22, 1, .36, 1) both;
@@ -53,6 +53,7 @@ nav.scrolled {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+    margin-bottom: 0;
 }
 
 .navbar-logo {

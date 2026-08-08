@@ -155,7 +155,7 @@ footer,
     min-height: 40px;
     margin: 0;
     background: var(--footer-background);
-    border-top: .5px solid white;
+    border-top: .5px solid var(--color);
     border-image: var(--border-bottom) 1;
     display: flex;
     justify-content: center;
