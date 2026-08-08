@@ -48,6 +48,7 @@
         color-mix(in srgb, var(--accent) 40%, var(--base) 60%);
         
     --contact-banner-background : color-mix(in srgb, var(--base) 60%, transparent 40%);
+    --projects-banner-background : color-mix(in srgb, var(--base) 40%, transparent 60%);
 
     --footer-background : #e1e1e1;
 

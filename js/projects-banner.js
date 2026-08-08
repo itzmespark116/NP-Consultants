@@ -1,15 +1,15 @@
 // ------------------------------------------------------------
 // -------------------- NP Consultants ------------------------
-// ------------------- contact-banner.js ----------------------
+// ------------------ projects-banner.js ----------------------
 // ------------------------------------------------------------
 
-const contactBanner = document.querySelector('.contact-banner');
+const projectsBanner = document.querySelector('.projects-banner');
 
-console.log(contactBanner);
+console.log(projectsBanner);
 
 window.addEventListener('scroll', () => {
 
-    contactBanner.classList.toggle(
+    projectsBanner.classList.toggle(
         'scrolled',
         window.scrollY > 40
     );
