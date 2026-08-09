@@ -170,6 +170,7 @@ nav.scrolled .navbar-logo img { height: 36px; }
     height: 22px;
 
     transition: transform .35s ease;
+    cursor: pointer;
 }
 
 .themeButton:hover {

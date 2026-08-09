@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ------------------ services-banner.css --------------------- */
+/* ------------------------------------------------------------ */
+
+@import url(root.css);
+
+/* ------------------------------------------------------------ */
+
+.services-section {
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.services-section h2 {
+    font-weight: 400;
+    font-size: 3rem;
+    text-transform: uppercase;
+
+    padding: 0.6rem 1rem;
+
+    border-bottom: 0.6px solid var(--color);
+    border-image: var(--border-bottom) 1;
+
+    cursor: auto;
+}
+
+.services-section p {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    cursor: auto;
+}
+
+.services-section ul {
+    margin: 0.6rem 1.2rem;
+    padding-left: 2rem;
+}
+
+.services-section li {
+    margin-bottom: 0.4rem;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .services-section h2 { font-size: 2rem; }
+}
