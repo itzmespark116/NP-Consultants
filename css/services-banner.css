@@ -22,7 +22,10 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: var(--services-banner-background);
+    /* background: var(--services-banner-background); */
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid var(--color);
     border-image: var(--border-bottom) 1;

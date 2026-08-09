@@ -44,12 +44,12 @@
         radial-gradient(circle at right, color-mix(in srgb, var(--accent) 22%, var(--base)), var(--base) 65%),
         var(--base);
 
-    --main-contact-background:
-        color-mix(in srgb, var(--accent) 40%, var(--base) 60%);
+    --main-contact-background: color-mix(in srgb, var(--accent) 40%, var(--base) 60%);
         
     --contact-banner-background : color-mix(in srgb, var(--base) 60%, transparent 40%);
     --projects-banner-background : color-mix(in srgb, var(--base) 40%, transparent 60%);
     --services-banner-background : color-mix(in srgb, var(--base) 40%, transparent 60%);
+    --contact-form-background : color-mix(in srgb, var(--accent) 40%, var(--base) 60%);
 
     --footer-background : #e1e1e1;
 

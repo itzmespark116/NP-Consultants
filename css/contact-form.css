@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ------------------- contact-from.css ----------------------- */
+/* ------------------------------------------------------------ */
+
+.contact-form {
+    min-height: 70vh;
+    min-height: 70dvh;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    padding: clamp(0px, 3vh, 30px) clamp(0px, 10vw, 250px);
+}
+
+
+.contact-form-info {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: clamp(10px, 3vw, 50px);
+    margin: 50px inherit;
+
+    border: 0.2px solid var(--border-2);
+    /* border-right: none; */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    background: var(--contact-form-background);
+}
+
+.contact-form-info * { margin: 0; }
+
+.contact-form-info-box {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto 0;
+}
+
+.contact-form-info-box svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--color);
+}
+
+.contact-form-info-box h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.contact-form-info-box p {
+    transition: transform .25s ease, color .25s ease;
+}
+
+.contact-form-info-box p:hover {
+    transform: translateX(6px);
+    color: var(--color);
+}
+
+
+
+
+
+
+.contact-form-user {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+
+    border: 0.2px solid var(--border-2);
+    border-left: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+    padding: 10px clamp(10px, 3vw, 50px);
+    margin: 50px inherit;
+
+    background: var(--glass);
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contact-form-user h4 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
