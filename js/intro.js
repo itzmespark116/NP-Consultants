@@ -3,37 +3,84 @@
 // ----------------------- intro.js ---------------------------
 // ------------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
+(function () {
 
-    const intro = document.querySelector(".body-intro");
+    function startIntro() {
 
-    if (!intro) return;
+        var body = document.body;
+        var intro = document.querySelector(".body-intro");
 
-    const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    // Skip intro completely
-    if (reducedMotion) {
-
-        document.body.classList.remove("intro-active");
-
-        intro.remove();
-
-        return;
-    }
-
-    // Normal intro
-    document.body.classList.add("intro-active");
-
-    setTimeout(() => {
-
-        document.body.classList.remove("intro-active");
-
-        if (intro && intro.parentNode) {
-            intro.remove();
+        if (!body || !intro) {
+            return;
         }
 
-    }, 1500);
+        // Check user's reduced-motion preference
+        var reducedMotion = false;
 
-});
+        if (window.matchMedia) {
+            reducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+        }
+
+        // ----------------------------------------------------
+        // Reduced motion → skip intro completely
+        // ----------------------------------------------------
+
+        if (reducedMotion) {
+
+            body.classList.remove("intro-active");
+
+            intro.style.display = "none";
+
+            if (intro.parentNode) {
+                intro.parentNode.removeChild(intro);
+            }
+
+            return;
+        }
+
+
+        // ----------------------------------------------------
+        // Normal intro
+        // ----------------------------------------------------
+
+        body.classList.add("intro-active");
+
+
+        // ----------------------------------------------------
+        // Remove intro after 1.5 seconds
+        // ----------------------------------------------------
+
+        window.setTimeout(function () {
+
+            body.classList.remove("intro-active");
+
+            if (intro && intro.parentNode) {
+                intro.parentNode.removeChild(intro);
+            }
+
+        }, 1500);
+
+    }
+
+
+    // --------------------------------------------------------
+    // Start when DOM is ready
+    // --------------------------------------------------------
+
+    if (document.readyState === "loading") {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            startIntro,
+            false
+        );
+
+    } else {
+
+        startIntro();
+
+    }
+
+})();

@@ -7,8 +7,8 @@
 
 const SnapScroll = {
     selector: "main > section",
-    jerkThreshold: 40,     // deltas below this are ignored (noise/overscroll)
-    snapThreshold: 400,    // deltas above this = free scroll, no snap
+    jerkThreshold: 100,     // deltas below this are ignored (noise/overscroll)
+    snapThreshold: 1000,    // deltas above this = free scroll, no snap
     idleTime: 140,         // ms of no wheel activity before we evaluate the burst
     smooth: true,
     behavior: "smooth",
