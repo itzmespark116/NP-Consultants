@@ -3,38 +3,29 @@
 // ----------------- intro-anim-manage.js ---------------------
 // ------------------------------------------------------------
 
-(() => {
+(function () {
 
     function setupAnimationManager() {
 
-        document.addEventListener("animationend", (event) => {
+        document.addEventListener("animationend", function (e) {
 
-            const element = event.target;
+            const element = e.target;
 
-            if (!(element instanceof HTMLElement)) {
+            if (!element || !element.style) {
                 return;
             }
 
-            // Only clean animations that actually belong
-            // to the intro system.
-            if (
-                element.classList.contains("intro") ||
-                element.closest(".intro")
-            ) {
-                element.style.removeProperty("animation");
-                element.style.removeProperty("animation-name");
-            }
+            element.style.removeProperty("animation");
+            element.style.removeProperty("animation-name");
 
         }, true);
 
     }
 
     if (document.readyState === "loading") {
-        document.addEventListener(
-            "DOMContentLoaded",
-            setupAnimationManager,
-            { once: true }
-        );
+        document.addEventListener("DOMContentLoaded", setupAnimationManager, {
+            once: true
+        });
     } else {
         setupAnimationManager();
     }

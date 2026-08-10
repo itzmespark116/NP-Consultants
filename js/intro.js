@@ -3,36 +3,26 @@
 // ----------------------- intro.js ---------------------------
 // ------------------------------------------------------------
 
-(() => {
+(function () {
 
     function startIntro() {
 
-        const body = document.body;
+        document.body.classList.add("intro-active");
+
         const intro = document.querySelector(".intro");
 
-        // No intro element = nothing to do
-        if (!intro) {
-            body.classList.remove("intro-active");
-            return;
-        }
+        setTimeout(function () {
 
-        // Start intro
-        body.classList.add("intro-active");
+            document.body.classList.remove("intro-active");
 
-        // Keep timing independent from browser animation events
-        window.setTimeout(() => {
-
-            body.classList.remove("intro-active");
-
-            // Remove intro safely
-            if (intro && intro.parentNode) {
+            if (intro) {
                 intro.remove();
             }
 
         }, 1500);
     }
 
-    // Run as soon as DOM is ready
+    // Works whether the script loads before or after DOMContentLoaded
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", startIntro, {
             once: true
@@ -42,4 +32,3 @@
     }
 
 })();
-
