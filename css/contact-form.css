@@ -92,3 +92,29 @@
     font-size: 1.4rem;
     font-weight: 300;
 }
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-info {
+        display: none;
+    }
+
+    .contact-form-user {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        border-left: 0.2px solid var(--border-2);
+        border-radius: 8px;
+    }
+}
