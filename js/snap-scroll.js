@@ -6,9 +6,9 @@
 // Long/fast scrolls are left as free-scroll (user is jumping far).
 
 const SnapScroll = {
-    selector: "main > section",
-    jerkThreshold: 100,     // deltas below this are ignored (noise/overscroll)
-    snapThreshold: 1000,    // deltas above this = free scroll, no snap
+    selector: "main > .banner",
+    jerkThreshold: 40,     // deltas below this are ignored (noise/overscroll)
+    snapThreshold: 100,    // deltas above this = free scroll, no snap
     idleTime: 140,         // ms of no wheel activity before we evaluate the burst
     smooth: true,
     behavior: "smooth",
