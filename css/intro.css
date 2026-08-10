@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------ */
 /* -------------------- NP Consultants ------------------------ */
-/* ----------------------- body.css --------------------------- */
+/* ---------------------- intro.css --------------------------- */
 /* ------------------------------------------------------------ */
 
 @import url(root.css);
@@ -10,6 +10,7 @@
 .body-intro {
     position: fixed;
     inset: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,19 +21,18 @@
     width: 100dvw;
 
     background: var(--background);
-    z-index: 9999;
     
+    z-index: 9999;
     animation: introFade 1.5s ease forwards;
 }
 
 body.intro-active {
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .body-intro img, .body-intro-img {
     align-self: center;
     justify-self: center;
-    
     width: clamp(120px, 14vw, 14vw);
     animation: logoFade 0.8s ease;
 }
@@ -42,40 +42,25 @@ body.intro-active {
     animation: mainShow 0.8s ease 1.5s forwards;
 }
 
-@keyframes introFade {
-    0%      { opacity: 0; }
-    0%, 70% { 
-        opacity: 1;
-        overscroll-behavior: none;
-        overflow: none;
-        cursor: none;
-    }
 
-    100% {
-        opacity: 0;
+
+@keyframes introFade {
+    0%  { opacity: 0; }
+    1%  { opacity: 1; }
+    70% { opacity: 1; }
+
+    100% { opacity: 0;
         visibility: hidden;
-        overscroll-behavior: inherit;
-        overflow: inherit;
-        cursor: inherit;
     }
 }
 
+
 @keyframes logoFade {
-    from { opacity: 0; transform: scale(0.8);}
-    to   { opacity: 1; transform: scale(1);}
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1);   }
 }
 
 @keyframes mainShow {
-    0% { opacity: 1; }
-    0% { 
-        opacity: 0;
-        overflow: hidden;
-        overscroll-behavior: none;
-    }
-
-    100% { 
-        opacity: 1;
-        overflow: inherit;
-        overscroll-behavior: inherit;
-    }
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }
