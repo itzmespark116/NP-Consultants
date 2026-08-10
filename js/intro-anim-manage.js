@@ -5,29 +5,32 @@
 
 (function () {
 
-    function setupAnimationManager() {
+    function animationEndHandler(event) {
 
-        document.addEventListener("animationend", function (e) {
+        var element = event.target;
 
-            const element = e.target;
+        if (!element || !element.style) {
+            return;
+        }
 
-            if (!element || !element.style) {
-                return;
-            }
-
-            element.style.removeProperty("animation");
-            element.style.removeProperty("animation-name");
-
-        }, true);
-
+        element.style.removeProperty("animation");
+        element.style.removeProperty("animation-name");
     }
 
-    if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", setupAnimationManager, {
-            once: true
-        });
-    } else {
-        setupAnimationManager();
-    }
+
+    // Standard animation event
+    document.addEventListener(
+        "animationend",
+        animationEndHandler,
+        true
+    );
+
+
+    // Older WebKit browsers
+    document.addEventListener(
+        "webkitAnimationEnd",
+        animationEndHandler,
+        true
+    );
 
 })();
