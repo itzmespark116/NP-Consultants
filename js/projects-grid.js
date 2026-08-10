@@ -12,7 +12,7 @@ let rotationTimers = [];
 
 async function loadProjects() {
     try {
-        const response = await fetch("js/projects.json");
+        const response = await fetch("data/projects.json");
 
         if (!response.ok) {
             throw new Error(`Failed to load projects.json: ${response.status}`);

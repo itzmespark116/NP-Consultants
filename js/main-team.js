@@ -31,7 +31,7 @@ function buildQualifications(qualifications) {
     return (qualifications || []).map(q => `<li>${q}</li>`).join("");
 }
 
-fetch("js/team.json")
+fetch("data/team.json")
 .then(res => {
     if (!res.ok) {
         throw new Error("team.json not found");

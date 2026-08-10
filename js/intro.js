@@ -3,51 +3,37 @@
 // ----------------------- intro.js ---------------------------
 // ------------------------------------------------------------
 
-(function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    function startIntro() {
+    const intro = document.querySelector(".body-intro");
 
-        var body = document.body;
-        var intro = document.querySelector(".intro");
+    if (!intro) return;
 
-        // Safety check
-        if (!body) {
-            return;
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // Skip intro completely
+    if (reducedMotion) {
+
+        document.body.classList.remove("intro-active");
+
+        intro.remove();
+
+        return;
+    }
+
+    // Normal intro
+    document.body.classList.add("intro-active");
+
+    setTimeout(() => {
+
+        document.body.classList.remove("intro-active");
+
+        if (intro && intro.parentNode) {
+            intro.remove();
         }
 
-        // Activate intro
-        body.classList.add("intro-active");
+    }, 1500);
 
-        // Remove intro after 1.5 seconds
-        setTimeout(function () {
-
-            body.classList.remove("intro-active");
-
-            // Remove intro safely
-            if (intro && intro.parentNode) {
-                intro.parentNode.removeChild(intro);
-            }
-
-        }, 1500);
-    }
-
-
-    // --------------------------------------------------------
-    // Start as soon as the DOM is ready
-    // --------------------------------------------------------
-
-    if (document.readyState === "loading") {
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            startIntro,
-            false
-        );
-
-    } else {
-
-        startIntro();
-
-    }
-
-})();
+});
