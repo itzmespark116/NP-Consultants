@@ -44,18 +44,19 @@
 }
 
 .contact-form-info-box svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
     fill: var(--color);
 }
 
 .contact-form-info-box h3 {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
 }
 
 .contact-form-info-box p {
+    font-size: 0.95rem;
     transition: transform .25s ease, color .25s ease;
 }
 

@@ -13,7 +13,7 @@
     "employees": [
         {
             "name": "Anoma Rajaguru",
-            "role": "Draftsman",
+            "role": "Managing Partner",
             "image": "",
             "qualifications": [
                 "National Certificate in Engineering Draftsmanship (NCED)",
@@ -73,7 +73,7 @@
             ]
         },
         {
-            "name": "A.P.K. Dushan",
+            "name": "A. P. K. Dushan",
             "role": "Draftsman",
             "image": "img/our-team/NP-Consultants---Draftsman---A-P-K-Dushan.jpeg",
             "qualifications": [
@@ -82,7 +82,7 @@
             ]
         },
         {
-            "name": "Y.K. Ruwindana Wijayarathna",
+            "name": "Y. K. Ruwindana Wijayarathna",
             "role": "Draftsman",
             "image": "img/our-team/NP-Consultants---Draftsman---Y-K-R-Wijayarathna.jpeg",
             "qualifications": [

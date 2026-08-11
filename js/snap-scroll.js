@@ -2,14 +2,13 @@
 // -------------------- NP Consultants ------------------------
 // -------------------- snap-scroll.js ------------------------
 // ------------------------------------------------------------
-// Snaps on short, deliberate scrolls. Ignores overscroll/jerks.
-// Long/fast scrolls are left as free-scroll (user is jumping far).
+// Snaps based on how far the current section has scrolled past
+// the viewport edge, not on scroll speed/distance.
 
 const SnapScroll = {
-    selector: "main > .banner",
-    jerkThreshold: 40,     // deltas below this are ignored (noise/overscroll)
-    snapThreshold: 100,    // deltas above this = free scroll, no snap
-    idleTime: 140,         // ms of no wheel activity before we evaluate the burst
+    selector: "main > section",
+    edgeThreshold: 0.4,    // 40% of viewport height
+    idleTime: 140,
     smooth: true,
     behavior: "smooth",
 
@@ -32,8 +31,6 @@ const SnapScroll = {
         window.addEventListener("touchend", e => this.handleTouchEnd(e), { passive: true });
     },
 
-    // Wheel events accumulate freely (native scroll is never blocked).
-    // Once the burst goes idle, we decide what to do with it.
     handleWheel(e) {
         if (this.snapping) return;
 
@@ -57,14 +54,10 @@ const SnapScroll = {
     evaluateBurst() {
         const delta = this.accumulator;
         this.accumulator = 0;
-
-        const distance = Math.abs(delta);
-
-        if (distance < this.jerkThreshold) return;     // too small, ignore
-        if (distance > this.snapThreshold) return;     // deliberate long scroll, let it free-scroll
+        if (delta === 0) return;
 
         this.index = this.getCurrentSection();
-        delta > 0 ? this.next() : this.previous();
+        delta > 0 ? this.tryNext() : this.tryPrevious();
     },
 
     handleKeyboard(e) {
@@ -72,25 +65,45 @@ const SnapScroll = {
 
         if (e.key === "ArrowDown" || e.key === "PageDown") {
             e.preventDefault();
-            this.next();
+            this.index = this.getCurrentSection();
+            this.tryNext();
         }
 
         if (e.key === "ArrowUp" || e.key === "PageUp") {
             e.preventDefault();
-            this.previous();
+            this.index = this.getCurrentSection();
+            this.tryPrevious();
         }
     },
 
-    next() {
+    // Only advance if current section's bottom has scrolled above
+    // 40% of viewport height.
+    tryNext() {
         if (this.index >= this.sections.length - 1) return;
 
+        const rect = this.sections[this.index].getBoundingClientRect();
+        const limit = window.innerHeight * this.edgeThreshold;
+
+        if (rect.bottom < limit) this.next();
+    },
+
+    // Only go back if current section's top has scrolled below
+    // 60% of viewport height (mirror of the 40% threshold).
+    tryPrevious() {
+        if (this.index <= 0) return;
+
+        const rect = this.sections[this.index].getBoundingClientRect();
+        const limit = window.innerHeight * (1 - this.edgeThreshold);
+
+        if (rect.top > limit) this.previous();
+    },
+
+    next() {
         this.index++;
         this.snap();
     },
 
     previous() {
-        if (this.index <= 0) return;
-
         this.index--;
         this.snap();
     },

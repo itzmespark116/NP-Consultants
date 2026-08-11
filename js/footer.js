@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!footer) return;
 
+    // Admin pages are one directory deeper
+    const pathPrefix = footer.id === "admin" ? "../" : "";
+
     footer.innerHTML = `
 
         <div class="footer-main">
@@ -16,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="footer-logo-card">
                 <img
                     class="theme-logo"
-                    data-dark="icons/icon_dark.png"
-                    data-light="icons/icon_light.png"
-                    src="icons/icon_dark.png"
+                    data-dark="${pathPrefix}icons/icon_dark.png"
+                    data-light="${pathPrefix}icons/icon_light.png"
+                    src="${pathPrefix}icons/icon_dark.png"
                     alt="NP Consultants"
                 >
             </div>
@@ -48,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <p onclick="window.location.href='mailto:info@npconsultants.info'">
                         <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6l-8 5-8-5v12a2 2 0 0 0 2 2h16z"/>
+                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0-2 2v-?"/>
                         </svg>
                         info@npconsultants.info
                     </p>
 
                     <p onclick="window.location.href='mailto:nandanarce@gmail.com'">
                         <svg class="footer-icon" viewBox="0 0 24 24">
-                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6l-8 5-8-5v12a2 2 0 0 0 2 2h16z"/>
+                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2V6l8 5 8-5v12a2 2 0 0 0-2 2h-16a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
                         </svg>
                         nandanarce@gmail.com
                     </p>
@@ -67,11 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="footer-nav-card">
 
                 <ul>
-                    <li><a href="#main">Home</a></li>
-                    <li><a href="#main-about">About Us</a></li>
-                    <li><a href="#main-services">Our Services</a></li>
-                    <li><a href="#main-team">Our Team</a></li>
-                    <li><a href="#main-contact">Contact Us</a></li>
+                    <li><a href="${pathPrefix}index.html">Home</a></li>
+                    <li><a href="${pathPrefix}index.html#main-about">About Us</a></li>
+                    <li><a href="${pathPrefix}index.html#main-services">Our Services</a></li>
+                    <li><a href="${pathPrefix}index.html#main-team">Our Team</a></li>
+                    <li><a href="${pathPrefix}index.html#main-contact">Contact Us</a></li>
                 </ul>
 
             </div>
