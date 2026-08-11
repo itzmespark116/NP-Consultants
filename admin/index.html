@@ -6,8 +6,10 @@
     <title>NP Consultants &nbsp;&bull;&nbsp; Admin</title>
 
     <link rel="stylesheet" href="../css/root.css">
-    <link rel="stylesheet" href="../css/body.css">
-    <link rel="stylesheet" href="../css/admin-nav.css">
+    <link rel="stylesheet" href="css/admin-body.css">
+    <!-- <link rel="stylesheet" href="../css/intro.css"> -->
+    <link rel="stylesheet" href="css/admin-nav.css">
+    <link rel="stylesheet" href="css/admin-main.css">
 
     <link rel="stylesheet" href="../css/placeholder.css">
     <link rel="stylesheet" href="../css/limiter.css">
@@ -16,54 +18,46 @@
 <body><div class="show-screen">
 
 <!-- <div class="body-intro">
-    <img class="theme-logo" data-dark="icons/icon_dark.png" data-light="icons/icon_light.png" src="icons/icon_dark.png" alt="NP Consultants">
+    <img class="theme-logo" data-dark="../icons/icon_dark.png" data-light="icons/icon_light.png" src="../icons/icon_dark.png" alt="NP Consultants">
 </div> -->
 
 <main>
     
-<nav id="admin" class="admin-nav">
+<nav id="active" class="admin-nav"></nav>
 
-        <a href="../index.html" class="admin-navbar-logo">
-            <img class="theme-logo" data-dark="../icons/icon_dark.png" data-light="../icons/icon_light.png" src="${pathPrefix}icons/icon_dark.png" alt="NP Consultants">
-        </a>
+<!-- --------------------------------------------------------------- -->
 
-    <div class="admin-navbar-links">
+<main class="admin-main-container">
 
-        <ul>
-            <li>
-                <a href="index.html" class="admin-active">
-                    Dashboard
-                </a>
-            </li>
-        </ul>
+    <div class="admin-panel">
+
+        <div class="admin-panel-glow" aria-hidden="true"></div>
+        <div class="admin-panel-beam" aria-hidden="true"></div>
+
+        <div class="admin-welcome-msg">
+            <h2>Admin Panel</h2>
+            <p>Welcome Back...</p>
+        </div>
+
+        
+
+        <button class="admin-button admin-button-read" onclick="location.href='feedbacks.html'">
+            Read Feedbacks
+        </button>
+
+        <button class="admin-button admin-button-edit" onclick="location.href='webeditor.html'">
+            Edit Website
+        </button>
+
+        <button class="admin-button admin-button-sign-in" onclick="location.href='login.html'">
+            Sign In
+        </button>
 
     </div>
 
-    <button class="admin-themeButton" id="themeToggle">
-        <img id="themeIcon" src="../icons/lightMode.svg">
-    </button>
+</main>
 
-    <a href="../index.html" class="admin-website-link">
-        WEBSITE
-    </a>
-
-</nav>
-
-
-
-
-
-
-
-<div class="placeholder-100vh">
-    <h2>404</h2>
-    <p>Under Development</p>
-</div>
-
-
-
-
-
+<!-- --------------------------------------------------------------- -->
 
 </main>
 </div>
@@ -79,9 +73,12 @@
 
 </body>
 
+<script src="js/nav-print.js"></script>
+
 <script src="../js/theme.js"></script>
 <script src="../js/intro.js"></script>
 <script src="../js/intro-anim-manage.js"></script>
-<script src="../js/snap-scroll.js"></script>
+<script src="js/admin-nav-anim-manage.js"></script>
+<script src="js/admin-main-panel.js"></script>
 
 </html>

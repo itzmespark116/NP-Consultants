@@ -1,0 +1,231 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* -------------------- admin-main.css ------------------------ */
+/* ------------------------------------------------------------ */
+
+.admin-main-container {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    background: var(--admin-main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-panel {
+    --beam-angle: 0deg;
+
+    position: relative;
+    width: min(390px, 82vw);
+    padding: 45px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+
+    border-radius: 28px;
+    background: var(--glass);
+    border: 1px solid var(--border-2);
+
+    isolation: isolate;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-panel-beam,
+.admin-panel-glow {
+    position: absolute;
+    inset: -1px;
+    border-radius: 28px;
+    pointer-events: none;
+
+    background: conic-gradient(
+        from var(--beam-angle),
+        transparent 0deg,
+        transparent 18deg,
+        color-mix(in srgb, var(--accent) 4%, transparent) 36deg,
+        color-mix(in srgb, var(--accent) 55%, transparent) 48deg,
+        var(--accent) 56deg,
+        color-mix(in srgb, var(--accent) 25%, white) 61deg,
+        transparent 65deg,
+        transparent 360deg
+    );
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-panel-beam {
+    padding: 2px;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-panel-glow {
+    filter: blur(14px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-panel .admin-welcome-msg h2 {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-weight: 100;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    border-right: 2px solid var(--accent);
+
+    animation:
+        typing 1.5s steps(11) forwards,
+        blink 0.7s step-end 2,
+        cursor-stop 0s 1.5s forwards;
+}
+
+.admin-panel .admin-welcome-msg p {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-weight: 100;
+    font-size: 1.4rem;
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+
+    border-right: 2px solid var(--accent);
+
+    animation:
+        typing 1.5s steps(11) forwards,
+        blink 0.7s step-end 2,
+        cursor-stop 0s 1.5s forwards;
+}
+
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
+@keyframes cursor-stop { to { border-color: transparent; } }
+
+/* ------------------------------------------------------------ */
+
+.admin-button {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-height: 64px;
+    padding: 10px 20px;
+
+    border: 0.1px solid var(--border-2);
+    border-radius: 999px;
+
+    background: var(--glass);
+    color: var(--color);
+
+    font-size: 1.35rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-button:hover {
+    transform: scale(1.03);
+    background: var(--glass-2);
+    border-color: var(--border);
+
+    box-shadow:
+        0 8px 24px
+        color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-button-sign-in {
+    background: color-mix( in srgb, var(--accent) 20%, var(--base) );
+
+    border-color: var(--color);
+    border-color: color-mix( in srgb, var(--accent) 25%, var(--border-2));
+    border-image: color-mix( in srgb, var(--accent) 25%, var(--border-2));
+}
+
+.admin-button-sign-in:hover {
+    background: color-mix( in srgb, var(--accent) 35%, var(--base) );
+    border-color: var(--accent);
+}
+
+/* ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+    .admin-panel-beam,
+    .admin-panel-glow {
+        display: none;
+    }
+
+    .admin-button {
+        transition: none;
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+    .admin-panel {
+        width: min(360px, 86vw);
+        padding: 32px 24px;
+        gap: 14px;
+    }
+
+    .admin-button {
+        min-height: 60px;
+        font-size: 1.2rem;
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-height: 500px) {
+    .admin-panel {
+        padding: 24px;
+        gap: 10px;
+    }
+
+    .admin-button {
+        min-height: 52px;
+    }
+}

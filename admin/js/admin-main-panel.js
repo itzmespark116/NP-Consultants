@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* -------------------- admin-main.js -------------------------- */
+/* ------------------------------------------------------------ */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const panel = document.querySelector(".admin-panel");
+
+    if (!panel) return;
+
+    let angle = 0;
+    let speed = 42;
+    let targetSpeed = 42;
+
+    const idleSpeed = 42;
+    const hoverSpeed = 240;
+
+    let last = performance.now();
+
+    function animate(now) {
+        const dt = Math.min((now - last) / 1000, 0.05);
+        last = now;
+
+        const acceleration = 30 * (targetSpeed - speed);
+        speed += acceleration * dt;
+
+        angle += speed * dt;
+
+        panel.style.setProperty(
+            "--beam-angle",
+            `${angle % 360}deg`
+        );
+
+        requestAnimationFrame(animate);
+    }
+
+    panel.addEventListener("pointerenter", () => {
+        targetSpeed = hoverSpeed;
+    });
+
+    panel.addEventListener("pointerleave", () => {
+        targetSpeed = idleSpeed;
+    });
+
+    panel.addEventListener("focusin", () => {
+        targetSpeed = hoverSpeed;
+    });
+
+    panel.addEventListener("focusout", () => {
+        targetSpeed = idleSpeed;
+    });
+
+    requestAnimationFrame(animate);
+});

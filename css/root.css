@@ -41,8 +41,8 @@
 
     --main-projects-background:
         var(--edge-fade),
-        radial-gradient(circle at left,  color-mix(in srgb, var(--accent) 22%, var(--base)), var(--base) 65%),
-        radial-gradient(circle at right, color-mix(in srgb, var(--accent) 22%, var(--base)), var(--base) 65%),
+        radial-gradient(circle at left,  color-mix(in srgb, var(--accent) 22%, transparent), var(--base) 65%),
+        radial-gradient(circle at right, color-mix(in srgb, var(--accent) 22%, transparent), var(--base) 65%),
         var(--base);
 
     --main-contact-background: color-mix(in srgb, var(--accent) 40%, var(--base) 60%);
@@ -51,6 +51,11 @@
     --projects-banner-background : color-mix(in srgb, var(--base) 40%, transparent 60%);
     --services-banner-background : color-mix(in srgb, var(--base) 40%, transparent 60%);
     --contact-form-background : color-mix(in srgb, var(--accent) 40%, var(--base) 60%);
+
+    --admin-main-background  :
+        radial-gradient(circle at left,  color-mix(in srgb, var(--accent) 22%, transparent), transparent 50%),
+        radial-gradient(circle at right, color-mix(in srgb, var(--accent) 22%, transparent), transparent 50%),
+        var(--base);
 
     --footer-background : #e1e1e1;
 

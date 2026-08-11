@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Admin pages are one directory deeper
     const nav = document.querySelector("nav");
-    const pathPrefix = nav?.id === "admin" ? "../" : "";
+    const pathPrefix = ( nav?.id === "admin" || nav?.id === "active") ? "../" : "";
 
     function setTheme(dark, save = true) {
 
