@@ -1,13 +1,9 @@
-// ------------------------------------------------------------
-// -------------------- NP Consultants ------------------------
-// ------------------- contact-form.js -------------------------
-// ------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
     const info = document.getElementById("contact-form-info");
     const form = document.getElementById("contact-form-user");
     if (!info || !form) return;
-    fetch("data/contact.json")
+    fetch("../data/contact.json")
         .then(response => response.json())
         .then(data => {
             const groupedInfo = {};

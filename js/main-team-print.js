@@ -1,20 +1,21 @@
 
 
-const PLACEHOLDER_IMAGE = "img/placeholder-profile.jpg";
+const MAIN_TEAM_PATH = "../";
+const PLACEHOLDER_IMAGE = `${MAIN_TEAM_PATH}img/placeholder-profile.jpg`;
 
 function imageFallback(src, alt) {
-    return `<img class="main-team-image" src="${src || PLACEHOLDER_IMAGE}" alt="${alt}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">`;
+    return `<img class="main-team-image" src="${src ? `${MAIN_TEAM_PATH}${src}` : PLACEHOLDER_IMAGE}" alt="${alt}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">`;
 }
 
 function directorImageFallback(src, alt) {
-    return `<img class="main-team-dir-image" src="${src || PLACEHOLDER_IMAGE}" alt="${alt}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">`;
+    return `<img class="main-team-dir-image" src="${src ? `${MAIN_TEAM_PATH}${src}` : PLACEHOLDER_IMAGE}" alt="${alt}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">`;
 }
 
 function buildQualifications(qualifications) {
     return (qualifications || []).map(q => `<li>${q}</li>`).join("");
 }
 
-fetch("data/team.json")
+fetch("../data/team.json")
     .then(res => {
         if (!res.ok) throw new Error("team.json not found");
         return res.json();

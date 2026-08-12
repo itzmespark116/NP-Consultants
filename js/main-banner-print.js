@@ -1,14 +1,10 @@
-// ------------------------------------------------------------
-// -------------------- NP Consultants ------------------------
-// ------------------ main-banner-print.js --------------------
-// ------------------------------------------------------------
-
-fetch("data/main-banner.json")
+const MAIN_BANNER_PATH = "../";
+fetch("../data/main-banner.json")
     .then(response => response.json())
     .then(data => {
         document.querySelector(".banner").innerHTML = `
-            <video class="banner-video" autoplay muted loop playsinline preload="metadata" poster="${data["main-banner-poster"]}" oncontextmenu="return false;">
-                <source src="${data["main-banner-video"]}" type="video/mp4">
+            <video class="banner-video" autoplay muted loop playsinline preload="metadata" poster="${MAIN_BANNER_PATH}${data["main-banner-poster"]}" oncontextmenu="return false;">
+                <source src="${MAIN_BANNER_PATH}${data["main-banner-video"]}" type="video/mp4">
             </video>
             <div class="banner-overlay"></div>
             <div class="banner-overlay-fade"></div>

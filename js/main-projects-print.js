@@ -1,14 +1,11 @@
-// ------------------------------------------------------------
-// -------------------- NP Consultants ------------------------
-// ---------------- main-projects-print.js --------------------
-// ------------------------------------------------------------
 
 const mainProjects = document.querySelector(".main-projects");
-const MAIN_PROJECTS_FALLBACK = "img/placeholder-project.jpg";
+const MAIN_PROJECTS_PATH = "../";
+const MAIN_PROJECTS_FALLBACK = `${MAIN_PROJECTS_PATH}img/placeholder-project.jpg`;
 
 async function loadFeaturedProjects() {
     try {
-        const response = await fetch("data/projects.json");
+        const response = await fetch("../data/projects.json");
 
         if (!response.ok) {
             throw new Error(`Failed to load projects.json: ${response.status}`);
@@ -43,7 +40,7 @@ function renderFeaturedProjects(data, projects) {
                 <article class="main-projects-card">
                     <div class="main-projects-image">
                         <img
-                            src="${project["photo-main"] || MAIN_PROJECTS_FALLBACK}"
+                            src="${project["photo-main"] ? `${MAIN_PROJECTS_PATH}${project["photo-main"]}` : MAIN_PROJECTS_FALLBACK}"
                             alt="${project.title || "Project"}"
                             onerror="this.onerror=null;this.src='${MAIN_PROJECTS_FALLBACK}'"
                         >

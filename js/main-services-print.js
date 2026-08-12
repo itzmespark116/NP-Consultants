@@ -1,6 +1,5 @@
-
-
-fetch("data/main-services.json")
+const MAIN_SERVICES_PATH = "../";
+fetch("../data/main-services.json")
     .then(response => response.json())
     .then(data => {
         document.querySelector(".main-services").innerHTML = `
@@ -17,7 +16,7 @@ fetch("data/main-services.json")
                     </div>
                 `).join("")}
                 <div class="main-services-image">
-                    <img src="${data["main-services-image"]}" alt="Our Services">
+                    <img src="${MAIN_SERVICES_PATH}${data["main-services-image"]}" alt="Our Services">
                 </div>
                 ${data["main-services"].slice(4).map(service => `
                     <div class="main-services-panel main-services-panel-right">

@@ -2,7 +2,7 @@
   "main-services-title": "Our Services",
   "main-services-description": "We Provide Various Engineering Services from the Initial Planning Stage to the Full Completion",
   "main-services-button": "Read More",
-  "main-services-buttonLink": "services.html",
+  "main-services-buttonLink": "services/",
   "main-services-image": "img/placeholder-project.jpg",
   "main-services": [
     {

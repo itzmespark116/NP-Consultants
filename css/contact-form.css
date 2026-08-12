@@ -141,6 +141,7 @@
 .contact-form-user-input-large textarea:not(:placeholder-shown):invalid {
     color: color-mix(in srgb, red 65%, var(--color));
     border: 0.4px solid color-mix(in srgb, red 65%, transparent);
+    border-image: color-mix(in srgb, red 65%, transparent);
     cursor: text;
 }
 .contact-form-user-input input:not(:placeholder-shown):invalid + .labelline,

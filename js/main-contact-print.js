@@ -1,4 +1,4 @@
-fetch("data/main-contact.json")
+fetch("../data/main-contact.json")
     .then(res => res.json())
     .then(data => {
         document.querySelector(".main-contact").innerHTML = `

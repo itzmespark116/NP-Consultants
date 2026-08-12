@@ -1,13 +1,9 @@
-// ------------------------------------------------------------
-// -------------------- NP Consultants ------------------------
-// ------------------- services-print.js -----------------------
-// ------------------------------------------------------------
 
 const servicesContainer = document.querySelector(".services-container");
 
 async function loadServices() {
     try {
-        const response = await fetch("data/services.json");
+        const response = await fetch("../data/services.json");
 
         if (!response.ok) {
             throw new Error(`Failed to load services.json: ${response.status}`);

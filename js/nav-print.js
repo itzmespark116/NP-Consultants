@@ -1,7 +1,3 @@
-// ------------------------------------------------------------
-// -------------------- NP Consultants ------------------------
-// --------------------- nav-print.js -------------------------
-// ------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9,64 +5,108 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!nav) return;
 
-    // --------------------------------------------------------
-    // ---------------------- ADMIN NAV -----------------------
-    // --------------------------------------------------------
-
     if (nav.id === "admin") {
 
-        // nav.innerHTML = `
+        nav.innerHTML = `
 
-        //     <a href="index.html" class="admin-navbar-logo">
-        //         <img class="theme-logo"
-        //              data-dark="icons/icon_dark.png"
-        //              data-light="icons/icon_light.png"
-        //              src="icons/icon_dark.png"
-        //              alt="NP Consultants">
-        //     </a>
+            <a href="index.html" class="admin-navbar-logo">
+                <img class="theme-logo"
+                     data-dark="../icons/icon_dark.png"
+                     data-light="../icons/icon_light.png"
+                     src="../icons/icon_dark.png"
+                     alt="NP Consultants">
+            </a>
 
-        //     <div class="admin-navbar-links">
+            <div class="admin-navbar-links">
 
-        //         <ul>
-        //             <li>
-        //                 <a href="index.html" class="admin-active">
-        //                     Dashboard
-        //                 </a>
-        //             </li>
-        //         </ul>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            Dashboard
+                        </a>
+                    </li>
 
-        //     </div>
+                    <li>
+                        <a href="editor.html">
+                            Editor
+                        </a>
+                    </li>
 
-        //     <a href="../index.html" class="admin-website-link">
-        //         WEBSITE
-        //     </a>
+                    <li>
+                        <a href="feedbacks.html">
+                            Feedback
+                        </a>
+                    </li>
 
-        // `;
+                    <li>
+                        <a href="visitors.html">
+                            Visitors
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="activity.html">
+                            Activity
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="media.html">
+                            Media
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="backups.html">
+                            Backups
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <a href="../home/" class="admin-website-link">
+                WEBSITE
+            </a>
+        `;
+
+        const currentPage =
+            window.location.pathname.split("/").pop() || "index.html";
+
+        nav.querySelectorAll(".admin-navbar-links a").forEach(link => {
+
+            const linkPage =
+                link.getAttribute("href").split("/").pop();
+
+            if (linkPage === currentPage) {
+                link.classList.add("admin-active");
+            }
+
+        });
 
         return;
     }
 
-    // --------------------------------------------------------
-    // ---------------------- PUBLIC NAV ----------------------
-    // --------------------------------------------------------
-
-    // Public pages are unchanged
-    const pathPrefix = "";
-
     nav.innerHTML = `
 
-        <a href="${pathPrefix}index.html" class="navbar-logo">
+        <a href="../home/" class="navbar-logo">
             <img class="theme-logo"
-                 data-dark="${pathPrefix}icons/icon_dark.png"
-                 data-light="${pathPrefix}icons/icon_light.png"
-                 src="${pathPrefix}icons/icon_dark.png"
+                 data-dark="../icons/icon_dark.png"
+                 data-light="../icons/icon_light.png"
+                 src="../icons/icon_dark.png"
                  alt="NP Consultants">
         </a>
 
         <input type="checkbox" id="nav-toggle">
 
         <button class="themeButton" id="themeToggle">
-            <img id="themeIcon" src="${pathPrefix}icons/lightMode.svg">
+            <img id="themeIcon" src="../icons/lightMode.svg">
         </button>
 
         <label for="nav-toggle" class="open-nav">
@@ -82,24 +122,23 @@ document.addEventListener("DOMContentLoaded", () => {
             <label for="nav-toggle" class="close-nav"></label>
 
             <ul>
-                <li><a href="${pathPrefix}index.html">Home</a></li>
-                <li><a href="${pathPrefix}services.html">Services</a></li>
-                <li><a href="${pathPrefix}projects.html">Projects</a></li>
-                <li><a href="${pathPrefix}contact.html">Contact Us</a></li>
+                <li><a href="../home/">Home</a></li>
+                <li><a href="../services/">Services</a></li>
+                <li><a href="../projects/">Projects</a></li>
+                <li><a href="../contact/">Contact Us</a></li>
             </ul>
 
         </div>
     `;
 
-    // Get current page
     const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
+        window.location.pathname.split("/").filter(Boolean).pop()
+        || "index.html";
 
-    // Add active class
     nav.querySelectorAll(".navbar-links a").forEach(link => {
 
         const linkPage =
-            link.getAttribute("href").split("/").pop();
+            link.getAttribute("href").split("/").filter(Boolean).pop();
 
         if (linkPage === currentPage) {
             link.classList.add("active");

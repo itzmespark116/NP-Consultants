@@ -1,18 +1,15 @@
-// ------------------------------------------------------------
-// -------------------- NP Consultants ------------------------
-// ------------------- projects-grid.js ----------------------- 
-// ------------------------------------------------------------
 
 const projectsContainer = document.querySelector(".projects-container");
 
-const FALLBACK_IMAGE = "img/placeholder-image.jpg";
+const PROJECTS_PATH = "../";
+const FALLBACK_IMAGE = `${PROJECTS_PATH}img/placeholder-image.jpg`;
 
 let projects = [];
 let rotationTimers = [];
 
 async function loadProjects() {
     try {
-        const response = await fetch("data/projects.json");
+        const response = await fetch("../data/projects.json");
 
         if (!response.ok) {
             throw new Error(`Failed to load projects.json: ${response.status}`);
@@ -26,9 +23,6 @@ async function loadProjects() {
         console.error("Projects failed to load:", error);
     }
 }
-
-// Attaches an onerror fallback to an <img>, swapping to the
-// placeholder image if the source fails to load (missing / 404 / etc).
 function withImageFallback(img) {
     img.addEventListener("error", () => {
         if (img.src.endsWith(FALLBACK_IMAGE)) return; // avoid infinite loop
@@ -95,7 +89,7 @@ function createProjectCard(project, index) {
     card.innerHTML = `
         <div class="project-card-image">
             <img
-                src="${images[0] || FALLBACK_IMAGE}"
+                src="${images[0] ? `${PROJECTS_PATH}${images[0]}` : FALLBACK_IMAGE}"
                 alt="${project.title || "Project"}"
             >
         </div>
@@ -135,7 +129,7 @@ function startImageRotation(card, images) {
         image.style.opacity = "0";
 
         setTimeout(() => {
-            image.src = images[currentIndex] || FALLBACK_IMAGE;
+            image.src = images[currentIndex] ? `${PROJECTS_PATH}${images[currentIndex]}` : FALLBACK_IMAGE;
             image.style.opacity = "1";
         }, 250);
     }, 5000);
@@ -211,7 +205,7 @@ function openProjectGallery(project) {
 
         const img = document.createElement("img");
 
-        img.src = image || FALLBACK_IMAGE;
+        img.src = image ? `${PROJECTS_PATH}${image}` : FALLBACK_IMAGE;
         img.alt = `${project.title || "Project"} - Image ${index + 1}`;
         img.loading = "lazy";
 

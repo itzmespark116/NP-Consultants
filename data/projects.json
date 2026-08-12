@@ -1,369 +1,368 @@
 {
-    "main-projects-title": "Our Projects",
-    "main-projects-description": "Our work ranges from small residential projects to large-scale commercial buildings and high-rise developments.",
-    "main-projects-button": "View All Projects",
-    "main-projects-buttonLink": "projects.html",
-
-    "projects": [
-        {
-            "id": 1,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Home Project",
-            "topic": "Mr. Arjuna",
-            "description": "Residential structural design project in Maharagama.",  
-            "location": "Maharagama",
-            "year": "2017",
-            "photo-main": "img/projects/Arjuna House-Selected (1).jpg",
-            "photos": [
-                "img/projects/Arjuna House-Selected (3).jpg"
-            ]
-        },
-        {
-            "id": 2,
-            "featured" : 1,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Cargills Food City",
-            "topic": "Cargills (Pvt) Ltd",
-            "description": "Structural design project for a Cargills Food City.",
-            "location": "Mahara",
-            "year": "2020",
-            "photo-main": "img/projects/05 (3).jpg",
-            "photos": [
-                "img/projects/05 (4).jpg",
-                "img/projects/05 (2).jpg"
-            ]
-        },
-        {
-            "id": 3,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Cargills Distribution Center",
-            "topic": "Cargills Quality Foods (Pvt) Ltd",
-            "description": "Structural design project for the Cargills Distribution Center.",
-            "location": "Miriswatta",
-            "year": "2018",
-            "photo-main": "img/projects/01 (1).jpg",
-            "photos": [
-                "img/projects/01 (2).jpg"
-            ]
-        },
-        {
-            "id": 4,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Home Project",
-            "topic": "Mr. Cyrill",
-            "description": "Residential structural design project in Kurana.",
-            "location": "Kurana",
-            "year": "",
-            "photo-main": "img/projects/House 2.jpg",
-            "photos": [
-                "img/projects/House 1.jpg"
-            ]
-        },
-        {
-            "id": 5,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Commercial Building",
-            "topic": "HNB PLC",
-            "description": "Commercial building structural design project.",
-            "location": "Kegalle",
-            "year": "2015",
-            "photo-main": "img/projects/HNB Kegalle-Selected (2).jpg",
-            "photos": []
-        },
-        {
-            "id": 6,
-            "featured" : 1,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Refurbishing of Existing Filling Stations",
-            "topic": "IOC PLC",
-            "description": "Refurbishment and structural design of existing filling stations.",
-            "location": "Ambalangoda, Mawanella, Pahathgama, Hali-ela, Galewela",
-            "year": "2015",
-            "photo-main": "img/projects/08 (5).jpg",
-            "photos": [
-                "img/projects/08 (2).jpg",
-                "img/projects/08 (3).jpg",
-                "img/projects/08 (4).jpg"
-            ]
-        },
-        {
-            "id": 7,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Eight Storied Multi Activity Center",
-            "topic": "Colombo Municipal Council",
-            "description": "Structural design project for an eight-storied multi activity center.",
-            "location": "Mattakkuliya",
-            "year": "2019",
-            "photo-main": "img/projects/Mattakkuliya Building 2.jpg",
-            "photos": [
-                "img/projects/Mattakkuliya Building 1.jpg"
-            ]
-        },
-        {
-            "id": 8,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Home Project",
-            "topic": "Mr. Paul",
-            "description": "Residential structural design project in Kaluthara.",
-            "location": "Kaluthara",
-            "year": "2011",
-            "photo-main": "img/projects/Mr.Paul House 5.jpg",
-            "photos": [
-                "img/projects/Mr.Paul House 2.jpg",
-                "img/projects/Mr.Paul House 3.jpg",
-                "img/projects/Mr.Paul House 4.jpg"
-            ]
-        },
-        {
-            "id": 9,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Extension to Existing Building",
-            "topic": "Phoenix Plastic Factory",
-            "description": "Structural design project for the extension of an existing factory building.",
-            "location": "Horana",
-            "year": "2018",
-            "photo-main": "img/projects/Phoenix Horana 4.jpg",
-            "photos": [
-                "img/projects/Phoenix Horana 1.jpg",
-                "img/projects/Phoenix Horana 2.jpg",
-                "img/projects/Phoenix Horana 3.jpg"
-            ]
-        },
-        {
-            "id": 10,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Home Project",
-            "topic": "Mrs. K A E A Fernando",
-            "description": "Residential structural design project in Kadirana.",
-            "location": "Kadirana",
-            "year": "2020",
-            "photo-main": "img/projects/Prasantha House (3).jpg",
-            "photos": [
-                "img/projects/Prasantha House (4).jpg",
-                "img/projects/Prasantha House (2).jpg"
-            ]
-        },
-        {
-            "id": 11,
-            "section": "projects1",
-            "sectionTitle": "Structural Design",
-            "title": "Home Project",
-            "topic": "Mr. Thusitha",
-            "description": "Residential structural design project in Marawila.",
-            "location": "Marawila",
-            "year": "2018",
-            "photo-main": "img/projects/Thusitha House (1).jpg",
-            "photos": [
-                "img/projects/Thusitha House (2).jpg"
-            ]
-        },
-        {
-            "id": 12,
-            "section": "projects2",
-            "sectionTitle": "Structural Detailing",
-            "title": "Sports & Recreation Complex",
-            "topic": "Development Resources (Pvt) Ltd",
-            "description": "Structural detailing project for a sports and recreation complex.",
-            "location": "Battaramulla",
-            "year": "2017",
-            "photo-main": "img/projects/Decathalon (5).jpg",
-            "photos": [
-                "img/projects/Decathalon (2).jpg",
-                "img/projects/Decathalon (3).jpg",
-                "img/projects/Decathalon (4).jpg"
-            ]
-        },
-        {
-            "id": 13,
-            "section": "projects2",
-            "sectionTitle": "Structural Detailing",
-            "title": "Assembly Workshop & Office Building",
-            "topic": "Ideal Investment Lanka Ltd",
-            "description": "Structural detailing project for an assembly workshop and office building.",
-            "location": "Welipenna",
-            "year": "2019",
-            "photo-main": "img/projects/IDEAL Motors-Selected (4).jpg",
-            "photos": [
-                "img/projects/IDEAL Motors-Selected (1).jpg",
-                "img/projects/IDEAL Motors-Selected (3).jpg"
-            ]
-        },
-        {
-            "id": 14,
-            "section": "projects2",
-            "sectionTitle": "Structural Detailing",
-            "title": "Building Extension",
-            "topic": "Kings Hospital",
-            "description": "Structural detailing project for a building extension.",
-            "location": "Colombo 05",
-            "year": "2020",
-            "photo-main": "img/projects/12 (9).jpg",
-            "photos": [
-                "img/projects/12 (10).jpg",
-                "img/projects/12 (12).jpg"
-            ]
-        },
-        {
-            "id": 15,
-            "section": "projects2",
-            "sectionTitle": "Structural Detailing",
-            "title": "Pharma Plant",
-            "topic": "Melwa Pharma (Pvt) Ltd",
-            "description": "Structural detailing project for a pharmaceutical plant.",
-            "location": "Ekala",
-            "year": "2019",
-            "photo-main": "img/projects/04 (1).jpg",
-            "photos": [
-                "img/projects/04 (3).jpg",
-                "img/projects/04 (4).jpg",
-                "img/projects/04 (5).jpg"
-            ]
-        },
-        {
-            "id": 16,
-            "section": "projects2",
-            "sectionTitle": "Structural Detailing",
-            "title": "HR Center",
-            "topic": "Stretchline (Pvt) Ltd",
-            "description": "Structural detailing project for an HR center.",
-            "location": "Biyagama",
-            "year": "2016",
-            "photo-main": "img/projects/Stretchline (3).jpg",
-            "photos": [
-                "img/projects/Stretchline (4).jpg",
-                "img/projects/Stretchline (2).jpg"
-            ]
-        },
-        {
-            "id": 17,
-            "section": "projects2",
-            "sectionTitle": "Structural Detailing",
-            "title": "Office Building",
-            "topic": "8D Shell One (Pvt) Ltd",
-            "description": "Structural detailing project for an office building.",
-            "location": "Colombo 03",
-            "year": "2020",
-            "photo-main": "img/projects/2641.jpg",
-            "photos": []
-        },
-        {
-            "id": 18,
-            "section": "projects2",
-            "sectionTitle": "Structural Detailing",
-            "title": "Main Building Extension",
-            "topic": "Wacoal Lanka (Pvt) Ltd",
-            "description": "Structural detailing project for the extension of the main building.",
-            "location": "Wathupitiwala",
-            "year": "2022",
-            "photo-main": "img/projects/WACOAL (2).jpg",
-            "photos": [
-                "img/projects/WACOAL (1).jpg"
-            ]
-        },
-        {
-            "id": 19,
-            "section": "projects3",
-            "sectionTitle": "Structural Design, Architectural Design & Project Management",
-            "title": "Packing Building",
-            "topic": "ATG Handcare (Pvt) Ltd",
-            "description": "Structural design, architectural design and project management for a packing building.",
-            "location": "Koggala",
-            "year": "2021",
-            "photo-main": "img/projects/03 (6).jpg",
-            "photos": [
-                "img/projects/03 (7).jpg",
-                "img/projects/03 (3).jpg",
-                "img/projects/03 (5).jpg"
-            ]
-        },
-        {
-            "id": 20,
-            "featured": 1,
-            "section": "projects4",
-            "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
-            "title": "Two Story Car Park",
-            "topic": "Mr. Brandon Fernando",
-            "description": "Structural design, architectural design and consultancy for a two-story car park.",
-            "location": "Negombo",
-            "year": "2021",
-            "photo-main": "img/projects/06 (12).jpg",
-            "photos": [
-                "img/projects/06 (8).jpg",
-                "img/projects/06 (10).jpg",
-                "img/projects/06 (11).jpg"
-            ]
-        },
-        {
-            "id": 21,
-            "section": "projects4",
-            "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
-            "title": "Head Office Building",
-            "topic": "Darinton Construction",
-            "description": "Structural design, architectural design and consultancy for a head office building.",
-            "location": "Kaluthara",
-            "year": "2016",
-            "photo-main": "img/projects/07 (3).jpg",
-            "photos": [
-                "img/projects/07 (2).jpg"
-            ]
-        },
-        {
-            "id": 22,
-            "section": "projects4",
-            "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
-            "title": "Extension to Existing Building",
-            "topic": "MRF Lanka (Pvt) Ltd",
-            "description": "Structural design, architectural design and consultancy for an existing building extension.",
-            "location": "Dankotuwa",
-            "year": "2013",
-            "photo-main": "img/projects/19 (5).jpg",
-            "photos": [
-                "img/projects/19 (1).jpg",
-                "img/projects/19 (3).jpg",
-                "img/projects/19 (4).jpg"
-            ]
-        },
-        {
-            "id": 23,
-            "section": "projects4",
-            "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
-            "title": "Production Building",
-            "topic": "Renuka Agri Foods PLC",
-            "description": "Structural design, architectural design and consultancy for a production building.",
-            "location": "Wathupitiwala",
-            "year": "2020",
-            "photo-main": "img/projects/11 (5).jpg",
-            "photos": [
-                "img/projects/11 (2).jpg",
-                "img/projects/11 (3).jpg",
-                "img/projects/11 (4).jpg"
-            ]
-        },
-        {
-            "id": 24,
-            "section": "projects4",
-            "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
-            "title": "Library Building",
-            "topic": "Uva Wellassa University",
-            "description": "Structural design, architectural design and consultancy for a library building.",
-            "location": "Badulla",
-            "year": "2019",
-            "photo-main": "img/projects/10 (1).jpg",
-            "photos": [
-                "img/projects/10 (2).jpg",
-                "img/projects/10 (4).jpg",
-                "img/projects/10 (5).jpg"
-            ]
-        }
-    ]
+  "main-projects-title": "Our Projects",
+  "main-projects-description": "Our work ranges from small residential projects to large-scale commercial buildings and high-rise developments.",
+  "main-projects-button": "View All Projects",
+  "main-projects-buttonLink": "projects/",
+  "projects": [
+    {
+      "id": 1,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Home Project",
+      "topic": "Mr. Arjuna",
+      "description": "Residential structural design project in Maharagama.",
+      "location": "Maharagama",
+      "year": "2017",
+      "photo-main": "img/projects/Arjuna House-Selected (1).jpg",
+      "photos": [
+        "img/projects/Arjuna House-Selected (3).jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "featured": 1,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Cargills Food City",
+      "topic": "Cargills (Pvt) Ltd",
+      "description": "Structural design project for a Cargills Food City.",
+      "location": "Mahara",
+      "year": "2020",
+      "photo-main": "img/projects/05 (3).jpg",
+      "photos": [
+        "img/projects/05 (4).jpg",
+        "img/projects/05 (2).jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Cargills Distribution Center",
+      "topic": "Cargills Quality Foods (Pvt) Ltd",
+      "description": "Structural design project for the Cargills Distribution Center.",
+      "location": "Miriswatta",
+      "year": "2018",
+      "photo-main": "img/projects/01 (1).jpg",
+      "photos": [
+        "img/projects/01 (2).jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Home Project",
+      "topic": "Mr. Cyrill",
+      "description": "Residential structural design project in Kurana.",
+      "location": "Kurana",
+      "year": "",
+      "photo-main": "img/projects/House 2.jpg",
+      "photos": [
+        "img/projects/House 1.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Commercial Building",
+      "topic": "HNB PLC",
+      "description": "Commercial building structural design project.",
+      "location": "Kegalle",
+      "year": "2015",
+      "photo-main": "img/projects/HNB Kegalle-Selected (2).jpg",
+      "photos": []
+    },
+    {
+      "id": 6,
+      "featured": 1,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Refurbishing of Existing Filling Stations",
+      "topic": "IOC PLC",
+      "description": "Refurbishment and structural design of existing filling stations.",
+      "location": "Ambalangoda, Mawanella, Pahathgama, Hali-ela, Galewela",
+      "year": "2015",
+      "photo-main": "img/projects/08 (5).jpg",
+      "photos": [
+        "img/projects/08 (2).jpg",
+        "img/projects/08 (3).jpg",
+        "img/projects/08 (4).jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Eight Storied Multi Activity Center",
+      "topic": "Colombo Municipal Council",
+      "description": "Structural design project for an eight-storied multi activity center.",
+      "location": "Mattakkuliya",
+      "year": "2019",
+      "photo-main": "img/projects/Mattakkuliya Building 2.jpg",
+      "photos": [
+        "img/projects/Mattakkuliya Building 1.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Home Project",
+      "topic": "Mr. Paul",
+      "description": "Residential structural design project in Kaluthara.",
+      "location": "Kaluthara",
+      "year": "2011",
+      "photo-main": "img/projects/Mr.Paul House 5.jpg",
+      "photos": [
+        "img/projects/Mr.Paul House 2.jpg",
+        "img/projects/Mr.Paul House 3.jpg",
+        "img/projects/Mr.Paul House 4.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Extension to Existing Building",
+      "topic": "Phoenix Plastic Factory",
+      "description": "Structural design project for the extension of an existing factory building.",
+      "location": "Horana",
+      "year": "2018",
+      "photo-main": "img/projects/Phoenix Horana 4.jpg",
+      "photos": [
+        "img/projects/Phoenix Horana 1.jpg",
+        "img/projects/Phoenix Horana 2.jpg",
+        "img/projects/Phoenix Horana 3.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Home Project",
+      "topic": "Mrs. K A E A Fernando",
+      "description": "Residential structural design project in Kadirana.",
+      "location": "Kadirana",
+      "year": "2020",
+      "photo-main": "img/projects/Prasantha House (3).jpg",
+      "photos": [
+        "img/projects/Prasantha House (4).jpg",
+        "img/projects/Prasantha House (2).jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "section": "projects1",
+      "sectionTitle": "Structural Design",
+      "title": "Home Project",
+      "topic": "Mr. Thusitha",
+      "description": "Residential structural design project in Marawila.",
+      "location": "Marawila",
+      "year": "2018",
+      "photo-main": "img/projects/Thusitha House (1).jpg",
+      "photos": [
+        "img/projects/Thusitha House (2).jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "section": "projects2",
+      "sectionTitle": "Structural Detailing",
+      "title": "Sports & Recreation Complex",
+      "topic": "Development Resources (Pvt) Ltd",
+      "description": "Structural detailing project for a sports and recreation complex.",
+      "location": "Battaramulla",
+      "year": "2017",
+      "photo-main": "img/projects/Decathalon (5).jpg",
+      "photos": [
+        "img/projects/Decathalon (2).jpg",
+        "img/projects/Decathalon (3).jpg",
+        "img/projects/Decathalon (4).jpg"
+      ]
+    },
+    {
+      "id": 13,
+      "section": "projects2",
+      "sectionTitle": "Structural Detailing",
+      "title": "Assembly Workshop & Office Building",
+      "topic": "Ideal Investment Lanka Ltd",
+      "description": "Structural detailing project for an assembly workshop and office building.",
+      "location": "Welipenna",
+      "year": "2019",
+      "photo-main": "img/projects/IDEAL Motors-Selected (4).jpg",
+      "photos": [
+        "img/projects/IDEAL Motors-Selected (1).jpg",
+        "img/projects/IDEAL Motors-Selected (3).jpg"
+      ]
+    },
+    {
+      "id": 14,
+      "section": "projects2",
+      "sectionTitle": "Structural Detailing",
+      "title": "Building Extension",
+      "topic": "Kings Hospital",
+      "description": "Structural detailing project for a building extension.",
+      "location": "Colombo 05",
+      "year": "2020",
+      "photo-main": "img/projects/12 (9).jpg",
+      "photos": [
+        "img/projects/12 (10).jpg",
+        "img/projects/12 (12).jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "section": "projects2",
+      "sectionTitle": "Structural Detailing",
+      "title": "Pharma Plant",
+      "topic": "Melwa Pharma (Pvt) Ltd",
+      "description": "Structural detailing project for a pharmaceutical plant.",
+      "location": "Ekala",
+      "year": "2019",
+      "photo-main": "img/projects/04 (1).jpg",
+      "photos": [
+        "img/projects/04 (3).jpg",
+        "img/projects/04 (4).jpg",
+        "img/projects/04 (5).jpg"
+      ]
+    },
+    {
+      "id": 16,
+      "section": "projects2",
+      "sectionTitle": "Structural Detailing",
+      "title": "HR Center",
+      "topic": "Stretchline (Pvt) Ltd",
+      "description": "Structural detailing project for an HR center.",
+      "location": "Biyagama",
+      "year": "2016",
+      "photo-main": "img/projects/Stretchline (3).jpg",
+      "photos": [
+        "img/projects/Stretchline (4).jpg",
+        "img/projects/Stretchline (2).jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "section": "projects2",
+      "sectionTitle": "Structural Detailing",
+      "title": "Office Building",
+      "topic": "8D Shell One (Pvt) Ltd",
+      "description": "Structural detailing project for an office building.",
+      "location": "Colombo 03",
+      "year": "2020",
+      "photo-main": "img/projects/2641.jpg",
+      "photos": []
+    },
+    {
+      "id": 18,
+      "section": "projects2",
+      "sectionTitle": "Structural Detailing",
+      "title": "Main Building Extension",
+      "topic": "Wacoal Lanka (Pvt) Ltd",
+      "description": "Structural detailing project for the extension of the main building.",
+      "location": "Wathupitiwala",
+      "year": "2022",
+      "photo-main": "img/projects/WACOAL (2).jpg",
+      "photos": [
+        "img/projects/WACOAL (1).jpg"
+      ]
+    },
+    {
+      "id": 19,
+      "section": "projects3",
+      "sectionTitle": "Structural Design, Architectural Design & Project Management",
+      "title": "Packing Building",
+      "topic": "ATG Handcare (Pvt) Ltd",
+      "description": "Structural design, architectural design and project management for a packing building.",
+      "location": "Koggala",
+      "year": "2021",
+      "photo-main": "img/projects/03 (6).jpg",
+      "photos": [
+        "img/projects/03 (7).jpg",
+        "img/projects/03 (3).jpg",
+        "img/projects/03 (5).jpg"
+      ]
+    },
+    {
+      "id": 20,
+      "featured": 1,
+      "section": "projects4",
+      "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
+      "title": "Two Story Car Park",
+      "topic": "Mr. Brandon Fernando",
+      "description": "Structural design, architectural design and consultancy for a two-story car park.",
+      "location": "Negombo",
+      "year": "2021",
+      "photo-main": "img/projects/06 (12).jpg",
+      "photos": [
+        "img/projects/06 (8).jpg",
+        "img/projects/06 (10).jpg",
+        "img/projects/06 (11).jpg"
+      ]
+    },
+    {
+      "id": 21,
+      "section": "projects4",
+      "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
+      "title": "Head Office Building",
+      "topic": "Darinton Construction",
+      "description": "Structural design, architectural design and consultancy for a head office building.",
+      "location": "Kaluthara",
+      "year": "2016",
+      "photo-main": "img/projects/07 (3).jpg",
+      "photos": [
+        "img/projects/07 (2).jpg"
+      ]
+    },
+    {
+      "id": 22,
+      "section": "projects4",
+      "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
+      "title": "Extension to Existing Building",
+      "topic": "MRF Lanka (Pvt) Ltd",
+      "description": "Structural design, architectural design and consultancy for an existing building extension.",
+      "location": "Dankotuwa",
+      "year": "2013",
+      "photo-main": "img/projects/19 (5).jpg",
+      "photos": [
+        "img/projects/19 (1).jpg",
+        "img/projects/19 (3).jpg",
+        "img/projects/19 (4).jpg"
+      ]
+    },
+    {
+      "id": 23,
+      "section": "projects4",
+      "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
+      "title": "Production Building",
+      "topic": "Renuka Agri Foods PLC",
+      "description": "Structural design, architectural design and consultancy for a production building.",
+      "location": "Wathupitiwala",
+      "year": "2020",
+      "photo-main": "img/projects/11 (5).jpg",
+      "photos": [
+        "img/projects/11 (2).jpg",
+        "img/projects/11 (3).jpg",
+        "img/projects/11 (4).jpg"
+      ]
+    },
+    {
+      "id": 24,
+      "section": "projects4",
+      "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
+      "title": "Library Building",
+      "topic": "Uva Wellassa University",
+      "description": "Structural design, architectural design and consultancy for a library building.",
+      "location": "Badulla",
+      "year": "2019",
+      "photo-main": "img/projects/10 (1).jpg",
+      "photos": [
+        "img/projects/10 (2).jpg",
+        "img/projects/10 (4).jpg",
+        "img/projects/10 (5).jpg"
+      ]
+    }
+  ]
 }

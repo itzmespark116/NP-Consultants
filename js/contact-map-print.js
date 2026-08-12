@@ -1,4 +1,4 @@
-fetch("data/contact.json")
+fetch("../data/contact.json")
     .then(response => response.json())
     .then(data => {
         const map = document.querySelector(".contact-map-container");

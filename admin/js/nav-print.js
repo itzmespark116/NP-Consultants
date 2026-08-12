@@ -1,7 +1,3 @@
-// ------------------------------------------------------------
-// -------------------- NP Consultants ------------------------
-// --------------------- nav-print.js -------------------------
-// ------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -10,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!nav) return;
 
     if (nav.id === "active") {
-    const pathPrefix = "";
 
     nav.innerHTML = `
 
@@ -34,17 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <img id="themeIcon" src="../icons/lightMode.svg" alt="NP Consultants - Theme Light">
         </button>
 
-        <a href="../index.html" class="admin-website-link">
+        <a href="../home/" class="admin-website-link">
             WEBSITE
         </a>
 
     `;
     }
 
-    // Public pages are unchanged
-
     else {
-    const pathPrefix = "";
 
     nav.innerHTML = `
 
@@ -68,18 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <img id="themeIcon" src="../icons/lightMode.svg" alt="NP Consultants - Theme Light">
         </button>
 
-        <a href="../index.html" class="admin-website-link">
+        <a href="../home/" class="admin-website-link">
             WEBSITE
         </a>
 
     `;
     }
-
-    // Get current page
     const currentPage =
         window.location.pathname.split("/").pop() || "index.html";
-
-    // Add active class
     nav.querySelectorAll(".navbar-links a").forEach(link => {
 
         const linkPage =
