@@ -1,4 +1,9 @@
 {
+    "main-projects-title": "Our Projects",
+    "main-projects-description": "Our work ranges from small residential projects to large-scale commercial buildings and high-rise developments.",
+    "main-projects-button": "View All Projects",
+    "main-projects-buttonLink": "projects.html",
+
     "projects": [
         {
             "id": 1,
@@ -16,6 +21,7 @@
         },
         {
             "id": 2,
+            "featured" : 1,
             "section": "projects1",
             "sectionTitle": "Structural Design",
             "title": "Cargills Food City",
@@ -71,6 +77,7 @@
         },
         {
             "id": 6,
+            "featured" : 1,
             "section": "projects1",
             "sectionTitle": "Structural Design",
             "title": "Refurbishing of Existing Filling Stations",
@@ -281,6 +288,7 @@
         },
         {
             "id": 20,
+            "featured": 1,
             "section": "projects4",
             "sectionTitle": "Structural Design, Architectural Design & Coinsultancy",
             "title": "Two Story Car Park",

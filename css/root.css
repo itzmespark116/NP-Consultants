@@ -14,6 +14,7 @@
     --background        : #fff;
     --color             : #111111;
     --color-mute        : #2f3745;
+    --color-theme       : color-mix(in srgb, var(--accent) 80%, var(--color) );
 
     --edge-fade: linear-gradient( to bottom, var(--base) 0%, transparent 12%, transparent 88%, var(--base) 100% );
 

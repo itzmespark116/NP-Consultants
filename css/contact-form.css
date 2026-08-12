@@ -1,121 +1,259 @@
 /* ------------------------------------------------------------ */
 /* -------------------- NP Consultants ------------------------ */
-/* ------------------- contact-from.css ----------------------- */
+/* ------------------- contact-form.css ----------------------- */
 /* ------------------------------------------------------------ */
 
 .contact-form {
     min-height: 70vh;
     min-height: 70dvh;
     width: 100%;
-
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-
     padding: clamp(0px, 3vh, 30px) clamp(0px, 10vw, 250px);
 }
-
-
 .contact-form-info {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: clamp(10px, 3vw, 50px);
     margin: 50px inherit;
-
     border: 0.2px solid var(--border-2);
-    /* border-right: none; */
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-
     background: var(--contact-form-background);
 }
-
-.contact-form-info * { margin: 0; }
-
+.contact-form-info * {
+    margin: 0;
+}
 .contact-form-info-box {
     display: flex;
     flex-direction: column;
-
     margin: auto 0;
 }
-
 .contact-form-info-box svg {
     width: 2.2rem;
     height: 2.2rem;
     fill: var(--color);
 }
-
 .contact-form-info-box h3 {
     font-weight: 400;
     font-size: 1.3rem;
     text-transform: uppercase;
 }
-
 .contact-form-info-box p {
     font-size: 0.95rem;
     transition: transform .25s ease, color .25s ease;
+    cursor: pointer;
 }
-
 .contact-form-info-box p:hover {
     transform: translateX(6px);
     color: var(--color);
 }
 
-
-
-
-
+/* ------------------------------------------------------------ */
 
 .contact-form-user {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-
+    padding: 32px clamp(10px, 3vw, 50px);
+    margin: 50px inherit;
     border: 0.2px solid var(--border-2);
     border-left: none;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    
-    padding: 10px clamp(10px, 3vw, 50px);
-    margin: 50px inherit;
-
     background: var(--glass);
-
     display: flex;
     flex-direction: column;
-    
+    gap: 12px;
 }
-
 .contact-form-user h4 {
     font-size: 1.4rem;
     font-weight: 300;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.contact-form-user-input {
+    position: relative;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+.contact-form-user-input input {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 16px;
+    line-height: 3.2;
+    border-radius: 5px;
+    border: 0.2px solid var(--border-2);
+    background: var(--background);
+    color: var(--color);
+    transition: 0.2s ease;
+    z-index: 1;
+    cursor: text;
+}
+.labelline {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-2%);
+    font-size: 1rem;
+    color: var(--color-mute);
+    padding: 0 5px;
+    background-color: var(--background);
+    z-index: 2;
+    transition: 0.2s ease;
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.contact-form-user-input input:focus,
+.contact-form-user-input input:not(:placeholder-shown):valid,
+.contact-form-user-input-large textarea:focus,
+.contact-form-user-input-large textarea:not(:placeholder-shown):valid {
+    color: var(--color);
+    border: 0.4px solid var(--color-theme);
+    cursor: text;
+}
+.contact-form-user-input input:focus + .labelline,
+.contact-form-user-input input:not(:placeholder-shown):valid + .labelline,
+.contact-form-user-input-large textarea:focus + .labelline,
+.contact-form-user-input-large textarea:not(:placeholder-shown):valid + .labelline {
+    top: 0;
+    transform: translateY(-50%) translateX(-10%) scale(0.88);
+    color: var(--color-theme);
+    -webkit-user-select: auto;
+    user-select: auto;
 }
 
+/* ------------------------------------------------------------ */
+/* ---------------------- Invalid input ----------------------- */
+/* ------------------------------------------------------------ */
 
+.contact-form-user-input input:not(:placeholder-shown):invalid,
+.contact-form-user-input-large textarea:not(:placeholder-shown):invalid {
+    color: color-mix(in srgb, red 65%, var(--color));
+    border: 0.4px solid color-mix(in srgb, red 65%, transparent);
+    cursor: text;
+}
+.contact-form-user-input input:not(:placeholder-shown):invalid + .labelline,
+.contact-form-user-input-large textarea:not(:placeholder-shown):invalid + .labelline {
+    top: 0;
+    transform: translateY(-50%) translateX(-10%) scale(0.88);
+    color: color-mix(in srgb, red 65%, transparent);
+    -webkit-user-select: auto;
+    user-select: auto;
+}
 
+/* ------------------------------------------------------------ */
 
+.contact-form-user-input-large {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    min-height: 150px;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+.contact-form-user-input-large textarea {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    letter-spacing: 0.05ch;
+    padding: 1rem 16px;
+    border-radius: 5px;
+    border: 0.1px solid var(--border-2);
+    background: var(--background);
+    color: var(--color);
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    vertical-align: top;
+    transition: 0.2s ease;
+    z-index: 1;
+    cursor: text;
+}
 
+/* ------------------------------------------------------------ */
+/* ------------------------ Scrollbar ------------------------- */
+/* ------------------------------------------------------------ */
 
+.contact-form-user-input-large textarea::-webkit-scrollbar {
+    width: 5px;
+}
+.contact-form-user-input-large textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+.contact-form-user-input-large textarea::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--color) 25%, transparent);
+    border-radius: 999px;
+}
+.contact-form-user-input-large textarea::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--color) 45%, transparent);
+}
 
+/* ------------------------------------------------------------ */
+
+.contact-form-user button {
+    font-size: 1rem;
+    padding: 10px 10px;
+    color: var(--color);
+    background: color-mix(in srgb, var(--accent) 42%, transparent);
+    border: 0.1px solid var(--border-1);
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: 0.2s ease;
+}
+.contact-form-user button:hover {
+    transform: scale(1.01);
+    background: color-mix(in srgb, var(--color-theme) 65%, var(--base));
+    box-shadow: var(--box-shadow);
+}
+.contact-form-user .button-error {
+    background: color-mix(in srgb, red 65%, transparent);
+    color: white;
+    border: 0.1px solid var(--border-2);
+}
+.contact-form-user .button-error:hover {
+    background: color-mix(in srgb, red 75%, transparent);
+    box-shadow: var(--box-shadow);
+    transform: scale(1.01);
+}
+
+/* ------------------------------------------------------------ */
 
 @media (max-width: 600px) {
-
     .contact-form {
         grid-template-columns: 1fr;
+        padding: clamp(0px, 3vh, 30px) clamp(0px, 4vw, 250px);
+        border: none;
     }
-
     .contact-form-info {
         display: none;
     }
-
     .contact-form-user {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-
-        border-left: 0.2px solid var(--border-2);
-        border-radius: 8px;
+        border: none;
+    }
+    .contact-form-user h4 {
+        margin: 0 2px;
     }
 }

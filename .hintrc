@@ -1,0 +1,16 @@
+{
+    "extends": [
+        "development"
+    ],
+    "hints": {
+        "axe/forms": "error",
+        "button-type": "error",
+        "compat-api": "error",
+        "html-checker": "error",
+        "no-broken-links": "error",
+        "no-inline-styles": "warning",
+        "no-protocol-relative-urls": "error",
+        "no-vulnerable-javascript": "error",
+        "security": "error"
+    }
+}

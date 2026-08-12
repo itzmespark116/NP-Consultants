@@ -1,0 +1,40 @@
+{
+  "main-about-title": "About Us",
+  "main-about-text": [
+    "NP Consultants is a structural design and consulting firm established in 2010, providing innovative and reliable engineering solutions for residential, commercial and specialized structures.",
+    "Our expertise covers reinforced concrete, steel structures, water-retaining structures, treatment plants and complete engineering consultancy services.",
+    "We focus on practical solutions, technical excellence and delivering projects that meet client requirements with precision and efficiency."
+  ],
+  "main-about-projects": [
+    {
+      "main-about-image": "img/placeholder-project.jpg",
+      "main-about-name": "Project Name",
+      "main-about-type": "Structural Design"
+    },
+    {
+      "main-about-image": "img/placeholder-project.jpg",
+      "main-about-name": "Project Name",
+      "main-about-type": "Structural Design"
+    },
+    {
+      "main-about-image": "img/placeholder-project.jpg",
+      "main-about-name": "Project Name",
+      "main-about-type": "Structural Design"
+    },
+    {
+      "main-about-image": "img/placeholder-project.jpg",
+      "main-about-name": "Project Name",
+      "main-about-type": "Structural Design"
+    },
+    {
+      "main-about-image": "img/placeholder-project.jpg",
+      "main-about-name": "Project Name",
+      "main-about-type": "Structural Design"
+    },
+    {
+      "main-about-image": "img/placeholder-project.jpg",
+      "main-about-name": "Project Name",
+      "main-about-type": "Structural Design"
+    }
+  ]
+}

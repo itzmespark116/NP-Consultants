@@ -1,0 +1,142 @@
+{
+  "services": [
+    {
+      "services-title": "STRUCTURAL DESIGNING",
+      "services-paragraphs": [
+        "At NP Consultants, our experienced Structural Designers provide professional and comprehensive structural design services for a diverse range of building structures. We focus on design, planning, and project management while working closely with our clients to understand their requirements and bring their vision to life.",
+        "Our Designers have extensive knowledge of current industry standards, building codes, and safety regulations, enabling us to develop cost-effective structural solutions while maintaining the required standards of safety and quality.",
+        "Our Structural Designers work closely with consultants and contractors throughout the project lifecycle to ensure effective coordination, timely completion, and adherence to project requirements."
+      ]
+    },
+    {
+      "services-title": "STEEL STRUCTURAL DETAILING",
+      "services-paragraphs": [
+        "Our Steel Structural Detailing services cover the preparation of detailed drawings required for steel fabrication and erection. Our experienced team prepares accurate drawings and details to provide fabricators with the necessary information for efficient and accurate construction.",
+        "Our Steel Structural Detailing services include;"
+      ],
+      "services-list": [
+        "Columns",
+        "Beams",
+        "Trusses",
+        "Staircases",
+        "Plates",
+        "Nuts and Bolts",
+        "Steel Fabrication Drawings",
+        "Steel Erection Drawings"
+      ]
+    },
+    {
+      "services-title": "CONSULTING ENGINEERS",
+      "services-paragraphs": [
+        "NP Consultants provides comprehensive Consulting Engineer services as an integral part of our consultancy. Our qualified and experienced Consulting Engineers provide engineering design, planning, and project management services for diverse building projects.",
+        "Our Consulting Engineers work closely with clients, consultants, and contractors to ensure that projects are developed according to specific requirements and applicable standards.",
+        "Our Consulting Engineering services include;"
+      ],
+      "services-list": [
+        "Engineering Design",
+        "Planning",
+        "Project Management",
+        "Concept Drawings",
+        "Council Drawings",
+        "Construction Drawings",
+        "Engineering Estimations",
+        "Tender Procedures",
+        "Tender Evaluation",
+        "Project Handover"
+      ]
+    },
+    {
+      "services-title": "CHARTERED ARCHITECTS",
+      "services-paragraphs": [
+        "NP Consultants provides Chartered Architect services as part of our full-service consultancy. Our experienced and qualified Chartered Architects specialize in architectural design, planning, and project management for various building types.",
+        "We work closely with our clients to understand their requirements, preferences, and budgets while developing designs that reflect their vision. Our architects also coordinate with engineers, contractors, and other consultants throughout the project.",
+        "Our Chartered Architectural services focus on;"
+      ],
+      "services-list": [
+        "Architectural Design",
+        "Planning",
+        "Project Management",
+        "Design Coordination",
+        "Building Code Compliance",
+        "Industry Standards and Regulations"
+      ]
+    },
+    {
+      "services-title": "QUANTITY SURVEYORS",
+      "services-paragraphs": [
+        "Our Quantity Surveyors provide professional cost management, project management, and contract administration services for a diverse range of building projects.",
+        "Our team focuses on maintaining control over project costs while supporting the timely and successful completion of projects. We provide detailed cost planning, procurement, and contract management services throughout the project lifecycle.",
+        "Our Quantity Surveying services include;"
+      ],
+      "services-list": [
+        "Cost Planning",
+        "Procurement",
+        "Cost Estimates",
+        "Budget Preparation",
+        "Bills of Quantities",
+        "Schedules of Work",
+        "Cost Analysis",
+        "Project Cost Monitoring",
+        "Contract Management",
+        "Tender Documentation"
+      ]
+    },
+    {
+      "services-title": "GREEN BUILDING CONSULTANTS",
+      "services-paragraphs": [
+        "NP Consultants provides Green Building Consultancy services to assist clients in designing, constructing, and operating sustainable and energy-efficient buildings.",
+        "Our team provides expertise in sustainable building design, energy auditing, and building simulation while helping clients achieve their green building objectives and reduce environmental impact.",
+        "Our Green Building Consultancy services include;"
+      ],
+      "services-list": [
+        "Green Building Design",
+        "Sustainable Building Planning",
+        "Energy Auditing",
+        "Building Simulation",
+        "Energy Efficiency Planning",
+        "Environmental Impact Reduction",
+        "Green Building Standards and Codes",
+        "LEED",
+        "BREEAM",
+        "WELL"
+      ]
+    },
+    {
+      "services-title": "PROJECT MANAGEMENT",
+      "services-paragraphs": [
+        "NP Consultants provides comprehensive Project Management Services as part of our full-service consultancy. Our experienced Project Management team provides planning, coordination, and management services for a wide range of building projects.",
+        "Our Project Managers work closely with clients, architects, engineers, contractors, and other consultants to coordinate the project and ensure that requirements relating to time, budget, quality, and overall project objectives are effectively managed.",
+        "Our Project Management services include;"
+      ],
+      "services-list": [
+        "Project Planning",
+        "Project Coordination",
+        "Project Management",
+        "Consultant Coordination",
+        "Contractor Coordination",
+        "Construction Monitoring",
+        "Project Progress Monitoring",
+        "Budget Monitoring",
+        "Project Handover"
+      ]
+    },
+    {
+      "services-title": "INTERIOR DESIGNING",
+      "services-paragraphs": [
+        "At NP Consultants, our professional Interior Designers create functional, safe, attractive, and pleasant interiors tailored to the requirements of our clients.",
+        "Our designers combine traditional and modern architectural elements while considering customer requirements, budget constraints, and applicable industry standards. We work closely with clients to understand their vision and develop suitable interior solutions.",
+        "Our Interior Designing services include;"
+      ],
+      "services-list": [
+        "Interior Space Planning",
+        "Colour Selection",
+        "Lighting Selection",
+        "Interior Design",
+        "Architectural Elements",
+        "Residential Interiors",
+        "Commercial Interiors",
+        "Institutional Interiors"
+      ]
+    }
+  ]
+}

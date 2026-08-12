@@ -84,10 +84,17 @@ footer,
 .footer-contact svg {
     width: 1rem;
     height: 1rem;
+    min-width: 1rem;
+    min-height: 1rem;
+    flex-shrink: 0;
+    display: block;
     fill: var(--color);
 }
 
 .footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: transform .25s ease, color .25s ease;
 }
 

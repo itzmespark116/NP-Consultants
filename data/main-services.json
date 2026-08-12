@@ -1,0 +1,49 @@
+{
+  "main-services-title": "Our Services",
+  "main-services-description": "We Provide Various Engineering Services from the Initial Planning Stage to the Full Completion",
+  "main-services-button": "Read More",
+  "main-services-buttonLink": "services.html",
+  "main-services-image": "img/placeholder-project.jpg",
+  "main-services": [
+    {
+      "main-services-name": "Structural Designing",
+      "main-services-description": "Cost-effective, space-saving, future-proof building structures that comply with industry standards.",
+      "main-services-side": "left"
+    },
+    {
+      "main-services-name": "Steel Structural Detailing",
+      "main-services-description": "Detailed drawings, for steel fabrication and steel erections with technical specifications",
+      "main-services-side": "left"
+    },
+    {
+      "main-services-name": "Consulting Engineers",
+      "main-services-description": "Learn how to utilize your available resources effectively and determine the best strategies for your project.",
+      "main-services-side": "left"
+    },
+    {
+      "main-services-name": "Chartered Architects",
+      "main-services-description": "Experienced, professional architectural services with years of industry experience for your next project.",
+      "main-services-side": "left"
+    },
+    {
+      "main-services-name": "Quantity Surveyors",
+      "main-services-description": "Our quantity surveying service will provide far more accuracy in estimations, budgeting, and planning.",
+      "main-services-side": "right"
+    },
+    {
+      "main-services-name": "Green Building Consultants",
+      "main-services-description": "Implement energy-efficient, eco-friendly strategies and minimize your carbon footprint as well as energy costs.",
+      "main-services-side": "right"
+    },
+    {
+      "main-services-name": "Project Management",
+      "main-services-description": "Make sure your project is on the right path to successful completion with our expert service.",
+      "main-services-side": "right"
+    },
+    {
+      "main-services-name": "Interior Designing",
+      "main-services-description": "We design functional, safe, attractive & pleasant interiors",
+      "main-services-side": "right"
+    }
+  ]
+}

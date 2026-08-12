@@ -1,0 +1,61 @@
+
+
+const PLACEHOLDER_IMAGE = "img/placeholder-profile.jpg";
+
+function imageFallback(src, alt) {
+    return `<img class="main-team-image" src="${src || PLACEHOLDER_IMAGE}" alt="${alt}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">`;
+}
+
+function directorImageFallback(src, alt) {
+    return `<img class="main-team-dir-image" src="${src || PLACEHOLDER_IMAGE}" alt="${alt}" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMAGE}'">`;
+}
+
+function buildQualifications(qualifications) {
+    return (qualifications || []).map(q => `<li>${q}</li>`).join("");
+}
+
+fetch("data/team.json")
+    .then(res => {
+        if (!res.ok) throw new Error("team.json not found");
+        return res.json();
+    })
+    .then(team => {
+        document.querySelector(".main-team").innerHTML = `
+            <div class="main-team-title">
+                <h2 class="main-team-heading">Our Team</h2>
+            </div>
+            <p class="main-team-description">
+                Our team consists of talented, energetic individuals with years of experience.
+            </p>
+            <div class="main-team-director" id="teamDirector">
+                ${team.director ? `
+                    ${directorImageFallback(team.director.image, team.director.name)}
+                    <div class="main-team-dir-info">
+                        <h3>${team.director.name}</h3>
+                        <h4>${team.director.role}</h4>
+                        <ul>
+                            ${buildQualifications(team.director.qualifications)}
+                        </ul>
+                    </div>
+                ` : ""}
+            </div>
+            <div class="main-team-grid" id="teamGrid">
+                ${(team.employees || []).map(member => `
+                    <div class="main-team-card">
+                        ${imageFallback(member.image, member.name)}
+                        <div class="main-team-info">
+                            <h3>${member.name}</h3>
+                            <h4>${member.role}</h4>
+                            <ul>
+                                ${buildQualifications(member.qualifications)}
+                            </ul>
+                        </div>
+                    </div>
+                `).join("")}
+            </div>
+        `;
+    })
+    .catch(error => {
+        console.error("Team loading error:", error);
+        document.querySelector(".main-team").innerHTML = "<p>Unable to load team information.</p>";
+    });
