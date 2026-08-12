@@ -2,7 +2,7 @@
   "main-projects-title": "Our Projects",
   "main-projects-description": "Our work ranges from small residential projects to large-scale commercial buildings and high-rise developments.",
   "main-projects-button": "View All Projects",
-  "main-projects-buttonLink": "projects/",
+  "main-projects-buttonLink": "../projects/",
   "projects": [
     {
       "id": 1,
