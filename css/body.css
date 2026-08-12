@@ -6,10 +6,7 @@
 @import url(root.css);
 
 * { box-sizing: border-box; cursor: default; }
-main > section { 
-     min-height: 10vh; 
-     scroll-snap-align: start;
-}
+main > section { min-height: 10vh; }
 
 /* ::-webkit-scrollbar { display: none; } */
 /* ::-webkit-scrollbar { display: inherit; width: 0; } */
