@@ -1,16 +1,30 @@
 /* ------------------------------------------------------------ */
 /* -------------------- NP Consultants ------------------------ */
-/* --------------------- admin-nav.css ------------------------ */
+/* --------------------- admin-nav.css ------------------------- */
 /* ------------------------------------------------------------ */
 
 @keyframes admin-nav-drop-in {
-    0% { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes admin-link-fade-in {
-    0% { transform: translateY(-6px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(-6px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* -------------------------- NAV ----------------------------- */
@@ -23,15 +37,28 @@ nav {
     width: 100%;
     height: 72px;
     padding: 0 clamp(24px, 5vw, 48px);
+
     display: flex;
     align-items: center;
+
     background: var(--glass);
+
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
+
     border-bottom: .5px solid var(--border);
+
     z-index: 1100;
-    animation: admin-nav-drop-in .6s cubic-bezier(.22, 1, .36, 1) both;
-    transition: height .35s ease, background .35s ease, border-color .35s ease, box-shadow .35s ease, backdrop-filter .35s ease;
+
+    animation:
+        admin-nav-drop-in .6s cubic-bezier(.22, 1, .36, 1) both;
+
+    transition:
+        height .35s ease,
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease,
+        backdrop-filter .35s ease;
 }
 
 nav * {
@@ -44,18 +71,27 @@ nav * {
 .admin-navbar-logo {
     display: flex;
     align-items: center;
+
     order: 1;
+
     cursor: pointer;
-    animation: admin-link-fade-in .5s ease .1s both;
+
+    animation:
+        admin-link-fade-in .5s ease .1s both;
 }
 
 .admin-navbar-logo img {
     height: 42px;
     width: auto;
+
     -webkit-user-select: none;
     user-select: none;
+
     pointer-events: none;
-    transition: transform .3s ease, height .35s ease;
+
+    transition:
+        transform .3s ease,
+        height .35s ease;
 }
 
 .admin-navbar-logo:hover img {
@@ -67,71 +103,88 @@ nav * {
 .admin-navbar-links {
     display: flex;
     align-items: center;
+
     order: 2;
+
     margin-left: clamp(28px, 4vw, 60px);
 }
 
 .admin-navbar-links ul {
     display: flex;
     align-items: center;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
 .admin-navbar-links li {
-    animation: admin-link-fade-in .5s ease .2s both;
+    animation:
+        admin-link-fade-in .5s ease .2s both;
 }
 
 .admin-navbar-links a {
     position: relative;
+
     display: flex;
     align-items: center;
 
     background: var(--glass);
+
     border: 0.2px solid var(--border-2);
     border-radius: 999px;
+
     padding: 8px 12px;
 
     color: var(--color-mute);
+
     text-decoration: none;
+
     font-family: system-ui, sans-serif;
     font-size: .95rem;
     font-weight: 500;
     letter-spacing: .04em;
+
     transition: .25s ease;
 }
 
 .admin-navbar-links a:hover,
-.admin-navbar-links a.admin-active {
+.admin-navbar-links a.active {
     color: var(--color);
     transform: scale(1.05);
 }
-
 
 /* -------------------------- WEBSITE ------------------------- */
 
 .admin-website-link {
     position: relative;
+
     order: 4;
+
     margin-left: 28px;
+
     display: flex;
     align-items: center;
 
     border: 0.2px solid var(--border-2);
     border-radius: 999px;
+
     padding: 8px 15px;
+
     background: var(--glass);
 
     color: var(--color-mute);
+
     text-decoration: none;
+
     font-family: system-ui, sans-serif;
     font-size: .95rem;
     font-weight: 500;
     letter-spacing: .04em;
 
     cursor: pointer;
-    /* animation: admin-link-fade-in .5s ease .35s both; */
+
     transition: .25s ease;
 }
 
@@ -140,29 +193,43 @@ nav * {
     transform: scale(1.05);
 }
 
-
 /* ---------------------- THEME BUTTON ------------------------ */
 
 .admin-themeButton {
     width: 42px;
     height: 42px;
+
     margin-left: auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     order: 3;
+
     background: transparent;
+
     border: 1px solid var(--border-3);
     border-radius: 50%;
+
     cursor: pointer;
-    animation: admin-link-fade-in .5s ease .25s both;
-    transition: transform .25s ease, background .25s ease, border .25s ease;
+
+    animation:
+        admin-link-fade-in .5s ease .25s both;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border .25s ease;
 }
 
 .admin-themeButton img {
     width: 22px;
     height: 22px;
-    transition: transform .35s ease;
+
+    transition:
+        transform .35s ease;
+
     pointer-events: none;
 }
 
@@ -171,16 +238,24 @@ nav * {
     background: var(--glass);
 }
 
-.admin-themeButton:hover img { transform: rotate(25deg) scale(1.1); }
-.admin-themeButton.admin-spin img { transform: rotate(360deg) scale(1.1); }
+.admin-themeButton:hover img {
+    transform: rotate(25deg) scale(1.1);
+}
+
+.admin-themeButton.admin-spin img {
+    transform: rotate(360deg) scale(1.1);
+}
 
 /* ------------------------- SCROLLED ------------------------- */
 
 nav.admin-scrolled {
     height: 60px;
+
     -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .12);
 }
 
 nav.admin-scrolled .admin-navbar-logo img {
@@ -190,12 +265,61 @@ nav.admin-scrolled .admin-navbar-logo img {
 /* -------------------------- MOBILE -------------------------- */
 
 @media (max-width: 600px) {
-    nav { height: 64px; padding: 0 clamp(18px, 5vw, 28px); }
-    nav.admin-scrolled { height: 56px; }
-    .admin-navbar-logo img { height: 36px; }
-    nav.admin-scrolled .admin-navbar-logo img { height: 32px; }
-    .admin-navbar-links { margin-left: 20px }
-    .admin-themeButton { width: 38px; height: 38px; }
-    .admin-themeButton img { width: 20px; height: 20px; }
-    .admin-navbar-links a, .admin-website-link { font-size: .85rem; }
+
+    nav {
+        height: 64px;
+        padding: 0 clamp(18px, 5vw, 28px);
+    }
+
+    nav.admin-scrolled {
+        height: 56px;
+    }
+
+    .admin-navbar-logo img {
+        height: 36px;
+    }
+
+    nav.admin-scrolled .admin-navbar-logo img {
+        height: 32px;
+    }
+
+    .admin-navbar-links {
+        margin-left: 20px;
+    }
+
+    .admin-themeButton {
+        width: 38px;
+        height: 38px;
+    }
+
+    .admin-themeButton img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .admin-navbar-links a,
+    .admin-website-link {
+        font-size: .85rem;
+    }
+}
+
+/* -------------------- REDUCED MOTION ------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    nav,
+    .admin-navbar-logo,
+    .admin-navbar-links li,
+    .admin-themeButton {
+        animation: none;
+    }
+
+    nav,
+    .admin-navbar-logo img,
+    .admin-navbar-links a,
+    .admin-website-link,
+    .admin-themeButton,
+    .admin-themeButton img {
+        transition: none;
+    }
 }

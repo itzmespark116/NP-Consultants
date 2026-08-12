@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const nav = document.querySelector("nav");
@@ -7,73 +6,97 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (nav.id === "active") {
 
-    nav.innerHTML = `
+        nav.innerHTML = `
 
-            <a href="" class="admin-navbar-logo">
-                <img class="theme-logo" data-dark="../icons/icon_dark.png" data-light="../icons/icon_light.png" src="../icons/icon_dark.png" alt="NP Consultants">
+            <a href="./" class="admin-navbar-logo">
+                <img
+                    class="theme-logo"
+                    data-dark="../icons/icon_dark.png"
+                    data-light="../icons/icon_light.png"
+                    src="../icons/icon_dark.png"
+                    alt="NP Consultants"
+                >
             </a>
 
-        <div class="admin-navbar-links">
+            <div class="admin-navbar-links">
 
-            <ul>
-                <li>
-                    <a href="index.html" class="admin-active">
-                        Dashboard
-                    </a>
-                </li>
-            </ul>
+                <ul>
+                    <li>
+                        <a href="./">
+                            Dashboard
+                        </a>
+                    </li>
+                </ul>
 
-        </div>
+            </div>
 
-        <button class="admin-themeButton" id="themeToggle">
-            <img id="themeIcon" src="../icons/lightMode.svg" alt="NP Consultants - Theme Light">
-        </button>
+            <button class="admin-themeButton" id="themeToggle">
+                <img
+                    id="themeIcon"
+                    src="../icons/lightMode.svg"
+                    alt="NP Consultants - Theme Light"
+                >
+            </button>
 
-        <a href="../home/" class="admin-website-link">
-            WEBSITE
-        </a>
-
-    `;
-    }
-
-    else {
-
-    nav.innerHTML = `
-
-            <a href="" class="admin-navbar-logo">
-                <img class="theme-logo" data-dark="../icons/icon_dark.png" data-light="../icons/icon_light.png" src="${pathPrefix}icons/icon_dark.png" alt="NP Consultants">
+            <a href="../home/" class="admin-website-link">
+                WEBSITE
             </a>
 
-        <div class="admin-navbar-links">
+        `;
 
-            <ul>
-                <li>
-                    <a href="index.html">
-                        Dashboard
-                    </a>
-                </li>
-            </ul>
+    } else {
 
-        </div>
+        nav.innerHTML = `
 
-        <button class="admin-themeButton" id="themeToggle">
-            <img id="themeIcon" src="../icons/lightMode.svg" alt="NP Consultants - Theme Light">
-        </button>
+            <a href="../" class="admin-navbar-logo">
+                <img
+                    class="theme-logo"
+                    data-dark="../../icons/icon_dark.png"
+                    data-light="../../icons/icon_light.png"
+                    src="../../icons/icon_dark.png"
+                    alt="NP Consultants"
+                >
+            </a>
 
-        <a href="../home/" class="admin-website-link">
-            WEBSITE
-        </a>
+            <div class="admin-navbar-links">
 
-    `;
+                <ul>
+                    <li>
+                        <a href="../">
+                            Dashboard
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <button class="admin-themeButton" id="themeToggle">
+                <img
+                    id="themeIcon"
+                    src="../../icons/lightMode.svg"
+                    alt="NP Consultants - Theme Light"
+                >
+            </button>
+
+            <a href="../../home/" class="admin-website-link">
+                WEBSITE
+            </a>
+
+        `;
+
     }
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
-    nav.querySelectorAll(".navbar-links a").forEach(link => {
 
-        const linkPage =
-            link.getAttribute("href").split("/").pop();
+    const currentPath =
+        window.location.pathname.replace(/\/+$/, "") || "/";
 
-        if (linkPage === currentPage) {
+    nav.querySelectorAll(".admin-navbar-links a").forEach(link => {
+
+        const linkPath =
+            new URL(link.getAttribute("href"), window.location.href)
+                .pathname
+                .replace(/\/+$/, "") || "/";
+
+        if (linkPath === currentPath) {
             link.classList.add("active");
         }
 

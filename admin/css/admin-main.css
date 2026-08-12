@@ -3,6 +3,8 @@
 /* -------------------- admin-main.css ------------------------ */
 /* ------------------------------------------------------------ */
 
+@import url(../../css/root.css);
+
 .admin-main-container {
     width: 100vw;
     height: 100vh;
@@ -36,6 +38,11 @@
     isolation: isolate;
 }
 
+/* .admin-panel * {
+    -webkit-user-select: none;
+    user-select: none;
+} */
+
 /* ------------------------------------------------------------ */
 
 .admin-panel-beam,
@@ -45,17 +52,27 @@
     border-radius: 28px;
     pointer-events: none;
 
-    background: conic-gradient(
-        from var(--beam-angle),
-        transparent 0deg,
-        transparent 18deg,
-        color-mix(in srgb, var(--accent) 4%, transparent) 36deg,
-        color-mix(in srgb, var(--accent) 55%, transparent) 48deg,
-        var(--accent) 56deg,
-        color-mix(in srgb, var(--accent) 25%, white) 61deg,
-        transparent 65deg,
-        transparent 360deg
-    );
+    background:
+        conic-gradient(
+            from var(--beam-angle),
+            transparent 0deg,
+            transparent 18deg,
+            color-mix(in srgb, var(--accent) 4%, transparent) 36deg,
+            color-mix(in srgb, var(--accent) 55%, transparent) 48deg,
+            var(--accent) 56deg,
+            color-mix(in srgb, var(--accent) 25%, white) 61deg,
+            transparent 65deg,
+
+            transparent 180deg,
+            transparent 198deg,
+            color-mix(in srgb, var(--accent) 4%, transparent) 216deg,
+            color-mix(in srgb, var(--accent) 55%, transparent) 228deg,
+            var(--accent) 236deg,
+            color-mix(in srgb, var(--accent) 25%, white) 241deg,
+            transparent 245deg,
+
+            transparent 360deg
+        );
 }
 
 /* ------------------------------------------------------------ */
@@ -101,6 +118,9 @@
     margin: 0;
     padding: 0;
 
+    -webkit-user-select: none;
+    user-select: none;
+
     border-right: 2px solid var(--accent);
 
     animation:
@@ -121,6 +141,9 @@
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
+
+    -webkit-user-select: none;
+    user-select: none;
 
     border-right: 2px solid var(--accent);
 
@@ -154,6 +177,8 @@
     font-weight: 500;
 
     cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
 
     transition:
         transform 0.3s ease,

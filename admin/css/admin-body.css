@@ -33,7 +33,6 @@ body {
     height: 100dvh;
 
     overflow: hidden;
-    overflow-x: hidden;
     opacity: 1;
 
     animation: pageEnter 0.7s ease forwards;

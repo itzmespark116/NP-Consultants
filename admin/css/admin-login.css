@@ -1,0 +1,440 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* -------------------- admin-main.css ------------------------- */
+/* ------------------------------------------------------------ */
+
+@import url(../../css/root.css);
+
+/* ------------------------------------------------------------ */
+
+.admin-login-container {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+
+    margin: 0;
+
+    background: var(--admin-main-background);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-panel {
+    --beam-angle: 0deg;
+
+    position: relative;
+
+    width: min(390px, 82vw);
+
+    padding: 45px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 28px;
+
+    border-radius: 28px;
+
+    background: var(--glass);
+    border: 1px solid var(--border-2);
+
+    isolation: isolate;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-panel-beam,
+.admin-login-panel-glow {
+    position: absolute;
+
+    inset: -1px;
+
+    border-radius: 28px;
+
+    pointer-events: none;
+
+    background:
+        conic-gradient(
+            from var(--beam-angle),
+
+            transparent 0deg,
+            transparent 18deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 4%,
+                transparent
+            ) 36deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 55%,
+                transparent
+            ) 48deg,
+
+            var(--accent) 56deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 25%,
+                white
+            ) 61deg,
+
+            transparent 65deg,
+
+            transparent 180deg,
+            transparent 198deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 4%,
+                transparent
+            ) 216deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 55%,
+                transparent
+            ) 228deg,
+
+            var(--accent) 236deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 25%,
+                white
+            ) 241deg,
+
+            transparent 245deg,
+
+            transparent 360deg
+        );
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-panel-beam {
+    padding: 2px;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-panel-glow {
+    filter: blur(14px);
+
+    opacity: 0.35;
+
+    z-index: -1;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------- WELCOME -------------------------- */
+/* ------------------------------------------------------------ */
+
+.admin-login-welcome-msg {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-welcome-msg h2 {
+    width: 100%;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    font-weight: 100;
+    font-size: 2.2rem;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    -webkit-user-select: none;
+    user-select: none;
+
+    border-right: 2px solid var(--accent);
+
+    animation:
+        typing 1.5s steps(11) forwards,
+        blink 0.7s step-end 2,
+        cursor-stop 0s 1.5s forwards;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-welcome-msg p {
+    width: 100%;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    font-weight: 100;
+    font-size: 1.4rem;
+
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 10px;
+
+    -webkit-user-select: none;
+    user-select: none;
+
+    border-right: 2px solid var(--accent);
+
+    animation:
+        typing 1.5s steps(11) forwards,
+        blink 0.7s step-end 2,
+        cursor-stop 0s 1.5s forwards;
+}
+
+/* ------------------------------------------------------------ */
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes cursor-stop {
+    to { border-color: transparent; }
+}
+
+/* ------------------------------------------------------------ */
+/* -------------------------- INPUTS --------------------------- */
+/* ------------------------------------------------------------ */
+
+.admin-login-input {
+    position: relative;
+    width: 100%;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-input input {
+    width: 100%;
+    min-height: 58px;
+    box-sizing: border-box;
+    padding: 12px 18px;
+
+    background: var(--glass);
+    color: var(--color);
+    border: 1px solid var(--border-2);
+    border-radius: 999px;
+
+    outline: none;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-input .labelline {
+    position: absolute;
+
+    left: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    padding: 0 5px;
+
+    background: none;
+    color: var(--color-mute);
+
+    font-family: system-ui, sans-serif;
+    font-size: .85rem;
+    font-weight: 500;
+
+    letter-spacing: .08em;
+
+    pointer-events: none;
+
+    transition:
+        top .2s ease,
+        transform .2s ease,
+        color .2s ease,
+        font-size .2s ease,
+        background .2s ease;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-input input:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px
+        color-mix(
+            in srgb,
+            var(--accent) 10%,
+            transparent
+        );
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-input input:focus + .labelline,
+.admin-login-input input:not(:placeholder-shown) + .labelline {
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--glass) 50%, var(--base));
+    color: var(--accent);
+    font-size: .72rem;
+    padding: 4px 8px;
+}
+
+/* -------------------------- BUTTON --------------------------- */
+
+.admin-login-button {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 64px;
+    padding: 10px 20px;
+    border: 0.1px solid var(--border-2);
+    border-radius: 999px;
+    background: var(--glass);
+    color: var(--color);
+    font-size: 1.35rem;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-button:hover {
+    transform: scale(1.03);
+    background: var(--glass-2);
+    border-color: var(--border);
+    box-shadow:
+        0 8px 24px
+        color-mix(
+            in srgb,
+            var(--accent) 12%,
+            transparent
+        );
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-button-sign-in {
+    background:
+        color-mix(
+            in srgb,
+            var(--accent) 20%,
+            var(--base)
+        );
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--accent) 25%,
+            var(--border-2)
+        );
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-login-button-sign-in:hover {
+    background:
+        color-mix(
+            in srgb,
+            var(--accent) 35%,
+            var(--base)
+        );
+
+    border-color: var(--accent);
+}
+
+/* ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .admin-login-panel-beam,
+    .admin-login-panel-glow {
+        display: none;
+    }
+
+    .admin-login-button {
+        transition: none;
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+
+    .admin-login-panel {
+        width: min(360px, 86vw);
+        padding: 32px 24px;
+        gap: 14px;
+    }
+
+    .admin-login-button {
+        min-height: 60px;
+        font-size: 1.2rem;
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-height: 500px) {
+
+    .admin-login-panel {
+        padding: 24px;
+        gap: 10px;
+    }
+
+    .admin-login-button {
+        min-height: 52px;
+    }
+}
