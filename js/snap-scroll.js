@@ -7,7 +7,7 @@
 
 const SnapScroll = {
     selector: "main > section",
-    edgeThreshold: 0.4,    // 40% of viewport height
+    edgeThreshold: 1,    // 40% of viewport height
     idleTime: 140,
     smooth: true,
     behavior: "smooth",
