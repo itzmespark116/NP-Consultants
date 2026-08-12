@@ -96,6 +96,7 @@ footer,
     align-items: center;
     gap: 8px;
     transition: transform .25s ease, color .25s ease;
+    cursor: pointer;
 }
 
 .footer-contact p:hover {
@@ -132,6 +133,7 @@ footer,
     letter-spacing: .01em;
     cursor: pointer;
     transition: color .2s ease, transform .2s ease;
+    cursor: pointer;
 }
 
 .footer-nav-card a::after {
