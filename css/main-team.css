@@ -301,24 +301,34 @@
     .main-team-card { min-height:auto; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .main-team-heading,
-    .main-team-description,
-    .main-team-director,
-    .main-team-card {
-        animation: none !important;
-        transition: none !important;
 
+@media (prefers-reduced-motion: reduce) {
+    .main-team .main-team-heading,
+    .main-team .main-team-description,
+    .main-team .main-team-director,
+    .main-team .main-team-card {
+        animation: none !important;
         opacity: 1 !important;
         transform: translateY(0) !important;
     }
 
-    .main-team-dir-image,
-    .main-team-image,
-    .main-team-dir-info,
-    .main-team-dir-info ul,
-    .main-team-info {
+    .main-team .main-team-dir-image,
+    .main-team .main-team-image,
+    .main-team .main-team-dir-info,
+    .main-team .main-team-dir-info ul,
+    .main-team .main-team-info {
+        animation: none !important;
         transition: none !important;
+        transform: none !important;
+    }
+
+    .main-team-director:hover,
+    .main-team-card:hover,
+    .main-team-card:hover .main-team-image,
+    .main-team-director:hover .main-team-dir-image,
+    .main-team-director:hover .main-team-dir-info,
+    .main-team-director:hover .main-team-dir-info ul,
+    .main-team-card:hover .main-team-info {
         transform: none !important;
     }
 }
