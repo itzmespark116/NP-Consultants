@@ -267,11 +267,24 @@
     .project-overlay p { display: none; }
 }
 
-@media(prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+@media (prefers-reduced-motion: reduce) {
+    .main-about,
+    .main-about h2,
+    .main-about-text,
+    .main-about-card {
         animation: none !important;
         transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
     }
 
-    .main-about, .main-about * { opacity: 1; }
+    .main-about-card img {
+        transform: none !important;
+        filter: none !important;
+    }
+
+    .main-about-card-overlay {
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }

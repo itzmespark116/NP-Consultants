@@ -196,7 +196,21 @@
     }
 }
 
-@media(prefers-reduced-motion: reduce) {
-    .banner-content{ opacity: 1; }
-    .banner-content * { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+    .banner-content,
+    .banner-content h1,
+    .banner-content h2,
+    .banner-content p,
+    .banner-content button {
+        animation: none !important;
+        transition: none !important;
+
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .banner-content button::before {
+        transition: none !important;
+        transform: none !important;
+    }
 }
