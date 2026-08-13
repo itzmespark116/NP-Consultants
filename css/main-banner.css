@@ -189,28 +189,21 @@
     .banner-content p { font-size: clamp(.9rem, 1.2vw, 1rem); }
 }
 
-@media(prefers-reduced-motion:reduce) {
-    *, *::before, *::after { 
-        animation: none!important;
-        transition: none!important;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .banner-content,
-    .banner-content h1,
     .banner-content h2,
-    /* .banner-content p, */
+    .banner-content h1,
+    .banner-content p,
     .banner-content button {
         animation: none !important;
         transition: none !important;
 
         opacity: 1 !important;
-        transform: none !important;
+        transform: translateY(0) !important;
     }
 
     .banner-content button::before {
         transition: none !important;
-        transform: none !important;
+        transform: translateX(120%) !important;
     }
 }
