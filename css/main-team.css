@@ -301,11 +301,24 @@
     .main-team-card { min-height:auto; }
 }
 
-@media(prefers-reduced-motion:reduce){
-    *,
-    *::before,
-    *::after {
-        animation:none!important;
-        transition:none!important;
+@media (prefers-reduced-motion: reduce) {
+    .main-team-heading,
+    .main-team-description,
+    .main-team-director,
+    .main-team-card {
+        animation: none !important;
+        transition: none !important;
+
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .main-team-dir-image,
+    .main-team-image,
+    .main-team-dir-info,
+    .main-team-dir-info ul,
+    .main-team-info {
+        transition: none !important;
+        transform: none !important;
     }
 }
