@@ -4,40 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Feedbacks</title>
-
     <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../css/admin-body.css">
     <link rel="stylesheet" href="../css/admin-nav.css">
     <link rel="stylesheet" href="../css/admin-login.css">
     <link rel="stylesheet" href="../css/admin-feedbacks.css">
-    <style> body { overflow-y: scroll; } </style>
-
     <link rel="stylesheet" href="../../css/placeholder.css">
     <link rel="stylesheet" href="../../css/limiter.css">
 </head>
-<body><div class="show-screen">
-
+<body>
+<div class="show-screen">
     <nav class="admin-nav"></nav>
-
-    <!-- <div class="placeholder-100vh">
-        <h2>503</h2>
-        <p>Under Development</p>
-    </div> -->
-
-    <div class="admin-feedbacks-container">
-        <div class="feedback">
-            <div class="name">Mr. / Mrs. / Ms. 'name'</div>
-            <div class="telephone">*** * *** ***</div>
-            <div class="email">email@email.com</div>
-            <div class="message">
-                message message message message message message message message message message <br>
-                message message message message message message message message message message <br>
-                message message message message message message message message message message <br>
-                message message message message message message message message message message <br>
+    <main class="admin-feedbacks">
+        <div class="feedbacks-toolbar">
+            <div class="feedbacks-title">
+                <h1>Feedbacks</h1>
+                <span id="feedbackCount">0</span>
+            </div>
+            <div class="feedbacks-filter">
+                <button class="filter active" data-filter="all">All</button>
+                <button class="filter" data-filter="unread">Unread</button>
+                <button class="filter" data-filter="read">Read</button>
             </div>
         </div>
-    </div>
+        <div class="admin-feedbacks-container" id="feedbackContainer"></div>
+    </main>
+</div>
 
+<div class="feedback-popup" id="feedbackPopup">
+    <div class="feedback-popup-backdrop" id="popupBackdrop"></div>
+    <div class="feedback-popup-container">
+        <div class="feedback-popup-header">
+            <div class="feedback-popup-title">
+                <span class="popup-label">FEEDBACK</span>
+                <h2 id="popupName">—</h2>
+            </div>
+            <div class="popup-header-actions">
+                <span class="popup-status" id="popupStatus">—</span>
+                <button class="feedback-popup-close" id="popupClose">&times;</button>
+            </div>
+        </div>
+
+        <div class="feedback-popup-content">
+            <section class="popup-section">
+                <h3>Contact</h3>
+                <div class="popup-grid">
+                    <div class="popup-field">
+                        <span>Name</span>
+                        <strong id="popupContactName">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Email</span>
+                        <strong id="popupEmail">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Phone</span>
+                        <strong id="popupPhone">—</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popup-section">
+                <h3>Message</h3>
+                <div class="popup-message" id="popupMessage">—</div>
+            </section>
+
+            <section class="popup-section">
+                <h3>Request</h3>
+                <div class="popup-grid">
+                    <div class="popup-field">
+                        <span>Request ID</span>
+                        <strong id="popupRequestId">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Date</span>
+                        <strong id="popupDate">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Time</span>
+                        <strong id="popupTime">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Status</span>
+                        <strong id="popupRead">—</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popup-section">
+                <h3>Network</h3>
+                <div class="popup-grid">
+                    <div class="popup-field">
+                        <span>IP Address</span>
+                        <strong id="popupIp">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Country</span>
+                        <strong id="popupCountry">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>City</span>
+                        <strong id="popupCity">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Timezone</span>
+                        <strong id="popupTimezone">—</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="popup-section">
+                <h3>Technical</h3>
+                <div class="popup-grid">
+                    <div class="popup-field">
+                        <span>Language</span>
+                        <strong id="popupLanguage">—</strong>
+                    </div>
+                    <div class="popup-field">
+                        <span>Submitted From</span>
+                        <strong id="popupSubmittedFrom">—</strong>
+                    </div>
+                    <div class="popup-field popup-field-wide">
+                        <span>Referrer</span>
+                        <strong id="popupReferrer">—</strong>
+                    </div>
+                    <div class="popup-field popup-field-wide">
+                        <span>User Agent</span>
+                        <strong id="popupUserAgent">—</strong>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="feedback-popup-footer">
+            <button id="toggleRead" class="popup-action">Mark as read</button>
+        </div>
+    </div>
 </div>
 
 <div class="screen-error">
@@ -46,10 +148,9 @@
     </div>
 </div>
 
-</body>
-
 <script src="../js/nav-print.js"></script>
 <script src="../js/admin-nav-anim-manage.js"></script>
 <script src="../../js/theme.js"></script>
-
+<script src="../js/admin-feedbacks.js"></script>
+</body>
 </html>

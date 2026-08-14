@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const nav = document.querySelector("nav");
 
-    const themePath = "../";
+    const themePath = "../../";
 
     function updateLogos(dark) {
 
@@ -43,43 +43,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 dark ? "dark" : "light"
             );
         }
-
     }
 
     const saved = localStorage.getItem("theme");
 
     if (saved) {
-
         setTheme(saved === "dark", false);
-
     } else {
-
         setTheme(
             window.matchMedia("(prefers-color-scheme: dark)").matches,
             false
         );
-
     }
 
     toggle.addEventListener("click", () => {
-
-        setTheme(
-            !root.classList.contains("dark")
-        );
-
+        setTheme(!root.classList.contains("dark"));
     });
 
     const observer = new MutationObserver(() => {
-
-        updateLogos(
-            root.classList.contains("dark")
-        );
-
+        updateLogos(root.classList.contains("dark"));
     });
 
     observer.observe(document.body, {
         childList: true,
         subtree: true
     });
-
 });

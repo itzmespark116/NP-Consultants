@@ -73,7 +73,6 @@
     flex: 1;
     min-width: 0;
 
-
     display: grid;
     grid-template-columns: minmax(0, 35%) minmax(0, 65%);
     grid-template-rows: 1fr;

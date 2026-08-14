@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="admin-themeButton" id="themeToggle">
                 <img
                     id="themeIcon"
-                    src="../../icons/lightMode.svg"
+                    src="../icons/lightMode.svg"
                     alt="NP Consultants - Theme Light"
                 >
             </button>
