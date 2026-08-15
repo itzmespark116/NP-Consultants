@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/root.css">
     <link rel="stylesheet" href="../css/admin-body.css">
     <link rel="stylesheet" href="../css/admin-nav.css">
-    <link rel="stylesheet" href="../css/admin-login.css">
+    <link rel="stylesheet" href="../css/admin-webeditor-main.css">
 
     <link rel="stylesheet" href="../../css/placeholder.css">
     <link rel="stylesheet" href="../../css/limiter.css">
@@ -17,9 +17,37 @@
 
     <nav class="admin-nav"></nav>
 
-    <div class="placeholder-100vh">
+    <!-- <div class="placeholder-100vh">
         <h2>503</h2>
         <p>Under Development</p>
+    </div> -->
+
+    <div class="admin-webeditor-dashboard-container">
+        <div class="beam-container">
+            <div class="beam-container-glow"></div>
+            <div class="beam-container-beam"></div>
+
+            <div class="admin-webeditor-dashboard">
+                <h2>Welcome to Webeditor</h2>
+
+                <div class="buttons">
+                    
+                    <div class="website-edit">
+                        <button onclick="location.href='edit-about/'">About Us</button>
+                        <button onclick="location.href='edit-services/'">Services</button>
+                        <button onclick="location.href='edit-projects/'">Projects</button>
+                        <button onclick="location.href='edit-team/'">Team</button>
+                        <button onclick="location.href='edit-contact-form/'">Contact Us - Form</button>
+                    </div> 
+
+                    <div class="brand-edit">
+                        <button onclick="location.href='edit-branding/'">Brand Details</button>
+                        <button onclick="location.href='edit-contact-info/'">Contact Information</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -34,6 +62,7 @@
 
 <script src="../js/nav-print.js"></script>
 <script src="../js/admin-nav-anim-manage.js"></script>
+<script src="../js/admin-webeditor-panel-anim.js"></script>
 <script src="../../js/theme.js"></script>
 
 </html>

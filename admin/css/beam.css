@@ -1,0 +1,161 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* -------------------- beam-container.css -------------------- */
+/* ------------------------------------------------------------ */
+
+/*
+    HOW TO USE:
+
+    Add the "beam-container" class to any container.
+
+    Example:
+
+    <div class="beam-container">
+
+        <div class="beam-container-glow" aria-hidden="true"></div>
+        <div class="beam-container-beam" aria-hidden="true"></div>
+
+        <!-- PUT ANY CONTENT HERE -->
+
+    </div>
+
+    The container can contain anything:
+    text, buttons, images, forms, cards, grids, etc.
+
+    The beam angle can be animated from JavaScript using:
+
+        element.style.setProperty(
+            "--beam-angle",
+            `${angle}deg`
+        );
+
+    Optional variables:
+
+        --beam-radius: 28px;
+*/
+
+/* ------------------------------------------------------------ */
+
+.beam-container {
+    --beam-angle: 0deg;
+    --beam-radius: 28px;
+
+    position: relative;
+    isolation: isolate;
+}
+
+/* ------------------------------------------------------------ */
+
+.beam-container-glow,
+.beam-container-beam {
+    position: absolute;
+    inset: -1px;
+
+    border-radius: var(--beam-radius);
+
+    pointer-events: none;
+
+    background:
+        conic-gradient(
+            from var(--beam-angle),
+
+            transparent 0deg,
+            transparent 18deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 4%,
+                transparent
+            ) 36deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 55%,
+                transparent
+            ) 48deg,
+
+            var(--accent) 56deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 25%,
+                white
+            ) 61deg,
+
+            transparent 65deg,
+
+            transparent 180deg,
+            transparent 198deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 4%,
+                transparent
+            ) 216deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 55%,
+                transparent
+            ) 228deg,
+
+            var(--accent) 236deg,
+
+            color-mix(
+                in srgb,
+                var(--accent) 25%,
+                white
+            ) 241deg,
+
+            transparent 245deg,
+
+            transparent 360deg
+        );
+}
+
+/* ------------------------------------------------------------ */
+
+.beam-container-beam {
+    padding: 2px;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------ */
+
+.beam-container-glow {
+    filter: blur(14px);
+    opacity: 0.35;
+
+    z-index: -1;
+}
+
+/* ------------------------------------------------------------ */
+
+.beam-container > :not(.beam-container-beam):not(.beam-container-glow) {
+    position: relative;
+    z-index: 2;
+}
+
+/* ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+    .beam-container-beam,
+    .beam-container-glow {
+        display: none;
+    }
+}
+
+/* ------------------------------------------------------------ */

@@ -1,0 +1,257 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* --------------- admin-webeditor-main.css ------------------- */
+/* ------------------------------------------------------------ */
+
+@import url(../../css/root.css);
+@import url(../../css/beam-container.css);
+
+/* ------------------------------------------------------------ */
+
+html,
+body {
+    background: var(--admin-webeditor-background);
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------ */
+
+.beam-container {
+    --beam-angle: 0deg;
+    --beam-radius: 28px;
+
+    position: relative;
+    isolation: isolate;
+
+    width: clamp(240px, 40vw, 800px);
+
+    border-radius: var(--beam-radius);
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 45px 32px;
+
+    background: var(--glass);
+    box-shadow: var(--box-shadow);
+
+    border: 0.4px solid var(--border-2);
+    border-radius: 28px;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard * {
+    user-select: none;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard h2 {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-weight: 100;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 28px;
+
+    -webkit-user-select: none;
+    user-select: none;
+
+    border-right: 2px solid var(--accent);
+
+    animation:
+        typing 1.5s steps(21) forwards,
+        blink 0.7s step-end 2,
+        cursor-stop 0s 1.5s forwards;
+}
+
+/* ------------------------------------------------------------ */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes cursor-stop {
+    to {
+        border-color: transparent;
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard .buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    gap: 24px;
+    padding: 12px;
+
+    width: 100%;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard .brand-edit,
+.admin-webeditor-dashboard .website-edit {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard .website-edit button,
+.admin-webeditor-dashboard .brand-edit button {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    min-height: 64px;
+
+    padding: 10px 20px;
+
+    border: 0.1px solid var(--border-2);
+    border-radius: 999px;
+
+    background: var(--glass);
+    color: var(--color);
+
+    font-size: 1.35rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    -webkit-user-select: none;
+    user-select: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard .brand-edit button {
+    background: color-mix(
+        in srgb,
+        var(--accent) 20%,
+        var(--base)
+    );
+
+    border-color: color-mix(
+        in srgb,
+        var(--accent) 25%,
+        var(--border-2)
+    );
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard .website-edit button:hover,
+.admin-webeditor-dashboard .brand-edit button:hover {
+    transform: scale(1.03);
+
+    background: var(--glass-2);
+    border-color: var(--border);
+
+    box-shadow:
+        0 8px 24px
+        color-mix(
+            in srgb,
+            var(--accent) 12%,
+            transparent
+        );
+}
+
+/* ------------------------------------------------------------ */
+
+.admin-webeditor-dashboard .brand-edit button:hover {
+    background: color-mix(
+        in srgb,
+        var(--accent) 35%,
+        var(--base)
+    );
+
+    border-color: var(--accent);
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-width: 500px) {
+
+    .beam-container {
+        width: 90vw;
+    }
+
+    .admin-webeditor-dashboard {
+        padding: 32px 24px;
+    }
+
+    .admin-webeditor-dashboard h2 {
+        overflow-wrap: break-word;
+        white-space: nowrap;
+        overflow: scroll;
+    }
+
+    .admin-webeditor-dashboard .buttons {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .admin-webeditor-dashboard .brand-edit button,
+    .admin-webeditor-dashboard .website-edit button {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------------------------ */
