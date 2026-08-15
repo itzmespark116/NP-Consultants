@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const themePath =
         document.body.id === "webeditor"
-            ? "../../../../"
+            ? "../../../"
             : "../../../";
 
     function updateLogos(dark) {
