@@ -4,29 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Webeditor</title>
-
     <link rel="stylesheet" href="../../../css/root.css">
     <link rel="stylesheet" href="../../css/admin-body.css">
     <link rel="stylesheet" href="../../css/admin-nav.css">
-
+    <link rel="stylesheet" href="../../css/webeditor-team.css">
     <link rel="stylesheet" href="../../../css/placeholder.css">
     <link rel="stylesheet" href="../../../css/limiter.css">
 </head>
-<body><div class="show-screen">
-
+<body>
+<div class="show-screen">
     <nav class="admin-nav" id="webeditor"></nav>
+    <main class="webeditor-container">
+        <div class="webeditor-header">
+            <div>
+                <div class="webeditor-title">Webeditor</div>
+                <div class="webeditor-subtitle">Our Team &nbsp;&bull;&nbsp; <i>Homepage</i></div>
+            </div>
+            <div class="webeditor-actions">
+                <button type="button" class="webeditor-button back" onclick="location.href='../'">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Webeditor
+                </button>
+                <button type="button" class="webeditor-button secondary" id="reset-button">
+                    Reset
+                </button>
+                <button type="button" class="webeditor-button" id="save-button">
+                    Save Changes
+                </button>
+            </div>
+        </div>
 
+        <form class="webeditor-form" id="team-form">
+            <section class="element">
+                <div class="element-header">
+                    <div class="element-name">Managing Director</div>
+                    <div class="element-description">Managing director information is fixed and cannot be edited here.</div>
+                </div>
 
+                <div class="director-editor">
+                    <div class="director-preview">
+                        <img id="director-image" src="../../../img/placeholder-profile.jpg" alt="Director">
+                    </div>
 
+                    <div class="director-fields">
+                        <div class="field">
+                            <label for="director-name">Name</label>
+                            <input type="text" id="director-name" autocomplete="off" readonly>
+                        </div>
 
-    <div class="placeholder-100vh">
-        <h2>503</h2>
-        <p>Under Development</p>
-    </div>
+                        <div class="field">
+                            <label for="director-role">Role</label>
+                            <input type="text" id="director-role" autocomplete="off" readonly>
+                        </div>
 
+                        <div class="field">
+                            <label>Qualifications</label>
+                            <div class="qualification-list readonly-list" id="director-qualifications"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section class="element">
+                <div class="element-header employee-header">
+                    <div>
+                        <div class="element-name">Employees</div>
+                        <div class="element-description">Add, remove, select and edit employees.</div>
+                    </div>
 
-    
+                    <button type="button" class="qualification-add add-employee-button" id="add-employee-button">
+                        + Add Employee
+                    </button>
+                </div>
+
+                <div class="team-grid" id="team-grid"></div>
+            </section>
+
+            <section class="element employee-editor" id="employee-editor" hidden>
+                <div class="element-header employee-editor-header">
+                    <div>
+                        <div class="element-name">Employee Details</div>
+                        <div class="element-description">Edit the selected employee's information.</div>
+                    </div>
+
+                    <button type="button" class="danger-button" id="remove-employee-button">
+                        Remove Employee
+                    </button>
+                </div>
+
+                <div class="employee-editor-layout">
+                    <div class="employee-preview">
+                        <img id="employee-image" src="../../../img/placeholder-profile.jpg" alt="Employee">
+
+                        <div class="image-upload">
+                            <input type="file" id="employee-image-upload" accept="image/jpeg,image/png,image/webp">
+
+                            <label for="employee-image-upload" class="file-button">
+                                Choose Image
+                            </label>
+
+                            <div class="file-name" id="employee-image-name">
+                                No image
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="employee-fields">
+                        <div class="field">
+                            <label for="employee-name">Name</label>
+                            <input type="text" id="employee-name" autocomplete="off">
+                        </div>
+
+                        <div class="field">
+                            <label for="employee-role">Role</label>
+                            <input type="text" id="employee-role" autocomplete="off">
+                        </div>
+
+                        <div class="field">
+                            <label>Qualifications</label>
+                            <div class="qualification-list" id="employee-qualifications"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+
+        <div class="webeditor-status" id="webeditor-status"></div>
+    </main>
 </div>
 
 <div class="screen-error">
@@ -35,11 +141,10 @@
     </div>
 </div>
 
-</body>
-
 <script src="../../js/nav-print.js"></script>
 <script src="../../js/admin-nav-anim-manage.js"></script>
 <script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-team.js"></script>
 <script src="../../../js/theme.js"></script>
-
+</body>
 </html>

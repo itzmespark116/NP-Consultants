@@ -8,38 +8,196 @@
     <link rel="stylesheet" href="../../../css/root.css">
     <link rel="stylesheet" href="../../css/admin-body.css">
     <link rel="stylesheet" href="../../css/admin-nav.css">
+    <link rel="stylesheet" href="../../css/webeditor-about.css">
 
     <link rel="stylesheet" href="../../../css/placeholder.css">
     <link rel="stylesheet" href="../../../css/limiter.css">
 </head>
-<body><div class="show-screen">
+<body>
+
+<div class="show-screen">
 
     <nav class="admin-nav" id="webeditor"></nav>
 
+    <main class="webeditor-container">
 
+        <div class="webeditor-header">
 
+            <div>
+                <div class="webeditor-title">
+                    Webeditor
+                </div>
 
-    <div class="placeholder-100vh">
-        <h2>503</h2>
-        <p>Under Development</p>
-    </div>
+                <div class="webeditor-subtitle">
+                    About Us &nbsp;&bull;&nbsp; <i>Homepage</i>
+                </div>
+            </div>
 
+            <div class="webeditor-actions">
 
+                <button
+                    class="webeditor-button back"
+                    onclick="location.href='../'"
+                >
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Webeditor
+                </button>
 
-    
+                <button
+                    type="button"
+                    class="webeditor-button secondary"
+                    id="reset-button"
+                >
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button"
+                    id="save-button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+        <form
+            class="webeditor-form"
+            id="about-form"
+        >
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        About Content
+                    </div>
+
+                    <div class="element-description">
+                        Edit the text displayed in the About section.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="main-about-title">
+                            Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-about-title"
+                            name="main-about-title"
+                            autocomplete="off"
+                            placeholder="About Us"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-about-text-0">
+                            Paragraph 01
+                        </label>
+
+                        <textarea
+                            id="main-about-text-0"
+                            name="main-about-text-0"
+                            rows="4"
+                            placeholder="NP Consultants is a structural design and consulting firm established in 2010, providing innovative and reliable engineering solutions for residential, commercial and specialized structures."
+                        ></textarea>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-about-text-1">
+                            Paragraph 02
+                        </label>
+
+                        <textarea
+                            id="main-about-text-1"
+                            name="main-about-text-1"
+                            rows="4"
+                            placeholder="Our expertise covers reinforced concrete, steel structures, water-retaining structures, treatment plants and complete engineering consultancy services."
+                        ></textarea>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-about-text-2">
+                            Paragraph 03
+                        </label>
+
+                        <textarea
+                            id="main-about-text-2"
+                            name="main-about-text-2"
+                            rows="4"
+                            placeholder="We focus on practical solutions, technical excellence and delivering projects that meet client requirements with precision and efficiency."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        About Projects
+                    </div>
+
+                    <div class="element-description">
+                        Edit the projects displayed in the About section.
+                    </div>
+
+                </div>
+
+                <div
+                    class="projects-container"
+                    id="projects-container"
+                ></div>
+
+            </section>
+
+        </form>
+
+        <div
+            class="webeditor-status"
+            id="webeditor-status"
+        ></div>
+
+    </main>
+
 </div>
 
 <div class="screen-error">
-    <div class="screen-error-container">
-        <div class="screen-error-msg">Resolution Not Sufficient</div>
-    </div>
-</div>
 
-</body>
+    <div class="screen-error-container">
+
+        <div class="screen-error-msg">
+            Resolution Not Sufficient
+        </div>
+
+    </div>
+
+</div>
 
 <script src="../../js/nav-print.js"></script>
 <script src="../../js/admin-nav-anim-manage.js"></script>
 <script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-about.js"></script>
 <script src="../../../js/theme.js"></script>
 
+</body>
 </html>

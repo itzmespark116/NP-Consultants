@@ -1,0 +1,579 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ------------------ webeditor-team.css ---------------------- */
+/* ------------------------------------------------------------ */
+
+@import url(../../css/root.css);
+
+/* ------------------------------------------------------------ */
+
+html,
+body {
+    overflow: scroll;
+    background: var(--admin-webeditor-background);
+}
+
+.webeditor-container {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 110px clamp(20px, 5vw, 80px) 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.webeditor-title {
+    color: var(--color-theme);
+    font-size: 3.6rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.webeditor-subtitle {
+    margin-top: 4px;
+    padding-left: 2px;
+    color: var(--color);
+    font-size: 1.2rem;
+    opacity: .55;
+}
+
+.webeditor-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.webeditor-button {
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 11px 18px;
+    background: var(--accent);
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.webeditor-button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+}
+
+.webeditor-button.secondary {
+    background: transparent;
+    border-color: var(--border-2);
+    color: var(--color-theme);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: var(--box-shadow);
+}
+
+.webeditor-button.back {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--glass);
+    border-color: var(--border-2);
+    color: var(--color);
+    box-shadow: var(--box-shadow);
+}
+
+.webeditor-button.back svg {
+    width: 16px;
+    height: 16px;
+}
+
+.webeditor-button:disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.element {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid var(--border-2);
+    border-radius: 16px;
+    background: var(--glass);
+}
+
+.element-header {
+    margin-bottom: 22px;
+}
+
+.employee-header,
+.employee-editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.element-name {
+    color: var(--color-theme);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.element-description {
+    margin-top: 5px;
+    color: var(--color);
+    font-size: 13px;
+    opacity: .55;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------- fields ---------------------------- */
+/* ------------------------------------------------------------ */
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    color: var(--color-mute);
+    font-size: 13px;
+    font-weight: 600;
+    opacity: .8;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: var(--glass);
+    color: var(--color);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: .2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb,var(--accent) 15%,transparent);
+}
+
+.field input[readonly] {
+    cursor: default;
+    opacity: .7;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------ director -------------------------- */
+/* ------------------------------------------------------------ */
+
+.director-editor,
+.employee-editor-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0,1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+.director-preview,
+.employee-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.director-preview > img,
+.employee-preview > img {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 1px solid var(--border-2);
+    background: white;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.director-fields,
+.employee-fields {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 18px;
+}
+
+.director-fields .field:nth-child(3),
+.employee-fields .field:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+/* ------------------------------------------------------------ */
+/* ---------------------- image upload ------------------------ */
+/* ------------------------------------------------------------ */
+
+.image-upload {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.image-upload input[type="file"] {
+    display: none;
+}
+
+.file-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 15px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.file-button:hover {
+    filter: brightness(1.08);
+}
+
+.file-name {
+    max-width: 220px;
+    overflow: hidden;
+    color: var(--color);
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: .55;
+}
+
+/* ------------------------------------------------------------ */
+/* ---------------------- employee grid ----------------------- */
+/* ------------------------------------------------------------ */
+
+.team-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+}
+
+.team-card {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--glass);
+    cursor: pointer;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: color-mix(in srgb,var(--glass) 85%,var(--accent) 15%);
+    box-shadow: var(--box-shadow);
+}
+
+.team-card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+}
+
+.team-card-image {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid var(--border-2);
+    background: white;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.team-card-info {
+    min-width: 0;
+    flex: 1;
+}
+
+.team-card-name {
+    overflow: hidden;
+    color: var(--color-theme);
+    font-size: 15px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.team-card-role {
+    margin-top: 4px;
+    color: var(--color);
+    font-size: 12px;
+    opacity: .55;
+}
+
+.team-card-edit {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.team-card-edit::after {
+    content: " →";
+}
+
+/* ------------------------------------------------------------ */
+/* -------------------- qualifications ------------------------ */
+/* ------------------------------------------------------------ */
+
+.qualification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.qualification-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qualification-item input {
+    flex: 1;
+}
+
+.readonly-list .qualification-item input {
+    cursor: default;
+    opacity: .7;
+}
+
+.readonly-list .qualification-remove {
+    display: none;
+}
+
+.qualification-remove {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--glass);
+    color: #ff5f5f;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.qualification-remove:hover {
+    border-color: #ff5f5f;
+}
+
+.qualification-add {
+    align-self: flex-start;
+    margin-top: 4px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 14px;
+    background: var(--glass);
+    color: var(--color);
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.qualification-add:hover {
+    border-color: var(--accent);
+}
+
+/* ------------------------------------------------------------ */
+/* --------------------- employee actions --------------------- */
+/* ------------------------------------------------------------ */
+
+.add-employee-button {
+    flex-shrink: 0;
+    margin-top: 0;
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.danger-button {
+    flex-shrink: 0;
+    border: 1px solid #ff5f5f;
+    border-radius: 999px;
+    padding: 9px 15px;
+    background: transparent;
+    color: #ff5f5f;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.danger-button:hover {
+    background: #ff5f5f;
+    color: white;
+}
+
+.employee-editor[hidden] {
+    display: none;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-status {
+    min-height: 20px;
+    color: var(--color);
+    font-size: 13px;
+    opacity: .7;
+}
+
+.webeditor-status.success {
+    color: #55c878;
+    opacity: 1;
+}
+
+.webeditor-status.error {
+    color: #ff5f5f;
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .director-editor,
+    .employee-editor-layout {
+        grid-template-columns: 180px minmax(0,1fr);
+    }
+
+    .director-preview > img,
+    .employee-preview > img {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .webeditor-container {
+        padding: 100px 16px 40px;
+    }
+
+    .webeditor-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .webeditor-actions {
+        width: 100%;
+    }
+
+    .webeditor-button {
+        flex: 1;
+    }
+
+    .element {
+        padding: 18px;
+    }
+
+    .employee-header,
+    .employee-editor-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .director-editor,
+    .employee-editor-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .director-fields,
+    .employee-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .director-fields .field:nth-child(3),
+    .employee-fields .field:nth-child(3) {
+        grid-column: auto;
+    }
+
+    .add-employee-button,
+    .danger-button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .team-card {
+        padding: 12px;
+    }
+
+    .team-card-image {
+        width: 54px;
+        height: 54px;
+    }
+
+    .team-card-name {
+        font-size: 14px;
+    }
+
+}
+
+/* ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .webeditor-button,
+    .team-card,
+    .file-button,
+    .danger-button {
+        transition: none !important;
+    }
+
+    .webeditor-button:hover,
+    .team-card:hover {
+        transform: none !important;
+    }
+
+}

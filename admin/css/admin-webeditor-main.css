@@ -11,6 +11,7 @@
 html,
 body {
     background: var(--admin-webeditor-background);
+    overflow: scroll;
 }
 
 /* ------------------------------------------------------------ */
@@ -29,15 +30,7 @@ body {
 /* ------------------------------------------------------------ */
 
 .beam-container {
-    --beam-angle: 0deg;
-    --beam-radius: 28px;
-
-    position: relative;
-    isolation: isolate;
-
-    width: clamp(240px, 40vw, 800px);
-
-    border-radius: var(--beam-radius);
+    width: clamp(240px, 50vw, 1100px);
 }
 
 /* ------------------------------------------------------------ */
@@ -52,10 +45,12 @@ body {
     flex-direction: column;
     gap: 12px;
 
+    /* max-height: calc(95vh - 80px); */
     width: 100%;
     box-sizing: border-box;
 
     padding: 45px 32px;
+    margin-top: 80px;
 
     background: var(--glass);
     box-shadow: var(--box-shadow);
@@ -78,16 +73,12 @@ body {
     white-space: nowrap;
 
     font-weight: 100;
-    font-size: 2.4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
 
-    margin: 0;
+    margin: 0 0 28px;
     padding: 0;
-    margin-bottom: 28px;
-
-    -webkit-user-select: none;
-    user-select: none;
 
     border-right: 2px solid var(--accent);
 
@@ -109,11 +100,15 @@ body {
     }
 }
 
+/* ------------------------------------------------------------ */
+
 @keyframes blink {
     50% {
         border-color: transparent;
     }
 }
+
+/* ------------------------------------------------------------ */
 
 @keyframes cursor-stop {
     to {
@@ -137,7 +132,8 @@ body {
 /* ------------------------------------------------------------ */
 
 .admin-webeditor-dashboard .brand-edit,
-.admin-webeditor-dashboard .website-edit {
+.admin-webeditor-dashboard .website-edit,
+.admin-webeditor-dashboard .website-edit-main {
     display: flex;
     flex-direction: column;
 
@@ -149,7 +145,8 @@ body {
 /* ------------------------------------------------------------ */
 
 .admin-webeditor-dashboard .website-edit button,
-.admin-webeditor-dashboard .brand-edit button {
+.admin-webeditor-dashboard .brand-edit button,
+.admin-webeditor-dashboard .website-edit-main button {
     position: relative;
     z-index: 3;
 
@@ -198,7 +195,8 @@ body {
 /* ------------------------------------------------------------ */
 
 .admin-webeditor-dashboard .website-edit button:hover,
-.admin-webeditor-dashboard .brand-edit button:hover {
+.admin-webeditor-dashboard .brand-edit button:hover,
+.admin-webeditor-dashboard .website-edit-main button:hover {
     transform: scale(1.03);
 
     background: var(--glass-2);
@@ -235,12 +233,13 @@ body {
 
     .admin-webeditor-dashboard {
         padding: 32px 24px;
+        margin-bottom: 65px;
     }
 
     .admin-webeditor-dashboard h2 {
-        overflow-wrap: break-word;
+        font-size: 1.8rem;
+        overflow-x: auto;
         white-space: nowrap;
-        overflow: scroll;
     }
 
     .admin-webeditor-dashboard .buttons {

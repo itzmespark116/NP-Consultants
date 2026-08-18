@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Webeditor</title>
+
+    <link rel="stylesheet" href="../../../css/root.css">
+    <link rel="stylesheet" href="../../css/admin-body.css">
+    <link rel="stylesheet" href="../../css/admin-nav.css">
+    <link rel="stylesheet" href="../../css/webeditor-banner.css">
+
+    <link rel="stylesheet" href="../../../css/placeholder.css">
+    <link rel="stylesheet" href="../../../css/limiter.css">
+</head>
+<body>
+
+<div class="show-screen">
+
+    <nav class="admin-nav" id="webeditor"></nav>
+
+    <main class="webeditor-container">
+
+        <div class="webeditor-header">
+
+            <div>
+                <div class="webeditor-title">
+                    Webeditor
+                </div>
+
+                <div class="webeditor-subtitle">
+                    Website Banner &nbsp;&bull;&nbsp; <i>Homepage</i>
+                </div>
+            </div>
+
+            <div class="webeditor-actions">
+
+                <button class="webeditor-button back" onclick="location.href='../'">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Webeditor
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button secondary"
+                    id="reset-button"
+                >
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button"
+                    id="save-button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+        <form
+            class="webeditor-form"
+            id="banner-form"
+        >
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Banner Content
+                    </div>
+
+                    <div class="element-description">
+                        Edit the text displayed on the main banner.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="main-banner-subtitle">
+                            Subtitle
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-banner-subtitle"
+                            name="main-banner-subtitle"
+                            autocomplete="off"
+                            placeholder="Sri Lanka's Leading"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-banner-title">
+                            Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-banner-title"
+                            name="main-banner-title"
+                            autocomplete="off"
+                            placeholder="Structural Engineers"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-banner-description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="main-banner-description"
+                            name="main-banner-description"
+                            rows="4"
+                            placeholder="Chartered Engineers & Architects with years of experience"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Banner Button
+                    </div>
+
+                    <div class="element-description">
+                        Configure the button text and destination.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="main-banner-button">
+                            Button Text
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-banner-button"
+                            name="main-banner-button"
+                            autocomplete="off"
+                            placeholder="Read More"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-banner-buttonLink">
+                            Button Link
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-banner-buttonLink"
+                            name="main-banner-buttonLink"
+                            autocomplete="off"
+                            placeholder="#main-about"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Banner Media
+                    </div>
+
+                    <div class="element-description">
+                        Upload the banner video and poster image.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="main-banner-video">
+                            Banner Video
+                        </label>
+
+                        <div class="file-input">
+
+                            <input
+                                type="file"
+                                id="main-banner-video"
+                                name="main-banner-video"
+                                accept="video/mp4,video/webm,video/ogg"
+                            >
+
+                            <label
+                                for="main-banner-video"
+                                class="file-button"
+                            >
+                                Choose Video
+                            </label>
+
+                            <div
+                                class="file-name"
+                                id="main-banner-video-name"
+                            >
+                                No file selected
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-banner-poster">
+                            Banner Poster
+                        </label>
+
+                        <div class="file-input">
+
+                            <input
+                                type="file"
+                                id="main-banner-poster"
+                                name="main-banner-poster"
+                                accept="image/jpeg,image/png,image/webp"
+                            >
+
+                            <label
+                                for="main-banner-poster"
+                                class="file-button"
+                            >
+                                Choose Image
+                            </label>
+
+                            <div
+                                class="file-name"
+                                id="main-banner-poster-name"
+                            >
+                                No file selected
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </form>
+
+        <div
+            class="webeditor-status"
+            id="webeditor-status"
+        ></div>
+
+    </main>
+
+</div>
+
+<div class="screen-error">
+
+    <div class="screen-error-container">
+
+        <div class="screen-error-msg">
+            Resolution Not Sufficient
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../../js/nav-print.js"></script>
+<script src="../../js/admin-nav-anim-manage.js"></script>
+<script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-banner.js"></script>
+<script src="../../../js/theme.js"></script>
+
+</body>
+</html>

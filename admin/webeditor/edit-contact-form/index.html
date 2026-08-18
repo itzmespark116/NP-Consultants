@@ -8,38 +8,214 @@
     <link rel="stylesheet" href="../../../css/root.css">
     <link rel="stylesheet" href="../../css/admin-body.css">
     <link rel="stylesheet" href="../../css/admin-nav.css">
+    <link rel="stylesheet" href="../../css/webeditor-contact.css">
 
     <link rel="stylesheet" href="../../../css/placeholder.css">
     <link rel="stylesheet" href="../../../css/limiter.css">
 </head>
-<body><div class="show-screen">
+<body>
+
+<div class="show-screen">
 
     <nav class="admin-nav" id="webeditor"></nav>
 
+    <main class="webeditor-container">
 
+        <div class="webeditor-header">
 
+            <div>
 
-    <div class="placeholder-100vh">
-        <h2>503</h2>
-        <p>Under Development</p>
-    </div>
+                <div class="webeditor-title">
+                    Webeditor
+                </div>
 
+                <div class="webeditor-subtitle">
+                    Contact Form &nbsp;&bull;&nbsp; <i>Contact Us Page</i><br>
+                    Footer &nbsp;&bull;&nbsp; <i>All Pages</i>
+                </div>
 
+            </div>
 
-    
+            <div class="webeditor-actions">
+
+                <button
+                    class="webeditor-button back"
+                    type="button"
+                    onclick="location.href='../'"
+                >
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M15 18L9 12L15 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    Webeditor
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button secondary"
+                    id="reset-button"
+                >
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button"
+                    id="save-button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+        <form
+            class="webeditor-form"
+            id="contact-form"
+        >
+
+            <section class="element">
+
+                <div class="element-header form-section-header">
+
+                    <div>
+
+                        <div class="element-name">
+                            Contact Form
+                        </div>
+
+                        <div class="element-description">
+                            Configure the fields displayed on the contact form.
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="navigation-add"
+                        id="add-field-button"
+                    >
+                        + Add Field
+                    </button>
+
+                </div>
+
+                <div
+                    class="element-fields"
+                    id="form-fields"
+                ></div>
+
+            </section>
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Footer
+                    </div>
+
+                    <div class="element-description">
+                        Edit the footer content and navigation links.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="footer-title">
+                            Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="footer-title"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="footer-subtitle">
+                            Subtitle
+                        </label>
+
+                        <input
+                            type="text"
+                            id="footer-subtitle"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <div class="field full">
+
+                        <label for="footer-copyright">
+                            Copyright
+                        </label>
+
+                        <input
+                            type="text"
+                            id="footer-copyright"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <div class="field full">
+
+                        <label>
+                            Navigation
+                        </label>
+
+                        <div
+                            class="footer-navigation"
+                            id="footer-navigation"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </form>
+
+        <div
+            class="webeditor-status"
+            id="webeditor-status"
+        ></div>
+
+    </main>
+
 </div>
 
 <div class="screen-error">
-    <div class="screen-error-container">
-        <div class="screen-error-msg">Resolution Not Sufficient</div>
-    </div>
-</div>
 
-</body>
+    <div class="screen-error-container">
+
+        <div class="screen-error-msg">
+            Resolution Not Sufficient
+        </div>
+
+    </div>
+
+</div>
 
 <script src="../../js/nav-print.js"></script>
 <script src="../../js/admin-nav-anim-manage.js"></script>
 <script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-contact.js"></script>
 <script src="../../../js/theme.js"></script>
 
+</body>
 </html>

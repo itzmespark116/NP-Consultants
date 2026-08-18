@@ -1,0 +1,258 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ------------- webeditor-contact-main.css ------------------- */
+/* ------------------------------------------------------------ */
+
+@import url(../../css/root.css);
+
+/* ------------------------------------------------------------ */
+
+html,
+body {
+    overflow: scroll;
+    background: var(--admin-webeditor-background);
+}
+
+.webeditor-container {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 110px clamp(20px, 5vw, 80px) 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    user-select: none;
+}
+
+.webeditor-title {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: var(--color-theme);
+}
+
+.webeditor-subtitle {
+    margin-top: 4px;
+    padding-left: 2px;
+    font-size: 1.2rem;
+    color: var(--color);
+    opacity: .55;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.webeditor-button {
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 11px 18px;
+    background: var(--accent);
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.webeditor-button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+}
+
+.webeditor-button.secondary {
+    background: transparent;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: var(--box-shadow);
+    border-color: var(--border-2);
+    color: var(--color-theme);
+}
+
+.webeditor-button.back {
+    color: var(--color);
+    background: var(--glass);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.webeditor-button.back svg {
+    height: 1rem;
+}
+
+.webeditor-button:disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ------------------------------------------------------------ */
+
+.element {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid var(--border-2);
+    border-radius: 16px;
+    background: var(--glass);
+}
+
+.element-header {
+    margin-bottom: 22px;
+}
+
+.element-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--color-theme);
+}
+
+.element-description {
+    margin-top: 5px;
+    font-size: 13px;
+    color: var(--color);
+    opacity: .55;
+}
+
+/* ------------------------------------------------------------ */
+
+.element-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field:nth-child(1),
+.field:nth-child(2) {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-mute);
+    opacity: .8;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: var(--glass);
+    color: var(--color);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: .2s ease;
+    cursor: text;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.field-key {
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--color);
+    opacity: .4;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-status {
+    min-height: 20px;
+    font-size: 13px;
+    color: var(--color);
+    opacity: .7;
+}
+
+.webeditor-status.success {
+    color: #55c878;
+    opacity: 1;
+}
+
+.webeditor-status.error {
+    color: #ff5f5f;
+    opacity: 1;
+}
+
+.webeditor-status.warning {
+    color: #e6a83b;
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-width: 700px) {
+
+    .webeditor-container {
+        padding: 100px 16px 40px;
+    }
+
+    .webeditor-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .webeditor-actions {
+        width: 100%;
+    }
+
+    .webeditor-button {
+        flex: 1;
+    }
+
+    .element {
+        padding: 18px;
+    }
+
+    .element-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .field:nth-child(1),
+    .field:nth-child(2) {
+        grid-column: auto;
+    }
+
+}

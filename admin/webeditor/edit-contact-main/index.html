@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Webeditor</title>
+
+    <link rel="stylesheet" href="../../../css/root.css">
+    <link rel="stylesheet" href="../../css/admin-body.css">
+    <link rel="stylesheet" href="../../css/admin-nav.css">
+    <link rel="stylesheet" href="../../css/webeditor-contact-main.css">
+
+    <link rel="stylesheet" href="../../../css/placeholder.css">
+    <link rel="stylesheet" href="../../../css/limiter.css">
+</head>
+
+<body>
+
+<div class="show-screen">
+
+    <nav class="admin-nav" id="webeditor"></nav>
+
+    <main class="webeditor-container">
+
+        <div class="webeditor-header">
+
+            <div>
+
+                <div class="webeditor-title">
+                    Webeditor
+                </div>
+
+                <div class="webeditor-subtitle">
+                    Contact Main &nbsp;&bull;&nbsp; <i>Homepage</i>
+                </div>
+
+            </div>
+
+            <div class="webeditor-actions">
+
+                <button
+                    class="webeditor-button back"
+                    type="button"
+                    onclick="location.href='../'"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M15 18L9 12L15 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+
+                    Webeditor
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button secondary"
+                    id="reset-button"
+                >
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button"
+                    id="save-button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="webeditor-form">
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Contact Main
+                    </div>
+
+                    <div class="element-description">
+                        Edit the main contact section displayed on the website.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="main-contact-title">
+                            Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-contact-title"
+                            name="main-contact-title"
+                            autocomplete="off"
+                            placeholder="Contact us for more information"
+                        >
+
+                        <div class="field-key">
+                            main-contact-title
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-contact-description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="main-contact-description"
+                            name="main-contact-description"
+                            rows="4"
+                            placeholder="Our experienced staff is always here to help you."
+                        ></textarea>
+
+                        <div class="field-key">
+                            main-contact-description
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-contact-button">
+                            Button Text
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-contact-button"
+                            name="main-contact-button"
+                            autocomplete="off"
+                            placeholder="Contact Us"
+                        >
+
+                        <div class="field-key">
+                            main-contact-button
+                        </div>
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-contact-buttonLink">
+                            Button Link
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-contact-buttonLink"
+                            name="main-contact-buttonLink"
+                            autocomplete="off"
+                            placeholder="../contact/"
+                        >
+
+                        <div class="field-key">
+                            main-contact-buttonLink
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <div
+            class="webeditor-status"
+            id="webeditor-status"
+        >
+            Loading contact data...
+        </div>
+
+    </main>
+
+</div>
+
+<div class="screen-error">
+
+    <div class="screen-error-container">
+
+        <div class="screen-error-msg">
+            Resolution Not Sufficient
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../../js/nav-print.js"></script>
+<script src="../../js/admin-nav-anim-manage.js"></script>
+<script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-contact-main.js"></script>
+<script src="../../../js/theme.js"></script>
+
+</body>
+</html>

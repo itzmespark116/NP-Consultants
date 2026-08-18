@@ -3,43 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Webeditor</title>
 
     <link rel="stylesheet" href="../../../css/root.css">
     <link rel="stylesheet" href="../../css/admin-body.css">
     <link rel="stylesheet" href="../../css/admin-nav.css">
+    <link rel="stylesheet" href="../../css/webeditor-services.css">
 
     <link rel="stylesheet" href="../../../css/placeholder.css">
     <link rel="stylesheet" href="../../../css/limiter.css">
 </head>
-<body><div class="show-screen">
+
+<body>
+
+<div class="show-screen">
 
     <nav class="admin-nav" id="webeditor"></nav>
 
+    <main class="webeditor-container">
 
+        <div class="webeditor-header">
 
+            <div>
 
-    <div class="placeholder-100vh">
-        <h2>503</h2>
-        <p>Under Development</p>
-    </div>
+                <div class="webeditor-title">
+                    Webeditor
+                </div>
 
+                <div class="webeditor-subtitle">
+                    Services &nbsp;&bull;&nbsp; <i>Services page</i>
+                </div>
 
+            </div>
 
-    
+            <div class="webeditor-actions">
+
+                <button
+                    class="webeditor-button back"
+                    type="button"
+                    onclick="location.href='../'"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M15 18L9 12L15 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+
+                    Webeditor
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button secondary"
+                    id="reset-button"
+                >
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button"
+                    id="save-button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="webeditor-form">
+
+            <div
+                class="services-list"
+                id="services-list"
+            ></div>
+
+            <button
+                type="button"
+                class="add-service-button"
+                id="add-service-button"
+            >
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M12 5V19M5 12H19"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                    />
+                </svg>
+
+                Add Service
+            </button>
+
+        </div>
+
+        <div
+            class="webeditor-status"
+            id="webeditor-status"
+        >
+            Loading services data...
+        </div>
+
+    </main>
+
 </div>
 
 <div class="screen-error">
-    <div class="screen-error-container">
-        <div class="screen-error-msg">Resolution Not Sufficient</div>
-    </div>
-</div>
 
-</body>
+    <div class="screen-error-container">
+
+        <div class="screen-error-msg">
+            Resolution Not Sufficient
+        </div>
+
+    </div>
+
+</div>
 
 <script src="../../js/nav-print.js"></script>
 <script src="../../js/admin-nav-anim-manage.js"></script>
 <script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-services.js"></script>
 <script src="../../../js/theme.js"></script>
 
+</body>
 </html>

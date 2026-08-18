@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Webeditor &nbsp;&bull;&nbsp; Main Services</title>
+
+    <link rel="stylesheet" href="../../../css/root.css">
+    <link rel="stylesheet" href="../../css/admin-body.css">
+    <link rel="stylesheet" href="../../css/admin-nav.css">
+    <link rel="stylesheet" href="../../css/webeditor-main-services.css">
+
+    <link rel="stylesheet" href="../../../css/placeholder.css">
+    <link rel="stylesheet" href="../../../css/limiter.css">
+</head>
+<body>
+
+<div class="show-screen">
+
+    <nav class="admin-nav" id="webeditor"></nav>
+
+    <main class="webeditor-container">
+
+        <div class="webeditor-header">
+
+            <div>
+                <div class="webeditor-title">
+                    Webeditor
+                </div>
+
+                <div class="webeditor-subtitle">
+                    Main Services &nbsp;&bull;&nbsp; <i>Homepage</i>
+                </div>
+            </div>
+
+            <div class="webeditor-actions">
+
+                <button
+                    class="webeditor-button back"
+                    onclick="location.href='../'"
+                >
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Webeditor
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button secondary"
+                    id="reset-button"
+                >
+                    Reset
+                </button>
+
+                <button
+                    type="button"
+                    class="webeditor-button"
+                    id="save-button"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+        <form
+            class="webeditor-form"
+            id="services-form"
+        >
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Main Services Content
+                    </div>
+
+                    <div class="element-description">
+                        Edit the heading and description displayed in the homepage services section.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="main-services-title">
+                            Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-services-title"
+                            name="main-services-title"
+                            autocomplete="off"
+                            placeholder="Our Services"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-services-description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="main-services-description"
+                            name="main-services-description"
+                            rows="4"
+                            placeholder="We Provide Various Engineering Services from the Initial Planning Stage to the Full Completion"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Main Services Button & Media
+                    </div>
+
+                    <div class="element-description">
+                        Configure the button and image displayed in the homepage services section.
+                    </div>
+
+                </div>
+
+                <div class="element-fields">
+
+                    <div class="field">
+
+                        <label for="main-services-button">
+                            Button Text
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-services-button"
+                            name="main-services-button"
+                            autocomplete="off"
+                            placeholder="Read More"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-services-buttonLink">
+                            Button Link
+                        </label>
+
+                        <input
+                            type="text"
+                            id="main-services-buttonLink"
+                            name="main-services-buttonLink"
+                            autocomplete="off"
+                            placeholder="../services/"
+                        >
+
+                    </div>
+
+                    <div class="field">
+
+                        <label for="main-services-image">
+                            Services Image
+                        </label>
+
+                        <div class="file-input">
+
+                            <input
+                                type="file"
+                                id="main-services-image"
+                                name="main-services-image"
+                                accept="image/jpeg,image/png,image/webp"
+                            >
+
+                            <label
+                                for="main-services-image"
+                                class="file-button"
+                            >
+                                Choose Image
+                            </label>
+
+                            <div
+                                class="file-name"
+                                id="main-services-image-name"
+                            >
+                                No file selected
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="element">
+
+                <div class="element-header">
+
+                    <div class="element-name">
+                        Homepage Services
+                    </div>
+
+                    <div class="element-description">
+                        Edit the services displayed on the homepage and choose which side each service appears on.
+                    </div>
+
+                </div>
+
+                <div
+                    class="services-container"
+                    id="services-container"
+                ></div>
+
+            </section>
+
+        </form>
+
+        <div
+            class="webeditor-status"
+            id="webeditor-status"
+        ></div>
+
+    </main>
+
+</div>
+
+<div class="screen-error">
+
+    <div class="screen-error-container">
+
+        <div class="screen-error-msg">
+            Resolution Not Sufficient
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../../js/nav-print.js"></script>
+<script src="../../js/admin-nav-anim-manage.js"></script>
+<script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-main-services.js"></script>
+<script src="../../../js/theme.js"></script>
+
+</body>
+</html>

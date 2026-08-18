@@ -3,30 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Webeditor</title>
-
+    <title>NP Consultants &nbsp;&bull;&nbsp; Admin &nbsp;&bull;&nbsp; Contact Info</title>
     <link rel="stylesheet" href="../../../css/root.css">
     <link rel="stylesheet" href="../../css/admin-body.css">
     <link rel="stylesheet" href="../../css/admin-nav.css">
-
+    <link rel="stylesheet" href="../../css/webeditor-contact-info.css">
     <link rel="stylesheet" href="../../../css/placeholder.css">
     <link rel="stylesheet" href="../../../css/limiter.css">
 </head>
-<body><div class="show-screen">
-
+<body>
+<div class="show-screen">
     <nav class="admin-nav" id="webeditor"></nav>
+    <main class="webeditor-container">
+        <div class="webeditor-header">
+            <div>
+                <div class="webeditor-title">Webeditor</div>
+                <div class="webeditor-subtitle">Contact Information &nbsp;&bull;&nbsp; <i>All Pages</i></div>
+            </div>
+            <div class="webeditor-actions">
+                <button class="webeditor-button back" type="button" onclick="location.href='../'">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Webeditor
+                </button>
+                <button type="button" class="webeditor-button secondary" id="reset-button">Reset</button>
+                <button type="button" class="webeditor-button" id="save-button">Save Changes</button>
+            </div>
+        </div>
 
+        <form class="webeditor-form" id="contact-info-form">
+            <section class="element">
+                <div class="element-header">
+                    <div class="element-name">Contact Information</div>
+                    <div class="element-description">Manage the contact details displayed on the website.</div>
+                </div>
+                <div class="info-grid" id="info-grid"></div>
+                <div class="element-footer">
+                    <button type="button" class="field-button" id="add-info-button">+ Add Contact Information</button>
+                </div>
+            </section>
 
+            <section class="element">
+                <div class="element-header">
+                    <div class="element-name">Map</div>
+                    <div class="element-description">Set the location shown on the contact page.</div>
+                </div>
+                <div class="element-fields">
+                    <div class="field full">
+                        <label for="map-link">Google Maps Link</label>
+                        <div class="map-link-row">
+                            <input type="url" id="map-link" placeholder="Paste a Google Maps link" autocomplete="off">
+                            <button type="button" class="field-button" id="convert-map">Convert</button>
+                        </div>
+                        <div class="field-hint">Paste a Google Maps URL containing the location coordinates.</div>
+                    </div>
 
+                    <div class="field">
+                        <label for="map-latitude">Latitude</label>
+                        <input type="number" id="map-latitude" step="any" autocomplete="off">
+                    </div>
 
-    <div class="placeholder-100vh">
-        <h2>503</h2>
-        <p>Under Development</p>
-    </div>
+                    <div class="field">
+                        <label for="map-longitude">Longitude</label>
+                        <input type="number" id="map-longitude" step="any" autocomplete="off">
+                    </div>
 
+                    <div class="field">
+                        <label for="map-zoom">Zoom</label>
+                        <input type="number" id="map-zoom" min="1" max="22" step="1" autocomplete="off">
+                    </div>
 
+                    <div class="field">
+                        <label for="map-place">Place</label>
+                        <input type="text" id="map-place" autocomplete="off">
+                    </div>
 
-    
+                    <div class="field full">
+                        <div class="map-preview">
+                            <div class="map-preview-header">
+                                <span>Map Preview</span>
+                                <span class="map-status" id="map-status">Ready</span>
+                            </div>
+                            <iframe id="map-preview" title="Map Preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+
+        <div class="webeditor-status" id="webeditor-status"></div>
+    </main>
 </div>
 
 <div class="screen-error">
@@ -35,11 +102,10 @@
     </div>
 </div>
 
-</body>
-
 <script src="../../js/nav-print.js"></script>
 <script src="../../js/admin-nav-anim-manage.js"></script>
 <script src="../../js/admin-webeditor-panel-anim.js"></script>
+<script src="../../js/webeditor-contact-info.js"></script>
 <script src="../../../js/theme.js"></script>
-
+</body>
 </html>

@@ -1,0 +1,495 @@
+/* ------------------------------------------------------------ */
+/* -------------------- NP Consultants ------------------------ */
+/* ------------------ webeditor-contact.css ------------------- */
+/* ------------------------------------------------------------ */
+
+@import url(../../css/root.css);
+@import url(../../css/beam-container.css);
+
+/* ------------------------------------------------------------ */
+
+html,
+body {
+    background:var(--admin-webeditor-background);
+    overflow:scroll;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-container {
+    width:100%;
+    min-height:100vh;
+    min-height:100dvh;
+    padding:100px clamp(20px,5vw,80px) 60px;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-header {
+    width:100%;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:30px;
+    margin-bottom:35px;
+    padding-bottom:25px;
+    border-bottom:1px solid var(--border);
+}
+
+.webeditor-title {
+    color:var(--color-theme);
+    text-transform:uppercase;
+    font-size:clamp(2rem,4vw,3.2rem);
+    font-weight:100;
+}
+
+.webeditor-subtitle {
+    margin-top:6px;
+    color:var(--color-mute);
+    font-size:1rem;
+}
+
+.webeditor-actions {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.webeditor-button {
+    border:1px solid var(--accent);
+    border-radius:999px;
+    padding:11px 18px;
+    background:var(--accent);
+    color:white;
+    font:inherit;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.webeditor-button:hover {
+    transform:translateY(-1px);
+    filter:brightness(1.08);
+    box-shadow:var(--box-shadow);
+}
+
+.webeditor-button.secondary {
+    background:transparent;
+    -webkit-backdrop-filter:blur(6px);
+    backdrop-filter:blur(6px);
+    border-color:var(--border-2);
+    color:var(--color-theme);
+}
+
+.webeditor-button.back {
+    color:var(--color);
+    background:var(--glass);
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.webeditor-button.back svg {
+    width:16px;
+    height:16px;
+}
+
+.webeditor-button:disabled {
+    opacity:.5;
+    pointer-events:none;
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-form {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* ------------------------------------------------------------ */
+
+.element {
+    width:100%;
+    overflow:hidden;
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    box-shadow:var(--card-shadow);
+}
+
+.element-header {
+    padding:25px 30px;
+    border-bottom:1px solid var(--border);
+}
+
+.form-section-header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.element-name {
+    font-size:1.2rem;
+    font-weight:500;
+    color:var(--color-theme);
+}
+
+.element-description {
+    margin-top:6px;
+    color:var(--color-mute);
+    font-size:.9rem;
+}
+
+.element-fields {
+    padding:30px;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:25px;
+    color:var(--color-theme);
+}
+
+.field {
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.field.full {
+    grid-column:1 / -1;
+}
+
+.field label {
+    color:var(--color-mute);
+    font-size:.9rem;
+}
+
+.field input,
+.field textarea,
+.field select {
+    width:100%;
+    padding:13px 15px;
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    outline:none;
+    background:var(--glass);
+    color:var(--color);
+    font:inherit;
+    transition:border .2s ease,box-shadow .2s ease;
+    cursor:text;
+}
+
+.field textarea {
+    min-height:110px;
+    resize:vertical;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 15%,transparent);
+}
+
+/* ------------------------------------------------------------ */
+/* ----------------------- form fields ------------------------ */
+/* ------------------------------------------------------------ */
+
+.form-field {
+    grid-column:1 / -1;
+    padding:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+}
+
+.form-field-header {
+    grid-column:1 / -1;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--border);
+}
+
+.form-field-header-actions {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.form-field-title {
+    color:var(--color-theme);
+    font-size:.95rem;
+    font-weight:500;
+}
+
+.form-field-type {
+    padding:5px 10px;
+    border-radius:999px;
+    background:var(--accent);
+    color:white;
+    font-size:.7rem;
+}
+
+/* ------------------------------------------------------------ */
+/* ---------------------- option buttons ---------------------- */
+/* ------------------------------------------------------------ */
+
+.field-options {
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.field-option {
+    min-height:44px;
+    padding:0 17px;
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    background:var(--glass);
+    color:var(--color-mute);
+    font:inherit;
+    font-size:.85rem;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.field-option:hover {
+    border-color:var(--accent);
+    color:var(--color);
+    transform:scale(1.01) translateY(-1px);
+}
+
+.field-option.active {
+    border-color:var(--accent);
+    background:var(--accent);
+    color:white;
+}
+
+/* ------------------------------------------------------------ */
+/* ----------------------- input types ------------------------ */
+/* ------------------------------------------------------------ */
+
+.input-type-options {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.input-type-option {
+    min-height:40px;
+    padding:0 14px;
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    background:var(--glass);
+    color:var(--color-mute);
+    font:inherit;
+    font-size:.8rem;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.input-type-option:hover {
+    border-color:var(--accent);
+    color:var(--color);
+    transform:translateY(-1px);
+}
+
+.input-type-option.active {
+    border-color:var(--accent);
+    background:var(--accent);
+    color:white;
+}
+
+.input-type-field.hidden {
+    display:none;
+}
+
+/* ------------------------------------------------------------ */
+/* ----------------------- field actions ---------------------- */
+/* ------------------------------------------------------------ */
+
+.form-field-remove {
+    padding:8px 13px;
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    background:var(--glass);
+    color:#ff5f5f;
+    font:inherit;
+    font-size:.8rem;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.form-field-remove:hover {
+    border-color:#ff5f5f;
+    background:color-mix(in srgb,#ff5f5f 10%,transparent);
+}
+
+.navigation-add {
+    align-self:flex-start;
+    padding:10px 15px;
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    background:var(--glass);
+    color:var(--color);
+    font:inherit;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.navigation-add:hover {
+    border-color:var(--accent);
+    color:var(--accent);
+}
+
+/* ------------------------------------------------------------ */
+/* ---------------------- footer nav -------------------------- */
+/* ------------------------------------------------------------ */
+
+.footer-navigation {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-navigation-item {
+    display:grid;
+    grid-template-columns:1fr 1.5fr auto;
+    gap:12px;
+    padding:15px;
+    background:var(--glass);
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+}
+
+.footer-navigation-item input {
+    width:100%;
+    padding:11px 13px;
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    outline:none;
+    background:var(--glass);
+    color:var(--color);
+    font:inherit;
+}
+
+.footer-navigation-item input:focus {
+    border-color:var(--accent);
+}
+
+.navigation-remove {
+    padding:0 12px;
+    border:1px solid var(--border);
+    border-radius:var(--card-radius);
+    background:var(--glass);
+    color:#ff5f5f;
+    font:inherit;
+    font-size:.8rem;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.navigation-remove:hover {
+    border-color:#ff5f5f;
+}
+
+.navigation-add:hover {
+    border-color:var(--accent);
+    color:var(--accent);
+}
+
+/* ------------------------------------------------------------ */
+
+.webeditor-status {
+    min-height:24px;
+    margin-top:20px;
+    color:var(--color-mute);
+    font-size:.9rem;
+}
+
+.webeditor-status.success {
+    color:#58d68d;
+}
+
+.webeditor-status.error {
+    color:#ff5f5f;
+}
+
+/* ------------------------------------------------------------ */
+
+@media(max-width:800px) {
+
+    .webeditor-container {
+        padding:90px 20px 40px;
+    }
+
+    .webeditor-header {
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .webeditor-actions {
+        width:100%;
+    }
+
+    .webeditor-button {
+        flex:1;
+    }
+
+    .form-section-header {
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .form-section-header .navigation-add {
+        width:100%;
+    }
+
+    .element-fields {
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    .form-field {
+        grid-template-columns:1fr;
+    }
+
+    .form-field-header {
+        grid-column:1;
+    }
+
+    .form-field-header-actions {
+        flex-wrap:wrap;
+    }
+
+    .footer-navigation-item {
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ------------------------------------------------------------ */
+
+@media(prefers-reduced-motion:reduce) {
+
+    .webeditor-button,
+    .field-option,
+    .input-type-option,
+    .form-field-remove,
+    .navigation-remove,
+    .navigation-add {
+        transition:none;
+    }
+
+}
